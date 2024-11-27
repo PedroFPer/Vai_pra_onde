@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Geral.DTO.CadastroGeralTempViewDTO"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaCadasPJ1"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaLoginTipCli"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
