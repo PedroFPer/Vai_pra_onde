@@ -27,7 +27,7 @@ public class TelaLoginTipCli extends AppCompatActivity {
         buttonInicLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TelaLoginTipCli.this, TelaCadasPJ1.class);
+                Intent intent = new Intent(TelaLoginTipCli.this, TelaCadasGeralPJ.class);
                 startActivity(intent);
             }
         });

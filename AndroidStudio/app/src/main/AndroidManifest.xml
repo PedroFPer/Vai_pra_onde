@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,27 +16,31 @@
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".Geral.TelasFront.TelaCadaspf"
+            android:name=".Geral.TelasFront.TelaCadasGeralPJ"
             android:exported="false" />
         <activity
-            android:name=".Geral.TelasFront.TelaCadasPJ2"
-=======
-            android:name=".Geral.TelasFront.TelaLoginEmpresa"
->>>>>>> 0b2d3a3559a81640cf1104e899d14d4faa44da53
+            android:name=".Geral.TelasFront.TelaCadasPjGeral"
             android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaLoginEmpresa"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ4"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ3"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ2"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ1"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaLoginTipCli"
             android:exported="false" />
