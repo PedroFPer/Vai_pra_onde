@@ -1,4 +1,4 @@
-/*package com.ducks.vai_pra_onde.Geral.DAO.PessoaFisica;
+package com.ducks.vai_pra_onde.Geral.DAO.PessoaFisica;
 import java.util.Map;
 import java.util.HashMap;
 import java.text.ParseException;
@@ -6,12 +6,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // pacotes necessarios de conexao com o Firebase
-import  com.ducks.vai_pra_onde.DAO.FirestoreDAO.FirestoreConnection;
+import  com.ducks.vai_pra_onde.Geral.DAO.FirestoreDAO.FirestoreConnection;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PessoaFisicaDAO {
     public static void cadastrarPessoaFisica(String nome, String data_nascimento, String email, String telefone, String senha) {
-        FirebaseFirestore connection = new FirestoreConnection.getConnection();
+
+        // nao adicionar construtor 'new' em "FirestoreConnection.getConnection();"
+        // pois o metodo getConnection() e STATIC, e nao um construtor
+        FirebaseFirestore connection = FirestoreConnection.getConnection();
 
         Map<String, Object> pessoaFisica = new HashMap<>();
 
@@ -40,4 +43,4 @@ public class PessoaFisicaDAO {
     }
 
     // public static PessoaFisicaMODEL buscarPessoaFisica(String email)
-}*/
+}
