@@ -3,6 +3,7 @@ package com.ducks.vai_pra_onde.Geral.TelasFront;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,9 +45,25 @@ public class TelaCadaspf extends AppCompatActivity {
         String sobrenomest = sobrenome.getText().toString();
 
         if(emailst.isEmpty()){
-
+            Toast.makeText(this, "O e-mail não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
         }
-        if(telefonest.isEmpty() )
+        if(telefonest.isEmpty() ){
+            Toast.makeText(this, "O telefone não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(senhast.isEmpty()){
+            Toast.makeText(this, "A senha não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(nomest.isEmpty()){
+            Toast.makeText(this, "O nome não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(sobrenomest.isEmpty()){
+            Toast.makeText(this, "O sobrenome não pode estar vazio.", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
 
     }
