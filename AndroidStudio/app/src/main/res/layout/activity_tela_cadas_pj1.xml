@@ -12,7 +12,7 @@
             android:id="@+id/TextInicio"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Nós fale um pouco sobre você!,"
+            android:text="Nós fale um pouco sobre sua empresa!,"
             android:layout_marginTop="100dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

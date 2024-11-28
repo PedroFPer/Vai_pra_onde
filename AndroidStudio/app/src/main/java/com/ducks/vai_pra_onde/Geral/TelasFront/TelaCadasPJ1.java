@@ -68,6 +68,8 @@ public class TelaCadasPJ1 extends AppCompatActivity {
             viewModelPj.setCnpj(cnpjEmprPj);
 
 
+
+
             Intent intent = new Intent(TelaCadasPJ1.this, TelaCadasPJ2.class);
             startActivity(intent);
         });

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +17,23 @@
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".Geral.TelasFront.TelaCadaspf"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ2"
+=======
+            android:name=".Geral.TelasFront.TelaLoginEmpresa"
+>>>>>>> 0b2d3a3559a81640cf1104e899d14d4faa44da53
             android:exported="false" />
         <activity
-            android:name=".Geral.DTO.CadastroGeralTempViewDTO"
+            android:name=".Geral.TelasFront.TelaCadasPJ4"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaCadasPJ3"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.TelasFront.TelaCadasPJ2"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ1"
