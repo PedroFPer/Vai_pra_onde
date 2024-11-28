@@ -1,4 +1,4 @@
-package com.ducks.vai_pra_onde.Geral.DAO;
+/*package com.ducks.vai_pra_onde.Geral.DAO.PessoaFisica;
 import java.util.Map;
 import java.util.HashMap;
 import java.text.ParseException;
@@ -11,7 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PessoaFisicaDAO {
     public static void cadastrarPessoaFisica(String nome, String data_nascimento, String email, String telefone, String senha) {
-        FirebaseFirestore connection = FirestoreConnection.getConnection();
+        FirebaseFirestore connection = new FirestoreConnection.getConnection();
 
         Map<String, Object> pessoaFisica = new HashMap<>();
 
@@ -40,4 +40,4 @@ public class PessoaFisicaDAO {
     }
 
     // public static PessoaFisicaMODEL buscarPessoaFisica(String email)
-}
+}*/
