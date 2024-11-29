@@ -13,31 +13,33 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.ducks.vai_pra_onde.R;
 
-public class TelaLoginTipCli extends AppCompatActivity {
+public class TelaCadasTipCli extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tela_login_tip_cli);
+        setContentView(R.layout.activity_tela_cadas_tip_cli);
 
-        //Botão cadastro PJ
 
-        Button buttonInicLogin = findViewById(R.id.BotaoCadasTipDon);
-        buttonInicLogin.setOnClickListener(new View.OnClickListener(){
+
+        Button buttonCadsTipDon = findViewById(R.id.BotaoCadasTipDon);
+        buttonCadsTipDon.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TelaLoginTipCli.this, TelaCadasGeralPJ.class);
+                Intent intent = new Intent(TelaCadasTipCli.this, TelaCadasGeralPJ.class);
                 startActivity(intent);
             }
         });
 
-
-
-
-
-
-
+        Button buttonCadsTipCons = findViewById(R.id.BotaoCadasTipConsu);
+        buttonCadsTipCons.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaCadasTipCli.this, TelaCadasPf.class);
+                startActivity(intent);
+            }
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -47,8 +49,4 @@ public class TelaLoginTipCli extends AppCompatActivity {
         });
     }
 
-    public void cadaspf(View v){
-        Intent i = new Intent(TelaLoginTipCli.this, TelaCadaspf.class);
-        startActivity(i);
-    }
 }

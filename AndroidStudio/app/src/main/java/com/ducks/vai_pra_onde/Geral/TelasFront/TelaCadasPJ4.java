@@ -16,7 +16,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -94,7 +93,7 @@ public class TelaCadasPJ4 extends Fragment {
                     return;
                     }
 
-                Intent intent = new Intent(requireContext(), TelaLoginTipCli.class);
+                Intent intent = new Intent(requireContext(), TelaCadasTipCli.class);
                 startActivity(intent);
 
 

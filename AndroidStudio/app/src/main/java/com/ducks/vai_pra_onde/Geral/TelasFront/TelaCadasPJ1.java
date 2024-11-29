@@ -46,9 +46,9 @@ public class TelaCadasPJ1 extends Fragment {
         Button buttonCadasPj1 = view.findViewById(R.id.BotaoCadas1);
 
         edtNomeEmprPj.setOnFocusChangeListener((v, hasFocus) -> {
-                    if (hasFocus) {
-                        if (edtNomeEmprPj.getText().toString().equals("Espaço de evento exemplo")) {
-                            edtNomeEmprPj.setText("");
+            if (hasFocus) {
+                if (edtNomeEmprPj.getText().toString().equals("Espaço de evento exemplo")) {
+                    edtNomeEmprPj.setText("");
                         }
                     }
                 });
