@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
+        android:backgroundTint="@color/bege"
         />
 
     <EditText
@@ -76,7 +76,8 @@
         app:layout_constraintTop_toTopOf="@+id/BotaoLoginIni"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/burnt_orange"
+        android:textColor="@color/white"
         />
 
     <Button
@@ -89,7 +90,8 @@
         app:layout_constraintTop_toTopOf="@+id/TextInicio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/burnt_orange"
         />
 
 
