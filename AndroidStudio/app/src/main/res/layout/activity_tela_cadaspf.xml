@@ -36,6 +36,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
 
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +47,7 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="130dp"
+            android:hint="E-mail"
 
             android:background="@drawable/caixa"
 
@@ -76,6 +78,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="240dp"
             android:background="@drawable/caixa"
+            android:hint="TELEFONE"
 
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +106,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="350dp"
             android:background="@drawable/caixa"
+            android:hint="DATA"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
