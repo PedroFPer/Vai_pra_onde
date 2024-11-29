@@ -80,17 +80,24 @@ public class TelaCadasPJ4 extends Fragment {
                 }
         );
 
-        // Clique para selecionar a imagem
+
         buttonSelecIma.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            imagePickerLaucher.launch(intent);
+            Intent intentUploImag = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            imagePickerLaucher.launch(intentUploImag);
         });
 
-        // Clique para finalizar o cadastro (navegação para o próximo fragmento ou activity)
         buttonFinCadas.setOnClickListener(v -> {
-            if (getActivity() != null) {
-                com.ducks.vai_pra_onde.Geral.TelasFront.FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaLoginEmpresa());
-            }
+            byte[] validImag = viewModelPj.getImageByteArray().getValue();
+
+                if (validImag == null || validImag.length ==0) {
+                    Toast.makeText(getContext(), "Adicione a imagem do documento de autetificação", Toast.LENGTH_SHORT).show();
+                    return;
+                    }
+
+                Intent intent = new Intent(requireContext(), TelaLoginTipCli.class);
+                startActivity(intent);
+
+
         });
     }
 }

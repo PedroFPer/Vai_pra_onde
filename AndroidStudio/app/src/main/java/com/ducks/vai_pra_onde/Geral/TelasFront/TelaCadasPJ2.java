@@ -46,6 +46,22 @@ public class TelaCadasPJ2 extends Fragment {
         EditText edtCpfResPj = view.findViewById(R.id.CadasCpfResPj);
         Button buttonCadasPj1 = view.findViewById(R.id.BotaoCadas1);
 
+        edtNomeResPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtNomeResPj.getText().toString().equals("João da silva")) {
+                    edtNomeResPj.setText("");
+                }
+            }
+        });
+
+        edtCpfResPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtCpfResPj.getText().toString().equals("00000000000")) {
+                    edtCpfResPj.setText("");
+                }
+            }
+        });
+
         buttonCadasPj1.setOnClickListener(v -> {
             String nomeResPj = edtNomeResPj.getText().toString().trim();
             String cpfResPj = edtCpfResPj.getText().toString().trim();

@@ -19,7 +19,7 @@ public class TelaInicial extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.tela_inicial);
+        setContentView(R.layout.activity_tela_inicial);
 
         //Botão de cadastro
 

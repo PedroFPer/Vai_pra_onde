@@ -45,11 +45,46 @@ public class TelaCadasPJ1 extends Fragment {
         EditText edtCnpjEmprPj = view.findViewById(R.id.CadasCnpjPj);
         Button buttonCadasPj1 = view.findViewById(R.id.BotaoCadas1);
 
+        edtNomeEmprPj.setOnFocusChangeListener((v, hasFocus) -> {
+                    if (hasFocus) {
+                        if (edtNomeEmprPj.getText().toString().equals("Espaço de evento exemplo")) {
+                            edtNomeEmprPj.setText("");
+                        }
+                    }
+                });
+
+        edtEmailEmprPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtEmailEmprPj.getText().toString().equals("email@email.com.br")) {
+                    edtEmailEmprPj.setText("");
+                }
+            }
+        });
+
+        edtTelefEmprPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtTelefEmprPj.getText().toString().equals("1234567891234")) {
+                    edtTelefEmprPj.setText("");
+                }
+            }
+        });
+
+        edtCnpjEmprPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtCnpjEmprPj.getText().toString().equals("12345678912345")) {
+                    edtCnpjEmprPj.setText("");
+                }
+            }
+        });
+
+
+
         buttonCadasPj1.setOnClickListener(v -> {
             String nomeEmprPj = edtNomeEmprPj.getText().toString().trim();
             String emailEmprPj = edtEmailEmprPj.getText().toString().trim();
             String telefEmprPj = edtTelefEmprPj.getText().toString().trim();
             String cnpjEmprPj = edtCnpjEmprPj.getText().toString().trim();
+
 
             if (nomeEmprPj.isEmpty()) {
                 showToast("O nome não pode estar vazio.");

@@ -18,7 +18,7 @@ public class ViewCadasPessoPjDTO extends ViewModel {
     private MutableLiveData<String> cidade = new MutableLiveData<>();
     private MutableLiveData<String> estado = new MutableLiveData<>();
     private MutableLiveData<String> pais = new MutableLiveData<>();
-    private MutableLiveData<String> referencia = new MutableLiveData<>();
+
 
     private MutableLiveData<byte[]> imagemByteArray = new MutableLiveData<>();
 
@@ -118,13 +118,6 @@ public class ViewCadasPessoPjDTO extends ViewModel {
         this.pais.setValue(pais);
     }
 
-    public LiveData<String> getReferencia() {
-        return referencia;
-    }
-
-    public void setReferencia(String referencia) {
-        this.referencia.setValue(referencia);
-    }
 
     public void setDocumAutecEmpr(byte[] imagem) {
         imagemByteArray.setValue(imagem); // Armazena a imagem

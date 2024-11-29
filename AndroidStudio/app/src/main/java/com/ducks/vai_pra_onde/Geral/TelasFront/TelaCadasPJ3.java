@@ -45,6 +45,45 @@ public class TelaCadasPJ3 extends Fragment {
         EditText edtPais = view.findViewById(R.id.CadasPaisPj);
         Button buttonProxima = view.findViewById(R.id.BotaoCadas1);
 
+        edtLogradouro.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtLogradouro.getText().toString().equals("Rua, Galeria")){
+                    edtLogradouro.setText("");
+                }
+            }
+        });
+
+        edtBairro.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtBairro.getText().toString().equals("Queimadinha")) {
+                    edtBairro.setText("");
+                }
+            }
+        });
+        edtCidade.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtCidade.getText().toString().equals("Feira de Santana")) {
+                    edtCidade.setText("");
+                }
+            }
+        });
+
+        edtEstado.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtEstado.getText().toString().equals("Bahia")) {
+                    edtEstado.setText("");
+                }
+            }
+        });
+
+        edtPais.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtPais.getText().toString().equals("Brasil")) {
+                    edtPais.setText("");
+                }
+            }
+        });
+
         buttonProxima.setOnClickListener(v -> {
             String logradouro = edtLogradouro.getText().toString().trim();
             String bairro = edtBairro.getText().toString().trim();
