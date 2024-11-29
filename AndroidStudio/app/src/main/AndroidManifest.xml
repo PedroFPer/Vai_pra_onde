@@ -16,15 +16,15 @@
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
         <activity
+            android:name=".Geral.TelasFront.TelaLoginEmpresa"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
             android:name=".Geral.TelasFront.TelaCadasGeralPJ"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPjGeral"
             android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.TelaLoginEmpresa"
-            android:exported="false"
-            tools:ignore="Instantiatable" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasPJ4"
             android:exported="false"

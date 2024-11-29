@@ -130,7 +130,7 @@ public class ViewCadasPessoPjDTO extends ViewModel {
         imagemByteArray.setValue(imagem); // Armazena a imagem
     }
 
-    public byte[] getImageByteArray() {
-        return imagemByteArray.getValue();
+    public LiveData<byte[]> getImageByteArray() {
+        return imagemByteArray;
     }
 }

@@ -5,22 +5,28 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.DTO.ViewCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
 import com.ducks.vai_pra_onde.R;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-
 import java.io.IOException;
 
-public class TelaCadasPJ4 extends AppCompatActivity {
+public class TelaCadasPJ4 extends Fragment {
 
     private ImageView imageViewSelect;
     private String saveImagePath;
@@ -28,28 +34,35 @@ public class TelaCadasPJ4 extends AppCompatActivity {
 
     private ViewCadasPessoPjDTO viewModelPj;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Inflar o layout do fragmento
+        return inflater.inflate(R.layout.activity_tela_cadas_pj4, container, false);
+    }
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_cadas_pj4);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(this).get(ViewCadasPessoPjDTO.class);
-
-        Button buttonFinCadas = findViewById(R.id.buttonFinalCadas);
-        Button buttonSelecIma = findViewById(R.id.buttonSelectImage);
-        imageViewSelect = findViewById(R.id.imageView);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(ViewCadasPessoPjDTO.class);
 
 
-        UtilArmazenImage utilArmIma = new UtilArmazenImage(this);
+        // Referências aos botões e ImageView
+        Button buttonFinCadas = view.findViewById(R.id.buttonFinalCadas);
+        Button buttonSelecIma = view.findViewById(R.id.buttonSelectImage);
+        imageViewSelect = view.findViewById(R.id.imageView);
 
+        UtilArmazenImage utilArmIma = new UtilArmazenImage(getContext());
+
+        // ActivityResultLauncher para pegar a imagem
         ActivityResultLauncher<Intent> imagePickerLaucher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
-                    if(result.getResultCode() == RESULT_OK && result.getData() != null){
+                    if(result.getResultCode() == getActivity().RESULT_OK && result.getData() != null){
                         Uri imagemUri = result.getData().getData();
                         try {
-                            Bitmap bitMap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagemUri);
+                            Bitmap bitMap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imagemUri);
 
                             saveImagePath = utilArmIma.saveImage(bitMap);
 
@@ -59,22 +72,25 @@ public class TelaCadasPJ4 extends AppCompatActivity {
 
                             imageViewSelect.setImageBitmap(bitMap);
 
-                            Toast.makeText(this, "Imagem salva em " + saveImagePath, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Imagem salva em " + saveImagePath, Toast.LENGTH_SHORT).show();
                         } catch (IOException e) {
-                            Toast.makeText(this, "Erro em processar a imagem", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Erro ao processar a imagem", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
         );
 
+        // Clique para selecionar a imagem
         buttonSelecIma.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             imagePickerLaucher.launch(intent);
         });
 
+        // Clique para finalizar o cadastro (navegação para o próximo fragmento ou activity)
         buttonFinCadas.setOnClickListener(v -> {
-            Intent intent2 = new Intent(TelaCadasPJ4.this, TelaLoginEmpresa.class);
-            startActivity(intent2);
+            if (getActivity() != null) {
+                com.ducks.vai_pra_onde.Geral.TelasFront.FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaLoginEmpresa());
+            }
         });
     }
 }

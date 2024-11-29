@@ -37,7 +37,7 @@ public class TelaCadasPJ1 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(this).get(ViewCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(ViewCadasPessoPjDTO.class);
 
         EditText edtNomeEmprPj = view.findViewById(R.id.CadasNomePj);
         EditText edtEmailEmprPj = view.findViewById(R.id.CadasEmailPj);
@@ -76,8 +76,9 @@ public class TelaCadasPJ1 extends Fragment {
             viewModelPj.setTelefone(telefEmprPj);
             viewModelPj.setCnpj(cnpjEmprPj);
 
-            Intent intent = new Intent(getContext(), TelaCadasPJ2.class);
-            startActivity(intent);
+            if (getActivity() != null) {
+                com.ducks.vai_pra_onde.Geral.TelasFront.FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaCadasPJ2());
+            }
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(view.findViewById(R.id.LayoutCadasPJ1), (v, insets) -> {

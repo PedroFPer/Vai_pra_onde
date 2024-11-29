@@ -13,7 +13,6 @@ import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasGeralPJ extends AppCompatActivity {
 
-
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -27,11 +26,5 @@ public class TelaCadasGeralPJ extends AppCompatActivity {
             }
         }
 
-        public void replaceFragment(Fragment fragment) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragContCadasPJ, fragment)
-                    .addToBackStack(null) // Adiciona à pilha para permitir voltar
-                    .commit();
-        }
     }
 
