@@ -46,4 +46,9 @@ public class TelaLoginTipCli extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void cadaspf(View v){
+        Intent i = new Intent(TelaLoginTipCli.this, TelaCadaspf.class);
+        startActivity(i);
+    }
 }

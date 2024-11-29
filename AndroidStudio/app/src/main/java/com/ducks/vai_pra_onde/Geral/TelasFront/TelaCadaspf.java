@@ -29,7 +29,7 @@ public class TelaCadaspf extends AppCompatActivity {
         });
 
         email = findViewById(R.id.email);
-        telefone = findViewById(R.id.telefone);
+        telefone = findViewById(R.id.tel);
         senha = findViewById(R.id.senha);
         data = findViewById(R.id.data);
         nome = findViewById(R.id.nome);
@@ -46,23 +46,23 @@ public class TelaCadaspf extends AppCompatActivity {
 
         if(emailst.isEmpty()){
             Toast.makeText(this, "O e-mail não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(telefonest.isEmpty() ){
             Toast.makeText(this, "O telefone não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(senhast.isEmpty()){
             Toast.makeText(this, "A senha não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(nomest.isEmpty()){
             Toast.makeText(this, "O nome não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(sobrenomest.isEmpty()){
             Toast.makeText(this, "O sobrenome não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
 
 

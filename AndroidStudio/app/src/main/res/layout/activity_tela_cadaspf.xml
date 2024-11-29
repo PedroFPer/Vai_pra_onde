@@ -30,9 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:layout_marginRight="200dp"
-            android:gravity="left"
-            android:text="E-MAIL"
+            android:layout_marginEnd="200dp"
+            android:text="@string/e_mail"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -60,9 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="210dp"
-            android:layout_marginRight="200dp"
-            android:gravity="left"
-            android:text="TELEFONE"
+            android:layout_marginEnd="200dp"
+            android:text="@string/telefone"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -72,27 +70,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/telefone"
+            android:id="@+id/tel"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="240dp"
-
             android:background="@drawable/caixa"
+
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="320dp"
-            android:layout_marginRight="100dp"
-            android:gravity="left"
-            android:text="DATA NASCIMENTO"
+            android:layout_marginEnd="100dp"
+            android:text="@string/data_nascimento"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -107,23 +102,20 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="350dp"
-            android:inputType="date"
-
             android:background="@drawable/caixa"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
-            />
+             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="430dp"
-            android:layout_marginRight="220dp"
-            android:gravity="left"
-            android:text="NOME"
+            android:layout_marginEnd="220dp"
+            android:text="@string/nome"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -138,30 +130,33 @@
             android:layout_height="60dp"
 
             android:layout_marginTop="460dp"
-            android:layout_marginRight="180dp"
+            android:layout_marginEnd="180dp"
 
             android:background="@drawable/caixa"
 
-            android:hint="NOME"
+            android:hint="@string/nome"
+
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
-            />
+             />
 
         <EditText
             android:id="@+id/sobrenome"
             android:layout_width="170dp"
             android:layout_height="60dp"
 
-            android:layout_marginLeft="150dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="460dp"
 
             android:background="@drawable/caixa"
 
-            android:hint="SOBRENOME"
+            android:hint="@string/sobrenome"
 
+
+            android:importantForAutofill="no"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -172,9 +167,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="540dp"
-            android:layout_marginRight="220dp"
-            android:gravity="left"
-            android:text="SENHA"
+            android:layout_marginEnd="220dp"
+            android:text="@string/senha"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -193,7 +187,8 @@
 
             android:background="@drawable/caixa"
 
-            android:hint="Senha"
+            android:hint="@string/senha"
+
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -207,12 +202,14 @@
             android:layout_height="70dp"
             android:layout_marginTop="700dp"
             android:backgroundTint="@color/black"
-            android:text="Cadastrar"
+            android:text="@string/cadastrar"
             android:textSize="20sp"
+
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UsingOnClickInXml" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
