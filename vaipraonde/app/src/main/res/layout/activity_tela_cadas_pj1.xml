@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutCadasPJ1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Geral.TelasFront.TelaCadasPJ1">
+
+
+        <TextView
+            android:id="@+id/TextInicio"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Nós fale um pouco sobre sua empresa!"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TextCadNomPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite o nome completo da sua empresa"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@+id/TextInicio"
+            app:layout_constraintBottom_toBottomOf="@+id/CadasNomePj"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/CadasNomePj"
+            android:layout_width="375dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/caixa"
+            android:padding="12dp"
+            android:text="Espaço de evento exemplo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/TextCadNomPj" />
+
+        <TextView
+            android:id="@+id/TextCadEmailPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite o nome completo da sua empresa"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@+id/CadasNomePj"
+            app:layout_constraintBottom_toBottomOf="@+id/CadasEmailPj"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/CadasEmailPj"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:text="email@email.com.br"
+            android:background="@drawable/caixa"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@+id/TextCadEmailPj"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TextCadTelefPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celular (com DDD)"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@+id/CadasEmailPj"
+            app:layout_constraintBottom_toBottomOf="@+id/CadasTelefPj"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/CadasTelefPj"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:text="1234567891234"
+            android:background="@drawable/caixa"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@+id/TextCadTelefPj"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TextCadCnpjfPj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CNPJ (14 digitos)"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="@+id/CadasTelefPj"
+            app:layout_constraintBottom_toBottomOf="@+id/CadasCnpjPj"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/CadasCnpjPj"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            android:text="12345678912345"
+            android:background="@drawable/caixa"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@+id/TextCadCnpjfPj"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Button
+            android:id="@+id/BotaoCadas1"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:text="Cadastro"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="@+id/CadasCnpjPj"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/burnt_orange"
+            />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

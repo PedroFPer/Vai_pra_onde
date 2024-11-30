@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">vai_pra_onde</string>
+    <string name="e_mail">E-MAIL</string>
+    <string name="telefone">TELEFONE</string>
+    <string name="data_nascimento">DATA NASCIMENTO</string>
+    <string name="nome">NOME</string>
+    <string name="nomee">NOME</string>
+    <string name="sobrenome">SOBRENOME</string>
+    <string name="senha">SENHA</string>
+    <string name="a">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="quero_descobrir_novos_locais">Quero descobrir novos locais!</string>
+</resources>
