@@ -48,7 +48,7 @@
         android:layout_marginTop="470dp"
         android:background="@drawable/caixa"
         android:padding="20dp"
-        android:hint="E-mail"
+        android:hint="CPF/CNPJ"
         android:textSize="20sp"
 
 
