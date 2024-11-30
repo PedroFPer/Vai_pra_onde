@@ -22,96 +22,173 @@ public class ViewCadasPessoPjDTO extends ViewModel {
 
     private MutableLiveData<byte[]> imagemByteArray = new MutableLiveData<>();
 
-    public LiveData<String> getNomeEmpresa() {
-        return nomeEmpresa;
+    public String getNomeEmpresa() {
+
+        if(nomeEmpresa.getValue()!=null){
+            String empresa= nomeEmpresa.getValue();
+            return empresa;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setNomeEmpresa(String nomeEmpresa) {
+
         this.nomeEmpresa.setValue(nomeEmpresa);
     }
 
-    public LiveData<String> getCnpj() {
-        return cnpj;
+    public String getCnpj() {
+        if(cnpj.getValue()!=null){
+            String cnpjstr= cnpj.getValue();
+            return cnpjstr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setCnpj(String cnpj) {
+
         this.cnpj.setValue(cnpj);
     }
 
-    public LiveData<String> getResponsavel() {
-        return responsavel;
+    public String getResponsavel() {
+        if(responsavel.getValue()!=null){
+            String responsavelstr= responsavel.getValue();
+            return responsavelstr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setResponsavel(String responsavel) {
+
         this.responsavel.setValue(responsavel);
     }
 
-    public LiveData<String> getCpfResponsavel() {
-        return cpfResponsavel;
+    public String getCpfResponsavel() {
+        if(cpfResponsavel.getValue()!=null){
+            String cpfresponsavelstr= cpfResponsavel.getValue();
+            return cpfresponsavelstr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setCpfResponsavel(String cpfResponsavel) {
         this.cpfResponsavel.setValue(cpfResponsavel);
     }
 
-    public LiveData<String> getEmail() {
-        return email;
+    public String getEmail() {
+        if(email.getValue()!=null){
+            String emailstr= email.getValue();
+            return emailstr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setEmail(String email) {
+
         this.email.setValue(email);
     }
 
-    public LiveData<String> getTelefone() {
-        return telefone;
+    public String getTelefone() {
+        if(telefone.getValue()!=null){
+            String telefonestr= telefone.getValue();
+            return telefonestr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setTelefone(String telefone) {
+
         this.telefone.setValue(telefone);
     }
 
-    public LiveData<String> getDocumentacao() {
-        return documentacao;
+    public String getDocumentacao() {
+        if(documentacao.getValue()!=null){
+            String documentacaostr= documentacao.getValue();
+            return documentacaostr;
+        }else {
+            return "404";
+        }
+
     }
 
     public void setDocumentacao(String documentacao) {
+
         this.documentacao.setValue(documentacao);
     }
 
-    public LiveData<String> getLogradouro() {
-        return logradouro;
+    public String getLogradouro() {
+        if (logradouro.getValue() != null) {
+            String logradourostr = logradouro.getValue();
+            return logradourostr;
+        } else {
+            return "404";
+        }
     }
 
     public void setLogradouro(String logradouro) {
+
         this.logradouro.setValue(logradouro);
     }
 
-    public LiveData<String> getBairro() {
-        return bairro;
+    public String getBairro() {
+        if (bairro.getValue() != null) {
+            String bairrostr = bairro.getValue();
+            return bairrostr;
+        } else {
+            return "404";
+        }
     }
 
     public void setBairro(String bairro) {
         this.bairro.setValue(bairro);
     }
 
-    public LiveData<String> getCidade() {
-        return cidade;
+    public String getCidade() {
+        if (cidade.getValue() != null) {
+            String cidadestr = cidade.getValue();
+            return cidadestr;
+        } else {
+            return "404";
+        }
     }
+
 
     public void setCidade(String cidade) {
         this.cidade.setValue(cidade);
     }
 
-    public LiveData<String> getEstado() {
-        return estado;
+    public String getEstado() {
+        if (estado.getValue() != null) {
+            String estadostr = estado.getValue();
+            return estadostr;
+        } else {
+            return "404";
+        }
     }
+
 
     public void setEstado(String estado) {
         this.estado.setValue(estado);
     }
 
-    public LiveData<String> getPais() {
-        return pais;
+    public String getPais() {
+        if (pais.getValue() != null) {
+            String paisstr = pais.getValue();
+            return paisstr;
+        } else {
+            return "404";
+        }
     }
 
     public void setPais(String pais) {
@@ -123,7 +200,17 @@ public class ViewCadasPessoPjDTO extends ViewModel {
         imagemByteArray.setValue(imagem); // Armazena a imagem
     }
 
-    public LiveData<byte[]> getImageByteArray() {
+    public byte[] getImageByteArray() {
+        if (imagemByteArray.getValue() != null) {
+            byte[] imgbyte = imagemByteArray.getValue();
+            return imgbyte;
+        } else {
+            return null;
+        }
+
+    }
+    public LiveData<byte[]> getImageByteArrayView() {
         return imagemByteArray;
     }
+
 }

@@ -86,7 +86,7 @@ public class TelaCadasPJ4 extends Fragment {
         });
 
         buttonFinCadas.setOnClickListener(v -> {
-            byte[] validImag = viewModelPj.getImageByteArray().getValue();
+            byte[] validImag = viewModelPj.getImageByteArrayView().getValue();
 
                 if (validImag == null || validImag.length ==0) {
                     Toast.makeText(getContext(), "Adicione a imagem do documento de autetificação", Toast.LENGTH_SHORT).show();
