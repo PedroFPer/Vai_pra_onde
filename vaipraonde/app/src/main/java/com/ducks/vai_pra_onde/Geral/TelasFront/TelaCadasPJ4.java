@@ -19,7 +19,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.DTO.ViewCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.DTO.CadasPessoaPJDTO;
+import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
 import com.ducks.vai_pra_onde.R;
 
@@ -31,7 +32,7 @@ public class TelaCadasPJ4 extends Fragment {
     private String saveImagePath;
     private byte[] imagemData;
 
-    private ViewCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjDTO viewModelPj;
 
     @Nullable
     @Override
@@ -44,7 +45,7 @@ public class TelaCadasPJ4 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(requireActivity()).get(ViewCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
 
 
         // Referências aos botões e ImageView
@@ -92,6 +93,21 @@ public class TelaCadasPJ4 extends Fragment {
                     Toast.makeText(getContext(), "Adicione a imagem do documento de autetificação", Toast.LENGTH_SHORT).show();
                     return;
                     }
+
+            CadasPessoaPJDTO cadasPessoaPJDTO = new CadasPessoaPJDTO(
+                    viewModelPj.getNomeEmpresa(),
+                    viewModelPj.getCnpj(),
+                    viewModelPj.getResponsavel(),
+                    viewModelPj.getCpfResponsavel(),
+                    viewModelPj.getEmail(),
+                    viewModelPj.getTelefone(),
+                    viewModelPj.getLogradouro(),
+                    viewModelPj.getBairro(),
+                    viewModelPj.getCidade(),
+                    viewModelPj.getEstado(),
+                    viewModelPj.getPais(),
+                    viewModelPj.getImageByteArray()
+            );
 
                 Intent intent = new Intent(requireContext(), TelaCadasTipCli.class);
                 startActivity(intent);

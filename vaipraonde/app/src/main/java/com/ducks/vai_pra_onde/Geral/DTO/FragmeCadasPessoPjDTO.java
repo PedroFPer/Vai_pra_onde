@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ViewCadasPessoPjDTO extends ViewModel {
+public class FragmeCadasPessoPjDTO extends ViewModel {
 
     private MutableLiveData<String> nomeEmpresa = new MutableLiveData<>();
     private MutableLiveData<String> cnpj = new MutableLiveData<>();
