@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/teste1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/conteiner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/light_gray"
+        />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/logofundotrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <TextView
         android:id="@+id/TextInicio"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:textColor="@color/dark_gray"
+        android:gravity="center"
+        android:layout_marginTop="304dp"
         android:fontFamily="sans-serif-black"
-        android:text="Nós fale um pouco sobre o representante!"
+        android:text="Fale sobre seu representante"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,11 +51,12 @@
         android:id="@+id/TextCadNomResPj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Digite o nome completo do represetante da sua empresa"
+        android:text="Digite o nome  do represetante da empresa"
         android:fontFamily="sans-serif-condensed"
         android:textSize="15sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="72dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintTop_toTopOf="@+id/TextInicio"
         app:layout_constraintBottom_toBottomOf="@+id/CadasNomeResPj"
@@ -36,9 +64,11 @@
 
     <EditText
         android:id="@+id/CadasNomeResPj"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:layout_marginHorizontal="60dp"
         android:text="João da silva"
+        android:textColor="@color/dark_gray"
         android:background="@drawable/caixa"
         android:padding="12dp"
         android:layout_marginTop="20dp"
@@ -50,11 +80,12 @@
         android:id="@+id/TextCadCpfResPj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Digite o cpf do responsável"
+        android:text="Informe o CPF"
         android:fontFamily="sans-serif-condensed"
         android:textSize="15sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="70dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintTop_toTopOf="@+id/CadasNomeResPj"
         app:layout_constraintBottom_toBottomOf="@+id/CadasCpfResPj"
@@ -62,9 +93,11 @@
 
     <EditText
         android:id="@+id/CadasCpfResPj"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:layout_marginHorizontal="60dp"
         android:text="00000000000"
+        android:textColor="@color/dark_gray"
         android:background="@drawable/caixa"
         android:padding="12dp"
         android:layout_marginTop="20dp"
@@ -75,15 +108,15 @@
 
     <Button
         android:id="@+id/BotaoCadas1"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proxima pagina ->"
+        android:text="Avançar"
         android:textColor="@color/white"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="89dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CadasCpfResPj"
         android:backgroundTint="@color/burnt_orange"
         />
 

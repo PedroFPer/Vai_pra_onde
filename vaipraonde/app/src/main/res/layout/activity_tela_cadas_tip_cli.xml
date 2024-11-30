@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/teste1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Geral.TelasFront.TelaCadasTipCli">
@@ -23,34 +24,26 @@
         android:id="@+id/TexLogTipCli2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Você deseja criar o seus proprios eventos?"
+        android:text="Qual é o seu objetivo ao usar o aplicativo?"
         android:fontFamily="sans-serif-black"
-        android:textSize="15sp"
+        android:textSize="17sp"
+        android:textColor="@color/white"
         android:layout_marginTop="504dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/logoTipClieCadas" />
 
-    <TextView
-        android:id="@+id/TexLogTipCli3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ou descobri novos lugares?"
-        android:fontFamily="sans-serif-black"
-        android:textSize="15sp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TexLogTipCli2" />
+
 
     <Button
         android:id="@+id/BotaoCadasTipConsu"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quero descobri novos locais"
         android:textColor="@color/white"
         android:layout_marginBottom="60dp"
+        android:layout_marginHorizontal="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/BotaoCadasTipDon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +52,12 @@
 
     <Button
         android:id="@+id/BotaoCadasTipDon"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quero divulgar meus eventos!"
         android:textColor="@color/white"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginHorizontal="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
