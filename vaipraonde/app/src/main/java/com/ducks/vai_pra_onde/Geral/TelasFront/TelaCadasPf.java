@@ -1,7 +1,9 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,6 +31,11 @@ public class TelaCadasPf extends AppCompatActivity {
         nome = findViewById(R.id.nome);
         sobrenome = findViewById(R.id.sobrenome);
 
+
+
+    }
+
+    public void cadastrar (View v){
         String emailst = email.getText().toString().trim();
         String telefonest = telefone.getText().toString().trim();
         String senhast = senha.getText().toString().trim();
@@ -37,31 +44,29 @@ public class TelaCadasPf extends AppCompatActivity {
 
         if(emailst.isEmpty()){
             Toast.makeText(this, "O e-mail não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(telefonest.isEmpty() ){
             Toast.makeText(this, "O telefone não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(senhast.isEmpty()){
             Toast.makeText(this, "A senha não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(nomest.isEmpty()){
             Toast.makeText(this, "O nome não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if(sobrenomest.isEmpty()){
             Toast.makeText(this, "O sobrenome não pode estar vazio.", Toast.LENGTH_SHORT).show();
-            return;
+
         }
+        Intent intent = new Intent(TelaCadasPf.this, TelaCadasTipCli.class);
+        startActivity(intent);
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.telaCadasPf), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        
 
     }
 
