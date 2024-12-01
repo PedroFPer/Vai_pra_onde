@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "45331470886",
+    "project_id": "banco-de-dados-vai-pra-onde",
+    "storage_bucket": "banco-de-dados-vai-pra-onde.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45331470886:android:419f4f7674a6d6f9b0a4e7",
+        "android_client_info": {
+          "package_name": "com.ducks.vai_pra_onde"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45331470886-cl7p6dfcqvd2392lfqihns19d2do430h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ducks.vai_pra_onde",
+            "certificate_hash": "c8748377deb1bb762f4e62bd92893db045d8e166"
+          }
+        },
+        {
+          "client_id": "45331470886-6q8h7s47nbehobsc5blp3q0533fjdqaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeN3gg0wIf2dGLnNOTL-nbxh07gR49CtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45331470886-6q8h7s47nbehobsc5blp3q0533fjdqaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
