@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# garantia para incluir o google-services.json
+!app/google-services.json
