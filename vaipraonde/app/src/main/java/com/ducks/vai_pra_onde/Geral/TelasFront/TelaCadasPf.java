@@ -70,12 +70,12 @@ public class TelaCadasPf extends AppCompatActivity {
             Toast.makeText(this, "O sobrenome não pode estar vazio.", Toast.LENGTH_SHORT).show();
 
         }
-        if (!dataNascStr.isEmpty()) {
+        /*if (!dataNascStr.isEmpty()) {
             // Converter a String para LocalDate
             LocalDate dateNasc = LocalDate.parse(dataNascStr);
-            }
+            }*/
 
-        CadasPessoPfDTO cadasPessoPfDTO = new CadasPessoPfDTO(nomest, sobrenomest, emailst, telefonest, senhast);
+        CadasPessoPfDTO cadasPessoPfDTO = new CadasPessoPfDTO(nomest, emailst, telefonest, senhast);
 
         Intent intent = new Intent(TelaCadasPf.this, TelaCadasTipCli.class);
         startActivity(intent);

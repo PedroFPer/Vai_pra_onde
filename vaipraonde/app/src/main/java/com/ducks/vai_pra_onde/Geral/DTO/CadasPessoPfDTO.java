@@ -3,12 +3,19 @@ package com.ducks.vai_pra_onde.Geral.DTO;
 public class CadasPessoPfDTO {
 
     private String nome;
-    private String dataNascimento;
+    //private String dataNascimento;
     private String email;
     private String telefone;
     private String senha;
 
-    // Getters e Setters
+    public CadasPessoPfDTO(String nome, String email, String telefone,String senha){
+        this.nome=nome;
+        this.email=email;
+        this.telefone=telefone;
+        this.senha = senha;
+    }
+
+
 
     public String getNome() {
         if (nome != null) {
@@ -22,7 +29,7 @@ public class CadasPessoPfDTO {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
+    /*public String getDataNascimento() {
         if (dataNascimento != null) {
             return dataNascimento;
         } else {
@@ -32,7 +39,7 @@ public class CadasPessoPfDTO {
 
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
-    }
+    }*/
 
     public String getEmail() {
         if (email != null) {
