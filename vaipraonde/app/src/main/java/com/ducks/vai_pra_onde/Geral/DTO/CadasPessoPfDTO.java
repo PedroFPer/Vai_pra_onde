@@ -1,18 +1,22 @@
 package com.ducks.vai_pra_onde.Geral.DTO;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class CadasPessoPfDTO {
 
     private String nome;
-    //private String dataNascimento;
+    private Date dataNascimento;
     private String email;
     private String telefone;
     private String senha;
 
-    public CadasPessoPfDTO(String nome, String email, String telefone,String senha){
+    public CadasPessoPfDTO(String nome, String email, String telefone,String senha, Date dataNascimento){
         this.nome=nome;
         this.email=email;
         this.telefone=telefone;
         this.senha = senha;
+        this.dataNascimento = dataNascimento;
     }
 
 
@@ -29,17 +33,14 @@ public class CadasPessoPfDTO {
         this.nome = nome;
     }
 
-    /*public String getDataNascimento() {
-        if (dataNascimento != null) {
+    public Date getDataNascimento() {
             return dataNascimento;
-        } else {
-            return "404";
-        }
+
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
-    }*/
+    }
 
     public String getEmail() {
         if (email != null) {
@@ -76,4 +77,6 @@ public class CadasPessoPfDTO {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+
 }
