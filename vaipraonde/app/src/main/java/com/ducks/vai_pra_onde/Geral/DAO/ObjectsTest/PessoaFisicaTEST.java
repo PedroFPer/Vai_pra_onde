@@ -58,7 +58,7 @@ public class PessoaFisicaTEST {
     // teste em TestesDAOActivity
     @Override
     public String toString() {
-        return String.format("nome: %s%ndata_nascimento:% s%nemail: %s%nsenha: %s%ntelefone: %s%n",
+        return String.format("nome: %s%ndata_nascimento: %s%nemail: %s%nsenha: %s%ntelefone: %s%n",
         nome, data_nascimento,  email, senha, telefone);
     }
 }

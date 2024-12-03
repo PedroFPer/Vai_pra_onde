@@ -18,8 +18,9 @@ public class PessoaFisicaDAO {
     sofrera mudancas para a estruturacao CORRETA de classes DAO
      */
 
-    public static void cadastrar(PessoaFisicaTEST pessoaSERVICE) {
+    public static CompletableFuture<Boolean> cadastrar(PessoaFisicaTEST pessoaSERVICE) {
         FirebaseFirestore connection = ConnectionDB.connect();
+        CompletableFuture<Boolean> future = new CompletableFuture<>();
         Map<String, Object> pessoaFisica = new HashMap<>();
         pessoaFisica.put("nome", pessoaSERVICE.getNome());
         pessoaFisica.put("data_nascimento", pessoaSERVICE.getData());
@@ -28,22 +29,17 @@ public class PessoaFisicaDAO {
         pessoaFisica.put("senha", pessoaSERVICE.getSenha());
 
         connection.collection("PessoaFisica").add(pessoaFisica)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
+                .addOnSuccessListener(documentoCriado -> {
+                    future.complete(true);
                 })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
+                .addOnFailureListener(e -> {
+                    future.complete(false);
                 });
-
+        return future;
     }
 
-    // exemplo de uso: PessoaFisicaTEST pessoaBuscada = buscarPorEmail(email).get();
+    // usarei o metodo assincrono "thenAccept(predicate)" para receber o retorno
+    // do metodo "buscar" abaixo
     public static CompletableFuture<PessoaFisicaTEST> buscar(String email) {
         FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<PessoaFisicaTEST> future = new CompletableFuture<>();

@@ -20,21 +20,26 @@ public class TestesDAOActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_testes_daoactivity);
 
-        PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST("Notorius B.I.G", "1972-12-02",
-        "Party_And_Bullshit@GofuckYou.com","Who Shot Ya?", "88981658971" );
-
-        PessoaFisicaDAO.cadastrar(pessoaSERVICE);
-
-        /*try {
-            PessoaFisicaTEST pessoaBuscada = PessoaFisicaDAO.buscar("HibrydMoments@hotmail.com").get();
-            if(pessoaBuscada != null) {
-                Log.d("TestesDAOActivity", pessoaBuscada.toString());
+        PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST("Green Day", "1999-12-02",
+        "I_Hate@gmail.com","Everything about you", "88598758111" );
+        PessoaFisicaDAO.cadastrar(pessoaSERVICE).thenAccept(sucessoCadastro -> {
+            if(sucessoCadastro) {
+                Log.d("TestesDAOActivity", "Cadastro realizado com sucesso!");
             }
             else {
-                Log.d("TestesDAOActivity", "Email Invalido!");
+                Log.d("TestesDAOActivity", "Falha no cadastro!");
             }
-        } catch(Exception e) {
-            System.err.println(e.getMessage());
-        }*/
+        });
+
+        /*PessoaFisicaDAO.buscar("HailMary@RunQuickSee.com").thenAccept(pessoaBuscada -> {
+            if (pessoaBuscada != null) {
+                Log.d("TestesDAOActivity", pessoaBuscada.toString());
+            } else {
+                Log.d("TestesDAOActivity", "e-mail invalido!");
+            }
+        }).exceptionally(e -> {
+            Log.e("TestesDAOActivity", e.getMessage());
+            return null;
+        });*/
     }
 }
