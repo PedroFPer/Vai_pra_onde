@@ -45,11 +45,11 @@ public class PessoaFisicaDAO {
         CompletableFuture<PessoaFisicaTEST> future = new CompletableFuture<>();
 
         connection.collection("PessoaFisica").whereEqualTo("email", email).get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    if(!queryDocumentSnapshots.isEmpty()) {
-                        DocumentSnapshot document = queryDocumentSnapshots.getDocuments().get(0);
-                        PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST(document.getString("nome"), document.getDate("data_nascimento"),
-                        document.getString("email"), document.getString("senha"), document.getString("telefone"));
+                .addOnSuccessListener(documentosQUERY -> {
+                    if(!documentosQUERY.isEmpty()) {
+                        DocumentSnapshot documento =documentosQUERY.getDocuments().get(0);
+                        PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST(documento.getString("nome"), documento.getDate("data_nascimento"),
+                                documento.getString("email"), documento.getString("senha"), documento.getString("telefone"));
                         future.complete(pessoaSERVICE);
                     }
                     else {
