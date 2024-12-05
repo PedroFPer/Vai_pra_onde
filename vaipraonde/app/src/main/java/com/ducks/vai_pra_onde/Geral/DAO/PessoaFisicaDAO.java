@@ -12,12 +12,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.concurrent.CompletableFuture;
 public class PessoaFisicaDAO {
-    /* LEIA:
-    o metodo "cadastrarPF" possui a atual estrutura vista abaixo temporariamente
-    a estrutura atual deve-se aos testes de comunicacao com o banco de dados, e posteriormente
-    sofrera mudancas para a estruturacao CORRETA de classes DAO
-     */
-
     public static CompletableFuture<Boolean> cadastrar(PessoaFisicaTEST pessoaSERVICE) {
         FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<Boolean> future = new CompletableFuture<>();
@@ -38,8 +32,6 @@ public class PessoaFisicaDAO {
         return future;
     }
 
-    // usarei o metodo assincrono "thenAccept(predicate)" para receber o retorno
-    // do metodo "buscar" abaixo
     public static CompletableFuture<PessoaFisicaTEST> buscar(String email) {
         FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<PessoaFisicaTEST> future = new CompletableFuture<>();
@@ -63,41 +55,13 @@ public class PessoaFisicaDAO {
         return future;
     }
 
-    /*public static void cadastrarPF(String nome, String data_nascimento, String email, String telefone, String senha) {
+    /*public static CompletableFuture<Boolean> editar(String email, String novoEmail, String novaSenha) {
         FirebaseFirestore connection = ConnectionDB.connect();
-        Map<String, Object> pessoaFisica = new HashMap<>();
-        Date dataNascimentoSQL = null;
+        CompletableFuture<Boolean> future = new CompletableFuture<>();
 
-        try {
-            SimpleDateFormat formatador = new SimpleDateFormat("yyyy-MM-dd");
-            dataNascimentoSQL = formatador.parse(data_nascimento);
-        } catch(ParseException e) {
-            return;
-        }
-
-        //Timestamp dataNascimentoTimestamp = new Timestamp(dataNascimentoSQL);
-        pessoaFisica.put("nome", nome);
-        pessoaFisica.put("data_nascimento", dataNascimentoSQL);
-        pessoaFisica.put("email", email);
-        pessoaFisica.put("telefone", telefone);
-        pessoaFisica.put("senha", senha);
-        //final CountDownLatch latch = new CountDownLatch(1);
-
-        connection.collection("PessoaFisica")
-                .add(pessoaFisica)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                        //latch.countDown();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                        //latch.countDown();
-                    }
-                });
     }*/
+
+    /*public static CompletableFuture<Boolean> deletar(String email) {
+        // deletar PF
+    } */
 }

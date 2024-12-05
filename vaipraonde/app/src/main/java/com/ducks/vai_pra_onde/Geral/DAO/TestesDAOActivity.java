@@ -23,16 +23,16 @@ public class TestesDAOActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_testes_daoactivity);
 
-        /*PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST("Lying From You", "1999-12-02",
-        "LinkinPark@gmail.com","Metheora", "88598758111" );*/
+        /*PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST("Still Loving You", "1999-12-02",
+        "Scorpion@gmail.com","Scorpion", "88598758111" );
 
         // TESTE: BLOQUEANDO A THREAD EM "cadastrar"
-        /*if(PessoaFisicaSERVICE_TEST.cadastroSERVICE(pessoaSERVICE)) {
+        if(PessoaFisicaSERVICE_TEST.cadastroSERVICE(pessoaSERVICE)) {
             Log.d("TestesDAOActivity", "Cadastro realizado com sucesso!");
         }
         else {
             Log.d("TestesDAOActivity", "Falha no cadastro!");
-        }/*
+        }*/
 
 
         /*PessoaFisicaDAO.cadastrar(pessoaSERVICE).thenAccept(sucessoCadastro -> {
