@@ -1,8 +1,6 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,11 +17,11 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.DTO.ViewCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ1 extends Fragment {
-    private ViewCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjDTO viewModelPj;
 
     public TelaCadasPJ1() {}
 
@@ -37,7 +34,7 @@ public class TelaCadasPJ1 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(requireActivity()).get(ViewCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
 
         EditText edtNomeEmprPj = view.findViewById(R.id.CadasNomePj);
         EditText edtEmailEmprPj = view.findViewById(R.id.CadasEmailPj);

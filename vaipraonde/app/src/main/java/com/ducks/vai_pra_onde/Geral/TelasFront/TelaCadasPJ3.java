@@ -6,21 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.DTO.ViewCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ3 extends Fragment {
-    private ViewCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjDTO viewModelPj;
 
     @Nullable
     @Override
@@ -34,7 +32,7 @@ public class TelaCadasPJ3 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Obter a instância do ViewModel
-        viewModelPj = new ViewModelProvider(requireActivity()).get(ViewCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
 
 
         // Referências aos elementos do layout
