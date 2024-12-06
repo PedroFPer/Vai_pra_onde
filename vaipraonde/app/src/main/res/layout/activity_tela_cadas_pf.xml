@@ -132,12 +132,12 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="187dp"
+        android:layout_marginEnd="140dp"
 
         android:background="@drawable/caixa"
         android:hint="  Nome"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sobrenome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/data" />
 
