@@ -64,7 +64,7 @@
 
     <EditText
         android:id="@+id/CadasNomeResPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginHorizontal="60dp"
         android:text="João da silva"
@@ -93,7 +93,7 @@
 
     <EditText
         android:id="@+id/CadasCpfResPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginHorizontal="60dp"
         android:text="00000000000"

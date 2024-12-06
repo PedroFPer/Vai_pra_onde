@@ -70,7 +70,7 @@
 
     <EditText
         android:id="@+id/CadasLogrPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginHorizontal="60dp"
         android:textColor="@color/dark_gray"
@@ -100,7 +100,7 @@
 
     <EditText
         android:id="@+id/CadasBairrPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:text="Queimadinha"
         android:layout_marginHorizontal="60dp"
@@ -130,7 +130,7 @@
 
     <EditText
         android:id="@+id/CadasCidadesPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginHorizontal="60dp"
         android:textColor="@color/dark_gray"
@@ -160,7 +160,7 @@
 
     <EditText
         android:id="@+id/CadasEstaPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:textColor="@color/dark_gray"
         android:layout_marginHorizontal="60dp"
@@ -190,7 +190,7 @@
 
     <EditText
         android:id="@+id/CadasPaisPj"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginHorizontal="60dp"
         android:text="Brasil"

@@ -8,6 +8,22 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class UtilVericCreden {
+
+
+    public boolean vericCpf(String cpf){
+        if(cpf.length()!=11){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    public boolean vericCnpj(String cnpj){
+        if(cnpj.length()!=14){
+            return false;
+        }else{
+            return true;
+        }
+    }
     public boolean vericTelef(String telefone){
         if(telefone.length()!=13){
             return false;
@@ -21,6 +37,29 @@ public class UtilVericCreden {
             return false;
         }else{
             return true;
+        }
+    }
+
+
+    public boolean vericIdade (Date dataFormatadest){
+        UtilDataAtual utilDataAtual = new UtilDataAtual();
+
+        Date dataAtual = utilDataAtual.utilDataAtu();
+
+        Calendar calInic = Calendar.getInstance();
+        calInic.setTime(dataFormatadest);
+        int anoNasci = calInic.get(Calendar.YEAR);
+
+        Calendar calFim = Calendar.getInstance();
+        calFim.setTime(dataAtual);
+        int anoAtual = calFim.get(Calendar.YEAR);
+
+        int idadeClie = anoAtual-anoNasci;
+
+        if(idadeClie>=16){
+            return true;
+        }else{
+            return false;
         }
     }
 
@@ -80,31 +119,5 @@ public class UtilVericCreden {
         }
 
         return isValido;
-    }
-
-
-
-
-
-    public boolean vericIdade (Date dataFormatadest){
-        UtilDataAtual utilDataAtual = new UtilDataAtual();
-
-        Date dataAtual = utilDataAtual.utilDataAtu();
-
-        Calendar calInic = Calendar.getInstance();
-        calInic.setTime(dataFormatadest);
-        int anoNasci = calInic.get(Calendar.YEAR);
-
-        Calendar calFim = Calendar.getInstance();
-        calFim.setTime(dataAtual);
-        int anoAtual = calFim.get(Calendar.YEAR);
-
-        int idadeClie = anoAtual-anoNasci;
-
-        if(idadeClie>=16){
-            return true;
-        }else{
-            return false;
-        }
     }
 }

@@ -1,6 +1,5 @@
 package com.ducks.vai_pra_onde.Geral.DTO;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 public class CadasPessoPfDTO {

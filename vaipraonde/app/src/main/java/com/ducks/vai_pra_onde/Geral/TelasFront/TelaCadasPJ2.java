@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 
 import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ2 extends Fragment {
@@ -33,6 +34,7 @@ public class TelaCadasPJ2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
+        UtilVericCreden utilVericCreden = new UtilVericCreden();
 
         EditText edtNomeResPj = view.findViewById(R.id.CadasNomeResPj);
         EditText edtCpfResPj = view.findViewById(R.id.CadasCpfResPj);
@@ -63,8 +65,11 @@ public class TelaCadasPJ2 extends Fragment {
                 return;
             }
 
-            if (cpfResPj.length() != 11) {
-                Toast.makeText(getContext(), "O CPF deve ter exatamente 11 dígitos.", Toast.LENGTH_SHORT).show();
+            if (cpfResPj.isEmpty()) {
+                Toast.makeText(getContext(), "O CPF não pode estar vazio", Toast.LENGTH_SHORT).show();
+                return;
+            } else if (utilVericCreden.vericCpf(cpfResPj)) {
+                Toast.makeText(getContext(), "O CPF deve conter exatamente 11 dígitos numéricos", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -72,7 +77,7 @@ public class TelaCadasPJ2 extends Fragment {
             viewModelPj.setCpfResponsavel(cpfResPj);
 
             if (getActivity() != null) {
-                FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaCadasPJ3());
+                com.ducks.vai_pra_onde.Geral.TelasFront.FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaCadasPJ3());
             }
         });
     }

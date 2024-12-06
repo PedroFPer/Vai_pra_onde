@@ -9,9 +9,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 import com.ducks.vai_pra_onde.Geral.DTO.CadasPessoPfDTO;
 import com.ducks.vai_pra_onde.Geral.Service.ServiceCadastro;
@@ -20,12 +18,9 @@ import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class TelaCadasPf extends AppCompatActivity {
-
     private EditText email, telefone, senha, nome, dataNasc;
 
     UtilVericCreden utilVericCreden = new UtilVericCreden();

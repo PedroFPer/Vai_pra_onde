@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Geral.TelasFront.PerfilTeste"
+            android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaInicial"
             android:exported="true">

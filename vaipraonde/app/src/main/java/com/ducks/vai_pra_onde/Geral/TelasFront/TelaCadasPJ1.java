@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ1 extends Fragment {
@@ -35,6 +36,7 @@ public class TelaCadasPJ1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
+        UtilVericCreden utilVericCreden = new UtilVericCreden();
 
         EditText edtNomeEmprPj = view.findViewById(R.id.CadasNomePj);
         EditText edtEmailEmprPj = view.findViewById(R.id.CadasEmailPj);
@@ -93,12 +95,18 @@ public class TelaCadasPJ1 extends Fragment {
                 return;
             }
 
-            if (!telefEmprPj.matches("\\d{13}")) {
-                showToast("O telefone deve conter exatamente 13 dígitos numéricos.");
+            if (telefEmprPj.isEmpty()) {
+                Toast.makeText(getContext(), "O telefone não pode estar vazio", Toast.LENGTH_SHORT).show();
+                return;
+            }else if(!utilVericCreden.vericTelef(telefEmprPj)){
+                Toast.makeText(getContext(), "O telefone deve conter exatamente 13 dígitos numéricos.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            if (!cnpjEmprPj.matches("\\d{14}")) {
+            if (cnpjEmprPj.isEmpty()) {
+                showToast("O CNPJ não pode estar vazio.");
+                return;
+            } else if (!utilVericCreden.vericCnpj(cnpjEmprPj)) {
                 showToast("O CNPJ deve conter exatamente 14 dígitos numéricos.");
                 return;
             }

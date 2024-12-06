@@ -72,7 +72,7 @@
 
         <EditText
             android:id="@+id/CadasNomePj"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="60dp"
@@ -100,8 +100,8 @@
 
         <EditText
             android:id="@+id/CadasEmailPj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
             android:text="email@email.com.br"
             android:background="@drawable/caixa"
             android:padding="12dp"
@@ -129,8 +129,8 @@
 
         <EditText
             android:id="@+id/CadasTelefPj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
             android:text="1234567891234"
             android:background="@drawable/caixa"
             android:textColor="@color/dark_gray"
@@ -158,8 +158,8 @@
 
         <EditText
             android:id="@+id/CadasCnpjPj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="45dp"
             android:text="12345678912345"
             android:background="@drawable/caixa"
             android:textColor="@color/dark_gray"
