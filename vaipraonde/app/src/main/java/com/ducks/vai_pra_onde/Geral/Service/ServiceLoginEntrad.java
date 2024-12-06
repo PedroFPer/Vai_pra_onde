@@ -7,13 +7,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class ServiceLoginEntrad {
-    /*public CompletableFuture<Boolean> serviceLogin(String email, String senha){
-        Login loginEntrad = new Login();
-        CompletableFuture<Boolean> vericCred = loginEntrad.loginPessoaFisica(email,senha);
 
-        return vericCred;
-    }*/
-    public HashMap<String, Object> serviceLogin(String email, String senha) {
+    public HashMap<String, Object> serviceLoginPF(String email, String senha) {
         try {
             return Login.loginPessoaFisica(email, senha).get();
         }
@@ -21,5 +16,15 @@ public class ServiceLoginEntrad {
             return null;
         }
     }
+
+    //Metodo para verificar e puxar o objeto pessoal PJ
+    /*public HashMap<String, Object> serviceLoginPJ(String email, String senha) {
+        try {
+            return Login.loginPessoaJuridica(email, senha).get();
+        }
+        catch(InterruptedException | ExecutionException e) {
+            return null;
+        }
+    }*/
 
 }

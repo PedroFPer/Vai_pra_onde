@@ -29,49 +29,39 @@ public class TelaInicial extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_inicial);
 
-        UtilVericCreden utilVericCreden = new UtilVericCreden();
-        ServiceLoginEntrad serviceLoginEntrad = new ServiceLoginEntrad ();
-
-        EditText editTextEmail = findViewById(R.id.textLogin);
-        EditText editTextSenha = findViewById(R.id.textSenha);
+        Button buttonLoginPf = findViewById(R.id.BotaoLoginPF);
+        Button buttonLoginPj = findViewById(R.id.BotaoLoginPJ);
+        Button buttonCadas = findViewById(R.id.BotaoCadas);
 
 
+        //Botão Login PF
 
-        Button buttonInicLogin = findViewById(R.id.BotaoCadas);
-        buttonInicLogin.setOnClickListener(new View.OnClickListener(){
+        buttonLoginPf.setOnClickListener(new View.OnClickListener(){
+
+
             @Override
             public void onClick(View v) {
-                String emailLogin = editTextEmail.getText().toString().trim();
-                String senhaLogin = editTextSenha.getText().toString().trim();
-
-                if(emailLogin.isEmpty()){
-                    //Adicionar mensagem
-                    return;
-                }
-
-                if(senhaLogin.isEmpty()){
-                    //Adicionar mensagem
-                    return;
-                } else if (!utilVericCreden.vericSenha(senhaLogin)) {
-                    //Adicionar Mensagem
-                    return;
-                }
-
-                //CompletableFuture<Boolean> vericCred = serviceLoginEntrad.serviceLogin(emailLogin,senhaLogin);
-
-
-
-                Intent intent = new Intent(TelaInicial.this, PerfilTeste.class);
+                Intent intent = new Intent(TelaInicial.this, TelaLoginPF.class);
                 startActivity(intent);
             }
         });
 
 
+        //Botão Login PJ
+
+        buttonLoginPj.setOnClickListener(new View.OnClickListener(){
 
 
-        Button buttonLogin = findViewById(R.id.BotaoLoginIni);
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaInicial.this, TelaLoginPJ.class);
+                startActivity(intent);
+            }
+        });
 
-        buttonInicLogin.setOnClickListener(new View.OnClickListener(){
+        //Botão Cadastro PF
+
+        buttonCadas.setOnClickListener(new View.OnClickListener(){
 
 
             @Override

@@ -1,4 +1,4 @@
-package com.ducks.vai_pra_onde.Geral.TelasFront;
+/*package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import static android.app.PendingIntent.getActivity;
 import static java.security.AccessController.getContext;
@@ -78,4 +78,4 @@ public class PerfilEmpresa extends AppCompatActivity {
         });
 
     }
-}
+}*/

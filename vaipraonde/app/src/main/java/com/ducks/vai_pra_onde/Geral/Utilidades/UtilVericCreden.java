@@ -11,7 +11,7 @@ public class UtilVericCreden {
 
 
     public boolean vericCpf(String cpf){
-        if(cpf.length()!=11){
+        if(cpf.length()!=10){
             return false;
         }else{
             return true;
