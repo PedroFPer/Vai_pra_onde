@@ -11,7 +11,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="630dp"
         android:layout_marginTop="160dp"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/conteiner"
@@ -50,11 +50,11 @@
     <EditText
         android:id="@+id/email"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:background="@drawable/caixa"
         android:hint="     E-mail"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/email"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="60dp" />
 
     <EditText
         android:id="@+id/tel"
@@ -81,11 +81,11 @@
         android:layout_marginHorizontal="40dp"
         android:background="@drawable/caixa"
         android:hint="  Telefone"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tel"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="130dp"
         />
 
@@ -108,11 +108,11 @@
         android:layout_marginHorizontal="40dp"
         android:background="@drawable/caixa"
         android:hint="     Data"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email"
-        android:layout_marginTop="157dp" />
+        android:layout_marginTop="110dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,18 +125,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/data"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="60dp" />
 
     <EditText
         android:id="@+id/nome"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="200dp"
 
         android:background="@drawable/caixa"
         android:hint="  Nome"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/data" />
@@ -146,10 +146,10 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/caixa"
         android:hint="   Sobrenome"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/data"
@@ -166,16 +166,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/nome"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="60dp" />
 
     <EditText
         android:id="@+id/senha"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:background="@drawable/caixa"
         android:hint="   Senha"
-        android:padding="20dp"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sobrenome"
@@ -184,9 +184,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/black"
         android:text="@string/cadastrar"
+        android:textColor="@color/white"
         android:layout_marginHorizontal="89dp"
         android:textSize="20sp"
         android:onClick="cadastrar"
