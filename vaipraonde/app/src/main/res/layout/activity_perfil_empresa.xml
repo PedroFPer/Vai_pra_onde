@@ -38,7 +38,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="220dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/conteiner"
@@ -114,6 +114,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
+        android:id="@+id/desc"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@drawable/caixa2"
@@ -137,5 +138,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar empresa"
+        android:textColor="@color/white"
+        android:backgroundTint="#3D3D3D"
+        android:layout_marginTop="197dp"
+        android:textSize="16dp"
+        android:padding="12dp"
+        android:layout_marginHorizontal="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/desc"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
