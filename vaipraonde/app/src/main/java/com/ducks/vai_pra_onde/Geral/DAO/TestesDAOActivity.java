@@ -2,7 +2,7 @@ package com.ducks.vai_pra_onde.Geral.DAO;
 
 import android.os.Bundle;
 import android.util.Log;
-
+import com.ducks.vai_pra_onde.Geral.DAO.Validacoes.Login;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -44,7 +44,7 @@ public class TestesDAOActivity extends AppCompatActivity {
             }
         });*/
 
-        PessoaFisicaDAO.buscar("LinkinPark@gmail.com").thenAccept(pessoaBuscada -> {
+        /*PessoaFisicaDAO.buscar("LinkinPark@gmail.com").thenAccept(pessoaBuscada -> {
             if (pessoaBuscada != null) {
                 Log.d("TestesDAOActivity", pessoaBuscada.toString());
             } else {
@@ -53,6 +53,6 @@ public class TestesDAOActivity extends AppCompatActivity {
         }).exceptionally(e -> {
             Log.e("TestesDAOActivity", e.getMessage());
             return null;
-        });
+        });*/
     }
 }

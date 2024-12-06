@@ -55,9 +55,15 @@ public class PessoaFisicaDAO {
         return future;
     }
 
-    /*public static CompletableFuture<Boolean> editar(String email, String novoEmail, String novaSenha) {
+    /*public static CompletableFuture<Boolean> editar(String emailDeBusca, String novoEmail, String novaSenha) {
         FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<Boolean> future = new CompletableFuture<>();
+        connection.collection("PessoaFisica").whereEqualTo("email", emailDeBusca).get()
+                .addOnSuccessListener(documentosQuery -> {
+                    if(!documentosQuery.isEmpty()) {
+                        String documentoID = documentosQuery.getDocuments().
+                    }
+                })
 
     }*/
 
