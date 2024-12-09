@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.ducks.vai_pra_onde.Geral.DAO.ObjectsTest.PessoaFisicaTEST;
 import com.ducks.vai_pra_onde.Geral.DAO.TestesSERVICE.PessoaFisicaSERVICE_TEST;
+import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
+import com.ducks.vai_pra_onde.Geral.novaSERVICE.CadastroSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.util.concurrent.ExecutionException;
@@ -23,36 +25,14 @@ public class TestesDAOActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_testes_daoactivity);
 
-        /*PessoaFisicaTEST pessoaSERVICE = new PessoaFisicaTEST("Still Loving You", "1999-12-02",
-        "Scorpion@gmail.com","Scorpion", "88598758111" );
+        // SIMULACAO: CADASTRO DE PESSOA JURIDICA: FRONT END -> DTO -> SERVICE -> BANCO DE DADOS
 
-        // TESTE: BLOQUEANDO A THREAD EM "cadastrar"
-        if(PessoaFisicaSERVICE_TEST.cadastroSERVICE(pessoaSERVICE)) {
-            Log.d("TestesDAOActivity", "Cadastro realizado com sucesso!");
-        }
-        else {
-            Log.d("TestesDAOActivity", "Falha no cadastro!");
-        }*/
+        // PASSO 1: O objeto PessoaPJ (pacote newDTO) abaixo recebe dados do FRONT END
+        PessoaPJ pessoa = new PessoaPJ("AquilesCIA", "Aquiles", "123456789", "aquilesBonito", "A", "B", "C", "D", "1234", "aquiles@gmail.com");
 
-
-        /*PessoaFisicaDAO.cadastrar(pessoaSERVICE).thenAccept(sucessoCadastro -> {
-            if(sucessoCadastro) {
-                Log.d("TestesDAOActivity", "Cadastro realizado com sucesso!");
-            }
-            else {
-                Log.d("TestesDAOActivity", "Falha no cadastro!");
-            }
-        });*/
-
-        /*PessoaFisicaDAO.buscar("LinkinPark@gmail.com").thenAccept(pessoaBuscada -> {
-            if (pessoaBuscada != null) {
-                Log.d("TestesDAOActivity", pessoaBuscada.toString());
-            } else {
-                Log.d("TestesDAOActivity", "e-mail invalido!");
-            }
-        }).exceptionally(e -> {
-            Log.e("TestesDAOActivity", e.getMessage());
-            return null;
-        });*/
+        // PASSO 2: O objeto PessoaPJ ja preenchido com dados do FRONT END, e passado por uma verificacao
+        // se a verificacao ocorrer com sucesso, o usuario e cadastrado e uma mensagem informando isso
+        // e exibida
+        CadastroSERVICE.executarVerificacao(pessoa);
     }
 }
