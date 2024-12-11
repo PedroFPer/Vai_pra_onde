@@ -38,6 +38,7 @@ public class TelaCadasPJ2 extends Fragment {
 
         EditText edtNomeResPj = view.findViewById(R.id.CadasNomeResPj);
         EditText edtCpfResPj = view.findViewById(R.id.CadasCpfResPj);
+        EditText edtSenhaResPj = view.findViewById(R.id.CadasSenhaResPj);
         Button buttonCadasPj1 = view.findViewById(R.id.BotaoCadas1);
 
         edtNomeResPj.setOnFocusChangeListener((v, hasFocus) -> {
@@ -56,9 +57,18 @@ public class TelaCadasPJ2 extends Fragment {
             }
         });
 
+        edtSenhaResPj.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (edtSenhaResPj.getText().toString().equals("1234567")) {
+                    edtSenhaResPj.setText("");
+                }
+            }
+        });
+
         buttonCadasPj1.setOnClickListener(v -> {
             String nomeResPj = edtNomeResPj.getText().toString().trim();
             String cpfResPj = edtCpfResPj.getText().toString().trim();
+            String senhaPj = edtSenhaResPj.getText().toString().trim();
 
             if (nomeResPj.isEmpty()) {
                 Toast.makeText(getContext(), "O nome do responsável não pode estar vazio.", Toast.LENGTH_SHORT).show();
@@ -73,8 +83,17 @@ public class TelaCadasPJ2 extends Fragment {
                 return;
             }
 
+            if (senhaPj.isEmpty()) {
+                Toast.makeText(getContext(), "A senha não pode estar vazio", Toast.LENGTH_SHORT).show();
+                return;
+            } else if (utilVericCreden.vericSenha(senhaPj)) {
+                Toast.makeText(getContext(), "A senha tem que ter 8 caracteres ", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             viewModelPj.setResponsavel(nomeResPj);
             viewModelPj.setCpfResponsavel(cpfResPj);
+            viewModelPj.setSenha(senhaPj);
 
             if (getActivity() != null) {
                 com.ducks.vai_pra_onde.Geral.TelasFront.FragmentManagerHelper.replaceFragment((AppCompatActivity) getActivity(), new TelaCadasPJ3());

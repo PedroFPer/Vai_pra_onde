@@ -40,7 +40,7 @@ public class TelaInicial extends AppCompatActivity {
 
 
         Button buttonCadas = findViewById(R.id.BotaoCadas);
-        Button buttonLogin = findViewById(R.id.BotaoLogin);
+        Button buttonLogin = findViewById(R.id.BotaoLoginIni);
 
         
         editTextEmail.setOnFocusChangeListener((v, hasFocus) -> {

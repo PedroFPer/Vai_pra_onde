@@ -28,11 +28,11 @@ public class TestesDAOActivity extends AppCompatActivity {
         // SIMULACAO: CADASTRO DE PESSOA JURIDICA: FRONT END -> DTO -> SERVICE -> BANCO DE DADOS
 
         // PASSO 1: O objeto PessoaPJ (pacote newDTO) abaixo recebe dados do FRONT END
-        PessoaPJ pessoa = new PessoaPJ("AquilesCIA", "Aquiles", "123456789", "aquilesBonito", "A", "B", "C", "D", "1234", "aquiles@gmail.com");
+        //PessoaPJ pessoa = new PessoaPJ("AquilesCIA", "Aquiles", "123456789", "aquilesBonito", "A", "B", "C", "D", "1234", "aquiles@gmail.com");
 
         // PASSO 2: O objeto PessoaPJ ja preenchido com dados do FRONT END, e passado por uma verificacao
         // se a verificacao ocorrer com sucesso, o usuario e cadastrado e uma mensagem informando isso
         // e exibida
-        CadastroSERVICE.executarVerificacao(pessoa);
+        //CadastroSERVICE.executarVerificacao(pessoa);
     }
 }

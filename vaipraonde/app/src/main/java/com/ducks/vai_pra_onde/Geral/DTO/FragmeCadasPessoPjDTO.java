@@ -10,6 +10,8 @@ public class FragmeCadasPessoPjDTO extends ViewModel {
     private MutableLiveData<String> cnpj = new MutableLiveData<>();
     private MutableLiveData<String> responsavel = new MutableLiveData<>();
     private MutableLiveData<String> cpfResponsavel = new MutableLiveData<>();
+
+    private MutableLiveData<String> senha = new MutableLiveData<>();
     private MutableLiveData<String> email = new MutableLiveData<>();
     private MutableLiveData<String> telefone = new MutableLiveData<>();
     private MutableLiveData<String> documentacao = new MutableLiveData<>();
@@ -211,6 +213,20 @@ public class FragmeCadasPessoPjDTO extends ViewModel {
     }
     public LiveData<byte[]> getImageByteArrayView() {
         return imagemByteArray;
+    }
+
+
+    public String getSenha() {
+        if (senha.getValue() != null) {
+            String senhastr = senha.getValue();
+            return senhastr;
+        } else {
+            return "404";
+        }
+    }
+
+    public void setSenha(String senha) {
+        this.senha.setValue(senha);
     }
 
 }

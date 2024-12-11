@@ -56,7 +56,7 @@
         android:textSize="15sp"
         android:layout_marginStart="72dp"
         android:textColor="@color/black"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintTop_toTopOf="@+id/TextInicio"
         app:layout_constraintBottom_toBottomOf="@+id/CadasNomeResPj"
@@ -105,6 +105,34 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
+    <TextView
+        android:id="@+id/TextCadSenhaResPj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe a senha"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="15sp"
+        android:layout_marginStart="70dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintTop_toTopOf="@+id/CadasNomeResPj"
+        app:layout_constraintBottom_toBottomOf="@+id/CadasCpfResPj"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/CadasSenhaResPj"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="60dp"
+        android:text="1234567"
+        android:textColor="@color/dark_gray"
+        android:background="@drawable/caixa"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@+id/TextCadSenhaResPj"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/BotaoCadas1"
@@ -112,11 +140,11 @@
         android:layout_height="wrap_content"
         android:text="Avançar"
         android:textColor="@color/white"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:layout_marginHorizontal="89dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/CadasCpfResPj"
+        app:layout_constraintTop_toTopOf="@+id/CadasSenhaResPj"
         android:backgroundTint="@color/burnt_orange"
         />
 

@@ -1,8 +1,13 @@
 package com.ducks.vai_pra_onde.Geral.novaDTO;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
 import java.util.Date;
 
-public class Eventos {
+public class Eventos implements Parcelable {
     /*Nome do Evento, Nome da Empresa, codigoDocumento (Firebase),
     codigoDocumentoEmpresa (Firebase), Descrição, Data do Evento, Horário do Evento, Email,
     Telefone, Logradouro, Bairro, ,Cidade. Estado, País
@@ -26,6 +31,52 @@ public class Eventos {
         this.cidade = cidade;
         this.estado = estado;
         this.dataEvento = dataEvento;
+    }
+
+    protected Eventos(Parcel in) {
+        nomeEvento = in.readString();
+        nomeEmpresa = in.readString();
+        codigoDocumento = in.readString();
+        codigoDocumentoEmpresa = in.readString();
+        descricao = in.readString();
+        email = in.readString();
+        telefone = in.readString();
+        logradouro = in.readString();
+        bairro = in.readString();
+        cidade = in.readString();
+        estado = in.readString();
+    }
+
+    public static final Creator<Eventos> CREATOR = new Creator<Eventos>() {
+        @Override
+        public Eventos createFromParcel(Parcel in) {
+            return new Eventos(in);
+        }
+
+        @Override
+        public Eventos[] newArray(int size) {
+            return new Eventos[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeString(nomeEvento);
+        dest.writeString(nomeEmpresa);
+        dest.writeString(codigoDocumento);
+        dest.writeString(codigoDocumentoEmpresa);
+        dest.writeString(descricao);
+        dest.writeString(email);
+        dest.writeString(telefone);
+        dest.writeString(logradouro);
+        dest.writeString(bairro);
+        dest.writeString(cidade);
+        dest.writeString(estado);
     }
 
     // faltam os metodos getters

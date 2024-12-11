@@ -22,6 +22,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.ducks.vai_pra_onde.Geral.DTO.CadasPessoaPJDTO;
 import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
+import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.R;
 
 import java.io.IOException;
@@ -94,19 +95,19 @@ public class TelaCadasPJ4 extends Fragment {
                     return;
                     }
 
-            CadasPessoaPJDTO cadasPessoaPJDTO = new CadasPessoaPJDTO(
+            PessoaPJ pessoaPJ = new PessoaPJ(
                     viewModelPj.getNomeEmpresa(),
-                    viewModelPj.getCnpj(),
                     viewModelPj.getResponsavel(),
                     viewModelPj.getCpfResponsavel(),
-                    viewModelPj.getEmail(),
-                    viewModelPj.getTelefone(),
+                    viewModelPj.getSenha(),
                     viewModelPj.getLogradouro(),
                     viewModelPj.getBairro(),
                     viewModelPj.getCidade(),
                     viewModelPj.getEstado(),
-                    viewModelPj.getPais(),
-                    viewModelPj.getImageByteArray()
+                    viewModelPj.getCnpj(),
+                    viewModelPj.getEmail(),
+                    viewModelPj.getTelefone()
+                    //viewModelPj.getImageByteArray()
             );
 
                 Intent intent = new Intent(requireContext(), TelaInicial.class);
