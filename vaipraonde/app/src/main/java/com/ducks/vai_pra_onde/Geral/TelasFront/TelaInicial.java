@@ -1,6 +1,8 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 
+import static java.security.AccessController.getContext;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,8 +19,10 @@ import androidx.core.view.WindowInsetsCompat;
 import com.ducks.vai_pra_onde.Geral.Service.ServiceCadastro;
 import com.ducks.vai_pra_onde.Geral.Service.ServiceLoginEntrad;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
+import com.ducks.vai_pra_onde.Geral.novaSERVICE.LoginSERVICE;
 import com.ducks.vai_pra_onde.R;
 
+import java.text.BreakIterator;
 import java.util.concurrent.CompletableFuture;
 
 public class TelaInicial extends AppCompatActivity {
@@ -29,35 +33,58 @@ public class TelaInicial extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_inicial);
 
-        Button buttonLoginPf = findViewById(R.id.BotaoLoginPF);
-        Button buttonLoginPj = findViewById(R.id.BotaoLoginPJ);
+        UtilVericCreden utilVericCreden = new UtilVericCreden();
+
+        EditText editTextEmail = findViewById(R.id.textLogin);
+        EditText editTextSenha = findViewById(R.id.textSenha);
+
+
         Button buttonCadas = findViewById(R.id.BotaoCadas);
+        Button buttonLogin = findViewById(R.id.BotaoLogin);
 
+        
+        editTextEmail.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (editTextEmail.getText().toString().equals("Email")) {
+                    editTextEmail.setText("");
+                }
+            }
+        });
 
-        //Botão Login PF
-
-        buttonLoginPf.setOnClickListener(new View.OnClickListener(){
-
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(TelaInicial.this, TelaLoginPF.class);
-                startActivity(intent);
+        editTextSenha.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) {
+                if (editTextSenha.getText().toString().equals("Senha")) {
+                    editTextSenha.setText("");
+                }
             }
         });
 
 
-        //Botão Login PJ
-
-        buttonLoginPj.setOnClickListener(new View.OnClickListener(){
-
-
+        buttonLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TelaInicial.this, TelaLoginPJ.class);
-                startActivity(intent);
+                String emailLogin = editTextEmail.getText().toString().trim();
+                String senhaLogin = editTextSenha.getText().toString().trim();
+
+                if (emailLogin.isEmpty()) {
+                    Toast.makeText(TelaInicial.this, "O email não pode estar vazio", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (senhaLogin.isEmpty()) {
+                    Toast.makeText(TelaInicial.this, "A senha não pode estar vazio", Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (!utilVericCreden.vericSenha(senhaLogin)) {
+                    Toast.makeText(TelaInicial.this, "A senha deve conter 8 caracteres", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                
+                LoginSERVICE.login(TelaInicial.this,emailLogin,senhaLogin);
+
             }
         });
+
+
+
 
         //Botão Cadastro PF
 
@@ -66,7 +93,7 @@ public class TelaInicial extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TelaInicial.this, TelaCadasTipCli.class);
+                Intent intent = new Intent(TelaInicial.this, TelaCadasGeralPJ.class);
                 startActivity(intent);
             }
         });

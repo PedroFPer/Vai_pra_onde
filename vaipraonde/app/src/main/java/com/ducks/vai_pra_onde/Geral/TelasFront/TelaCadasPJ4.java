@@ -109,7 +109,7 @@ public class TelaCadasPJ4 extends Fragment {
                     viewModelPj.getImageByteArray()
             );
 
-                Intent intent = new Intent(requireContext(), TelaCadasTipCli.class);
+                Intent intent = new Intent(requireContext(), TelaInicial.class);
                 startActivity(intent);
 
 

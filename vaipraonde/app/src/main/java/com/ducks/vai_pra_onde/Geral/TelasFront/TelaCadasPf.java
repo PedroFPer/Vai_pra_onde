@@ -114,8 +114,8 @@ public class TelaCadasPf extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(TelaCadasPf.this, TelaCadasTipCli.class);
-        startActivity(intent);
+       /* Intent intent = new Intent(TelaCadasPf.this, TelaCadasTipCli.class);
+        startActivity(intent);*/
 
 
         

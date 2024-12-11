@@ -6,7 +6,8 @@ import com.ducks.vai_pra_onde.Geral.DAO.PessoaJuridicaDAO.CadastroDAO;
 import com.ducks.vai_pra_onde.Geral.DAO.Verificacoes.VerificarCadastro;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 
-public class CadastroSERVICE {
+public class
+CadastroSERVICE {
     public static void executarVerificacao(PessoaPJ pessoa) {
         VerificarCadastro.verificaDadosUnique(pessoa.getCnpj(), pessoa.getEmail())
                 .thenAccept(sucessoVerificacao -> {
