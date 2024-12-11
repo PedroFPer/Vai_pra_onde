@@ -79,8 +79,42 @@ public class Eventos implements Parcelable {
         dest.writeString(estado);
     }
 
-    // faltam os metodos getters
-
+    public String getNomeEvento() {
+        return nomeEvento;
+    }
+    public String getNomeEmpresa() {
+        return nomeEmpresa;
+    }
+    public String getCodigoDocumento() {
+        return codigoDocumento;
+    }
+    public String getCodigoDocumentoEmpresa() {
+        return codigoDocumentoEmpresa;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public String getTelefone() {
+        return telefone;
+    }
+    public String getLogradouro() {
+        return logradouro;
+    }
+    public String getBairro() {
+        return bairro;
+    }
+    public String getCidade() {
+        return cidade;
+    }
+    public String getEstado() {
+        return estado;
+    }
+    public Date getDataEvento() {
+        return dataEvento;
+    }
     // os metodos setters deve ser APENAS:
     // setDataEvento(Date dataEvento)
 
