@@ -50,6 +50,41 @@ public class PessoaPJ implements Parcelable {
     public String getEmail() {
         return email;
     }
+    public String getNomeEmpresa() {
+        return nomeEmpresa;
+    }
+
+    public String getNomeEmpresario() {
+        return nomeEmpresario;
+    }
+
+    public String getCpfEmpresario() {
+        return cpfEmpresario;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
 
     public String getCodigoDocumento() {
         return codigoDocumento;

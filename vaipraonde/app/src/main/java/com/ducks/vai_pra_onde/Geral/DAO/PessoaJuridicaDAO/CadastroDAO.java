@@ -13,11 +13,18 @@ public class CadastroDAO {
         FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<Boolean> valorBooleano = new CompletableFuture<>();
         Map<String, Object> pessoa = new HashMap<>();
-
-        // por enquanto, vou adicionar apenas cnpj e email
-        // para testes
+        
+        pessoa.put("nomeEmpresa", pessoaJuridica.getNomeEmpresa());
+        pessoa.put("nomeEmpresario", pessoaJuridica.getNomeEmpresario());
+        pessoa.put("cpfEmpresario", pessoaJuridica.getCpfEmpresario());
+        pessoa.put("senha", pessoaJuridica.getSenha());
+        pessoa.put("logradouro", pessoaJuridica.getLogradouro());
+        pessoa.put("bairro", pessoaJuridica.getBairro());
+        pessoa.put("cidade", pessoaJuridica.getCidade());
+        pessoa.put("estado", pessoaJuridica.getEstado());
         pessoa.put("cnpj", pessoaJuridica.getCnpj());
         pessoa.put("email", pessoaJuridica.getEmail());
+        pessoa.put("telefone", pessoaJuridica.getTelefone());
 
         connection.collection("PessoaJuridica").add(pessoa)
                 .addOnSuccessListener(documentoCriado -> {
