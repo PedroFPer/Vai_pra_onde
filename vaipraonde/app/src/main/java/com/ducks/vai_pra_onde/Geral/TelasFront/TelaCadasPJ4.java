@@ -23,6 +23,7 @@ import com.ducks.vai_pra_onde.Geral.DTO.CadasPessoaPJDTO;
 import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
+import com.ducks.vai_pra_onde.Geral.novaSERVICE.CadastroSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.io.IOException;
@@ -109,6 +110,7 @@ public class TelaCadasPJ4 extends Fragment {
                     viewModelPj.getTelefone()
                     //viewModelPj.getImageByteArray()
             );
+                CadastroSERVICE.executarVerificacao(requireContext(),pessoaPJ);
 
                 Intent intent = new Intent(requireContext(), TelaInicial.class);
                 startActivity(intent);
