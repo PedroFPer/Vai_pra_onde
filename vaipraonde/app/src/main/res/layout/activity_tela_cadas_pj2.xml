@@ -74,6 +74,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadNomResPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -103,6 +105,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadCpfResPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -132,6 +136,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadSenhaResPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionDone"
+        android:inputType="text"
         />
 
     <Button

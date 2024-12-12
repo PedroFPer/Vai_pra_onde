@@ -78,7 +78,7 @@ public class TelaCadasPJ2 extends Fragment {
             if (cpfResPj.isEmpty()) {
                 Toast.makeText(getContext(), "O CPF não pode estar vazio", Toast.LENGTH_SHORT).show();
                 return;
-            } else if (utilVericCreden.vericCpf(cpfResPj)) {
+            } else if (!utilVericCreden.vericCpf(cpfResPj)) {
                 Toast.makeText(getContext(), "O CPF deve conter exatamente 11 dígitos numéricos", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -86,7 +86,7 @@ public class TelaCadasPJ2 extends Fragment {
             if (senhaPj.isEmpty()) {
                 Toast.makeText(getContext(), "A senha não pode estar vazio", Toast.LENGTH_SHORT).show();
                 return;
-            } else if (utilVericCreden.vericSenha(senhaPj)) {
+            } else if (!utilVericCreden.vericSenha(senhaPj)) {
                 Toast.makeText(getContext(), "A senha tem que ter 8 caracteres ", Toast.LENGTH_SHORT).show();
                 return;
             }

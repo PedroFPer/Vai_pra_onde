@@ -89,7 +89,9 @@
             android:textColor="@color/dark_gray"
             android:text="Espaço de evento exemplo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/TextCadNomPj" />
+            app:layout_constraintTop_toTopOf="@+id/TextCadNomPj"
+            android:imeOptions="actionNext"
+            android:inputType="text"/>
 
         <TextView
             android:id="@+id/TextCadEmailPj"
@@ -104,7 +106,8 @@
             android:layout_marginStart="70dp"
             app:layout_constraintTop_toTopOf="@+id/CadasNomePj"
             app:layout_constraintBottom_toBottomOf="@+id/CadasEmailPj"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
         <EditText
             android:id="@+id/CadasEmailPj"
@@ -118,6 +121,8 @@
             android:layout_marginHorizontal="60dp"
             app:layout_constraintTop_toTopOf="@+id/TextCadEmailPj"
             app:layout_constraintStart_toStartOf="parent"
+            android:imeOptions="actionNext"
+            android:inputType="text"
             />
 
         <TextView
@@ -147,6 +152,8 @@
             android:layout_marginHorizontal="60dp"
             app:layout_constraintTop_toTopOf="@+id/TextCadTelefPj"
             app:layout_constraintStart_toStartOf="parent"
+            android:imeOptions="actionNext"
+            android:inputType="text"
             />
 
         <TextView
@@ -176,6 +183,8 @@
             android:layout_marginHorizontal="60dp"
             app:layout_constraintTop_toTopOf="@+id/TextCadCnpjfPj"
             app:layout_constraintStart_toStartOf="parent"
+            android:imeOptions="actionDone"
+            android:inputType="text"
             />
 
         <Button

@@ -80,6 +80,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadLogrPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -110,6 +112,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadBairrPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -140,6 +144,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadCidadePj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -170,6 +176,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadasEstaPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
 
     <TextView
@@ -199,6 +207,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadasPaisPj"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionDone"
+        android:inputType="text"
         />
 
 
@@ -222,7 +232,8 @@
         android:layout_height="930dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

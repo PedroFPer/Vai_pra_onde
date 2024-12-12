@@ -72,7 +72,10 @@ android:background="@drawable/teste1">
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         />
+
 
     <EditText
         android:id="@+id/textSenha"
@@ -84,10 +87,11 @@ android:background="@drawable/teste1">
         android:padding="12dp"
         android:hint="Senha"
         android:textSize="20sp"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:imeOptions="actionDone"
+        android:inputType="text"
         />
 
     <Button
