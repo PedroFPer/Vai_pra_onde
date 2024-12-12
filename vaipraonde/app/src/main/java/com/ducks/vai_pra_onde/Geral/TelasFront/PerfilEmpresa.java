@@ -1,4 +1,4 @@
-/*package com.ducks.vai_pra_onde.Geral.TelasFront;
+package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import static android.app.PendingIntent.getActivity;
 import static java.security.AccessController.getContext;
@@ -8,8 +8,10 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,15 +23,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
+import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
+import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
+import com.ducks.vai_pra_onde.Geral.novaSERVICE.LoginSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import com.ducks.vai_pra_onde.novaDTO.PessoaPj;
 
 public class PerfilEmpresa extends AppCompatActivity {
+    private TextView nom;
+    private TextView emai;
+    private TextView ender;
+    private TextView desc;
 
-    private ImageView imageViewSelected;
-    private  String saveImagePath;
-    private byte[] imagemData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,40 +51,19 @@ public class PerfilEmpresa extends AppCompatActivity {
             return insets;
         });
 
-        Button buttonSelecIma = view.findViewById(R.id.bannerbtn);
-        imageViewSelect = view.findViewById(R.id.banner);
+        ArrayList<Eventos> listaUsuarios = getIntent().getParcelableArrayListExtra("listaUsuarios");
+        PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
 
-        UtilArmazenImage utilArmIma = new UtilArmazenImage(getContext());
 
-        // ActivityResultLauncher para pegar a imagem
-        ActivityResultLauncher<Intent> imagePickerLaucher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if(result.getResultCode() == getActivity().RESULT_OK && result.getData() != null){
-                        Uri imagemUri = result.getData().getData();
-                        try {
-                            Bitmap bitMap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imagemUri);
 
-                            saveImagePath = utilArmIma.saveImage(bitMap);
+        nom = findViewById(R.id.nome);
+        emai = findViewById(R.id.email);
+        ender = findViewById(R.id.ende);
 
-                            imagemData = utilArmIma.convertBitMapToByteArray(bitMap);
+        nom.setText(pessoaPJ.getNomeEmpresa());
+        emai.setText(pessoaPJ.getEmail());
+        ender.setText(pessoaPJ.getLogradouro());
 
-                            viewModelPj.setDocumAutecEmpr(imagemData);
-
-                            imageViewSelect.setImageBitmap(bitMap);
-
-                            Toast.makeText(getContext(), "Imagem salva em " + saveImagePath, Toast.LENGTH_SHORT).show();
-                        } catch (IOException e) {
-                            Toast.makeText(getContext(), "Erro ao processar a imagem", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
-        );
-
-        buttonSelecIma.setOnClickListener(v -> {
-            Intent intentUploImag = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            imagePickerLaucher.launch(intentUploImag);
-        });
 
     }
-}*/
+}

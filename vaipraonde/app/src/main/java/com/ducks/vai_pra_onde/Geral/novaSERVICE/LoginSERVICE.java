@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.ducks.vai_pra_onde.Geral.DAO.Carregamentos.DownloadEventos;
 import com.ducks.vai_pra_onde.Geral.DAO.Verificacoes.VerificarLogin;
+import com.ducks.vai_pra_onde.Geral.TelasFront.PerfilEmpresa;
 import com.ducks.vai_pra_onde.Geral.TelasFront.PerfilTeste;
 import com.ducks.vai_pra_onde.Geral.TelasFront.TelaCadasGeralPJ;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
@@ -22,7 +23,7 @@ public class LoginSERVICE {
                 Log.d("LoginService", "Conta encontrada?");
                     DownloadEventos.carregarEventos(pessoaJuridica).thenAccept(listaEventos -> {
                         Log.d("LoginService", "Conta encontrada");
-                        Intent intent = new Intent(context, PerfilTeste.class);
+                        Intent intent = new Intent(context, PerfilEmpresa.class);
                         intent.putExtra("pessoaJuridica", pessoaJuridica);
                         intent.putParcelableArrayListExtra("listaEventos", listaEventos);
                         Log.d("LoginService", "Objetos deportados");
