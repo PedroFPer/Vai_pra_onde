@@ -8,11 +8,6 @@ import android.widget.Toast;
 import com.ducks.vai_pra_onde.Geral.DAO.Carregamentos.DownloadEventos;
 import com.ducks.vai_pra_onde.Geral.DAO.Verificacoes.VerificarLogin;
 import com.ducks.vai_pra_onde.Geral.TelasFront.PerfilEmpresa;
-import com.ducks.vai_pra_onde.Geral.TelasFront.PerfilTeste;
-import com.ducks.vai_pra_onde.Geral.TelasFront.TelaCadasGeralPJ;
-import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
-
-import java.util.ArrayList;
 
 public class LoginSERVICE {
     public static void login(Context context, String email, String senha) {

@@ -30,7 +30,7 @@
             android:name=".Geral.TelasFront.TelaLoginPF"
             android:exported="false" />
         <activity
-            android:name=".Geral.TelasFront.PerfilTeste"
+            android:name=".Geral.TelasFront.PerfilEmpresa"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaInicial"
