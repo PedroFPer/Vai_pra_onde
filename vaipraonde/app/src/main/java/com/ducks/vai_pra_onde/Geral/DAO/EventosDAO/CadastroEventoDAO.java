@@ -1,5 +1,7 @@
 package com.ducks.vai_pra_onde.Geral.DAO.EventosDAO;
 
+import android.content.Context;
+
 import com.ducks.vai_pra_onde.Geral.DAO.ConnectionDB;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -10,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class CadastroEventoDAO {
     public static CompletableFuture<Boolean> cadastrar(Eventos evento) {
-        FirebaseFirestore connection = ConnectionDB.connect();
+            FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<Boolean> valorBooleano = new CompletableFuture<>();
         Map<String, Object> eventoCadastro = new HashMap<>();
 
@@ -28,6 +30,7 @@ public class CadastroEventoDAO {
 
         connection.collection("Eventos").add(eventoCadastro)
                 .addOnSuccessListener(documentoCriado -> {
+
                     valorBooleano.complete(true);
                 })
                 .addOnFailureListener(e -> {

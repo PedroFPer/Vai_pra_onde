@@ -1,6 +1,7 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -35,8 +36,14 @@ public class PerfilEmpresa extends AppCompatActivity {
         editNom.setText(pessoaPJ.getNomeEmpresa());
         editEmai.setText(pessoaPJ.getEmail());
 
+        if(listaUsuarios != null) {
+            for (Eventos ev : listaUsuarios) {
+                Log.d("PerfilEmpresa", "Informações da PessoaPJ: " + listaUsuarios.toString());
+            };
 
-
+        }else{
+            Log.d("PerfilEmpresa", "Array Vazia");
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

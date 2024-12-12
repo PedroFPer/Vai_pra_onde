@@ -118,4 +118,24 @@ public class Eventos implements Parcelable {
     // os metodos setters deve ser APENAS:
     // setDataEvento(Date dataEvento)
 
+
+    @Override
+    public String toString() {
+        return "Evento{" +
+                "Nome do Evento='" + getNomeEvento() + '\'' +
+                ", Nome da Empresa='" + getNomeEmpresa() + '\'' +
+                ", Código do Documento='" + getCodigoDocumento() + '\'' +
+                ", Código do Documento da Empresa='" + getCodigoDocumentoEmpresa() + '\'' +
+                ", Descrição='" + getDescricao() + '\'' +
+                ", E-mail='" + getEmail() + '\'' +
+                ", Telefone='" + getTelefone() + '\'' +
+                ", Logradouro='" + getLogradouro() + '\'' +
+                ", Bairro='" + getBairro() + '\'' +
+                ", Cidade='" + getCidade() + '\'' +
+                ", Estado='" + getEstado() + '\'' +
+                ", Data do Evento=" + getDataEvento() +
+                '}';
+    }
+
+
 }
