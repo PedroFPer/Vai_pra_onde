@@ -15,10 +15,11 @@ public class Eventos implements Parcelable {
     private String nomeEvento, nomeEmpresa, codigoDocumento, codigoDocumentoEmpresa, descricao, email;
     private String telefone, logradouro, bairro, cidade, estado;
     private Date dataEvento;
+    private int horaEvento, minutoEvento;
 
     public Eventos(String nomeEvento, String nomeEmpresa, String codigoDocumento, String codigoDocumentoEmpresa,
     String descricao, String email, String telefone, String logradouro, String bairro, String cidade, String estado,
-    Date dataEvento) {
+    int horaEvento, int minutoEvento, Date dataEvento) {
         this.nomeEvento = nomeEvento;
         this.nomeEmpresa = nomeEmpresa;
         this.codigoDocumento = codigoDocumento;
@@ -31,6 +32,8 @@ public class Eventos implements Parcelable {
         this.cidade = cidade;
         this.estado = estado;
         this.dataEvento = dataEvento;
+        this.horaEvento = horaEvento;
+        this.minutoEvento = minutoEvento;
     }
 
     protected Eventos(Parcel in) {
@@ -115,9 +118,35 @@ public class Eventos implements Parcelable {
     public Date getDataEvento() {
         return dataEvento;
     }
-    // os metodos setters deve ser APENAS:
-    // setDataEvento(Date dataEvento)
+    public int getHoraEvento() {
+        return horaEvento;
+    }
 
+    public int getMinutoEvento() {
+        return minutoEvento;
+    }
+
+    // OBS: Os metodos setters abaixo
+    // sao usados no objeto Eventos recuperado da listaEventos
+    // no layout de "update Evento", de modo que estes metodos setters
+    // preparam o objeto para ser modificado em tempo de aplicacao
+    // e em seguida ser modificado no banco de dados via-parametro
+    public void setDataEvento(Date dataEvento) {
+        this.dataEvento = dataEvento;
+    }
+
+    public void setHoraEvento(int horaEvento, int minutoEvento) {
+        this.horaEvento = horaEvento;
+        this.minutoEvento = minutoEvento;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setNomeEvento(String nomeEvento) {
+        this.nomeEvento = nomeEvento;
+    }
 
     @Override
     public String toString() {

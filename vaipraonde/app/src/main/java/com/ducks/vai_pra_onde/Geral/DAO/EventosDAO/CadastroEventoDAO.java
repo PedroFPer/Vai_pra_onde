@@ -27,6 +27,8 @@ public class CadastroEventoDAO {
         eventoCadastro.put("cidade", evento.getCidade());
         eventoCadastro.put("estado", evento.getEstado());
         eventoCadastro.put("dataEvento", evento.getDataEvento());
+        eventoCadastro.put("horaEvento", evento.getHoraEvento());
+        eventoCadastro.put("minutoEvento", evento.getMinutoEvento());
 
         connection.collection("Eventos").add(eventoCadastro)
                 .addOnSuccessListener(documentoCriado -> {

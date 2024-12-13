@@ -28,7 +28,7 @@ public class DownloadEventos {
                             documento.getId(), documento.getString("codigoDocumentoEmpresa"), documento.getString("descricao"),
                             documento.getString("email"), documento.getString("telefone"), documento.getString("logradouro"),
                             documento.getString("bairro"), documento.getString("cidade"), documento.getString("estado"),
-                            documento.getDate("dataEvento"));
+                            documento.getLong("horaEvento").intValue(), documento.getLong("minutoEvento").intValue(), documento.getDate("dataEvento"));
                             listaEventos.add(evento);
                         }
 

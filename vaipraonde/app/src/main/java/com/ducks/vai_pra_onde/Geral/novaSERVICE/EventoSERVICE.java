@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.ducks.vai_pra_onde.Geral.DAO.EventosDAO.CadastroEventoDAO;
+import com.ducks.vai_pra_onde.Geral.DAO.EventosDAO.EditarEventoDAO;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 
 public class EventoSERVICE {
@@ -19,6 +20,19 @@ public class EventoSERVICE {
                // "Erro ao cadastrar evento, tente novamente"
                Log.d("TestesDAOActivity", "Erro, evento não cadastrado");
            }
+        });
+    }
+
+    public static void editarEvento(Eventos evento) {
+        EditarEventoDAO.editar(evento).thenAccept(sucessoUpdate -> {
+            if(sucessoUpdate) {
+                // dialog-box para exibir que o evento foi atualizado com sucesso
+                Log.d("TestesDAOActivity", "EVENTO ATUALIZADO COM SUCESSO!");
+            }
+            else {
+                // dialog-box para indicar falha na atualizacao doevento
+                Log.d("TestesDAOActivity", "FALHA AO ATUALIZAR");
+            }
         });
     }
 }
