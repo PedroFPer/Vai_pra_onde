@@ -46,117 +46,112 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:src="@drawable/car" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Informações do Evento"
-                android:textSize="30dp"
-                android:textAlignment="center"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/caixaperfil1"
-                android:textColor="@color/white"
-                android:padding="10dp"
-                />
-            
 
-        </LinearLayout>
+
         <LinearLayout
-            android:layout_width="300dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="65dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="360dp"
             android:layout_height="400dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="65dp"
             android:background="@drawable/caixa2"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/nome_da_empresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Nome da Empresa"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/descricao"
+                    android:layout_width="290dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Descrição"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/data_evento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Data do Evento"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+                <TextView
+                    android:id="@+id/horario_do_evento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Horario do Evento"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Email"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+                <TextView
+                    android:id="@+id/telefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="145dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Telefone"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+
+
+
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/nome_evento"
-                android:text="Nome do Evento"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/nome_da_empresa"
-                android:text="nome_da_empresa"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/descricao"
-                android:text="Descrição"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/data_evento"
-                android:text="Data do Evento"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/horario_do_evento"
-                android:text="Horario do Evento"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/Email"
-                android:text="Email"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/telefone"
-                android:text="Telefone"
-                android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/endereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:text="Endereço"
                 android:textColor="@color/white"
-                android:textSize="10pt"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                />
+                android:textSize="8pt" />
 
         </LinearLayout>
 

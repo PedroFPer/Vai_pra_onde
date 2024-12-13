@@ -1,6 +1,7 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -36,7 +37,30 @@ public class EventoCadastro extends AppCompatActivity {
             return insets;
         });
         submit.setOnClickListener(v->{
-            
+            String nome_evento_edit=nome_evento.getText().toString().trim();
+            String nome_empresa_edit=nome_da_empresa.getText().toString().trim();
+            String description_edit=descricao.getText().toString().trim();
+            String horario_evento_edit=horario_evento.getText().toString().trim();
+            String data_evento_edit=data_evento.getText().toString().trim();
+            String endereco_edit=endereco.getText().toString().trim();
+            if(nome_evento_edit.isEmpty()){
+                Log.d("EventoCadastro","Adicione um nome para o Evento");
+            }
+            if(nome_empresa_edit.isEmpty()){
+                Log.d("EventoCadastro","Adicione o nome da empresa");
+            }
+            if(horario_evento_edit.isEmpty()){
+                Log.d("EventoCadastro","Adicione um Horario para o Evento");
+            }
+            if(endereco_edit.isEmpty()){
+                Log.d("EventoCadastro","Adicione o endereco para o Evento");
+            }
+            if(data_evento_edit.isEmpty()){
+                Log.d("EventoCadastro","Adicione uma Data para o Evento");
+
+            }
+
+
         });
     }
 }
