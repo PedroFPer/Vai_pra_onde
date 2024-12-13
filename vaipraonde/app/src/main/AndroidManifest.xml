@@ -16,10 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
-
-        <activity android:name=".Geral.DAO.TestesDAOActivity"
-            android:exported="true"/>
-
+        <activity
+            android:name=".Geral.TelasFront.EventoCadastro"
+            android:exported="false" />
+        <activity
+            android:name=".Geral.DAO.TestesDAOActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Geral.DAO.TestesDAOActivity"
+            android:exported="true" />
         <activity
             android:name=".Geral.TelasFront.PerfilEvento"
             android:exported="false" />
@@ -34,8 +39,8 @@
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaInicial"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,9 +72,6 @@
         <activity
             android:name=".Geral.TelasFront.TelaCadasPf"
             android:exported="false" />
-        <activity
-            android:name=".Geral.DAO.TestesDAOActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
