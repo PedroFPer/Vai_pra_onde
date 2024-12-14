@@ -17,6 +17,7 @@ public class Eventos implements Parcelable {
     private Date dataEvento;
     private int horaEvento, minutoEvento;
 
+    // construtor para instanciar o objeto puxando parametros do banco de dados
     public Eventos(String nomeEvento, String nomeEmpresa, String codigoDocumento, String codigoDocumentoEmpresa,
     String descricao, String email, String telefone, String logradouro, String bairro, String cidade, String estado,
     int horaEvento, int minutoEvento, Date dataEvento) {
@@ -36,6 +37,24 @@ public class Eventos implements Parcelable {
         this.minutoEvento = minutoEvento;
     }
 
+    // construtor pro CADASTRO front-end
+    public Eventos(String nomeEvento, String nomeEmpresa, String codigoDocumentoEmpresa, String descricao,
+    String email, String telefone, String logradouro, String bairro, String cidade, String estado,
+    int horaEvento, int minutoEvento, Date dataEvento) {
+        this.nomeEvento = nomeEvento;
+        this.nomeEmpresa = nomeEmpresa;
+        this.codigoDocumentoEmpresa = codigoDocumentoEmpresa;
+        this.descricao = descricao;
+        this.email = email;
+        this.telefone = telefone;
+        this.logradouro = logradouro;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.dataEvento = dataEvento;
+        this.horaEvento = horaEvento;
+        this.minutoEvento = minutoEvento;
+    }
     protected Eventos(Parcel in) {
         nomeEvento = in.readString();
         nomeEmpresa = in.readString();
@@ -126,11 +145,7 @@ public class Eventos implements Parcelable {
         return minutoEvento;
     }
 
-    // OBS: Os metodos setters abaixo
-    // sao usados no objeto Eventos recuperado da listaEventos
-    // no layout de "update Evento", de modo que estes metodos setters
-    // preparam o objeto para ser modificado em tempo de aplicacao
-    // e em seguida ser modificado no banco de dados via-parametro
+    /*
     public void setDataEvento(Date dataEvento) {
         this.dataEvento = dataEvento;
     }
@@ -146,6 +161,14 @@ public class Eventos implements Parcelable {
 
     public void setNomeEvento(String nomeEvento) {
         this.nomeEvento = nomeEvento;
+    }*/
+
+    public void setInformacoesEvento(String nomeEvento, String descricao, Date dataEvento, int horaEvento, int minutoEvento) {
+        this.nomeEvento = nomeEvento;
+        this.descricao = descricao;
+        this.dataEvento = dataEvento;
+        this.horaEvento = horaEvento;
+        this.minutoEvento = minutoEvento;
     }
 
     @Override
