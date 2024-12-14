@@ -5,19 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DFDFDF"
-    tools:context=".Geral.TelasFront.PerfilEvento">
+    android:background="@drawable/teste1"
+    tools:conhint=".Geral.TelasFront.EventoCadastro">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Primeiro LinearLayout -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/branco"
+            >
 
             <ImageView
                 android:layout_width="90dp"
@@ -27,14 +29,17 @@
                 android:src="@drawable/logofundotrans" />
 
             <EditText
+                android:id="@+id/nome_evento_cad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textSize="15pt"
+                android:textSize="14pt"
                 android:background="@drawable/caixaperfil1"
                 android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:padding="10dp"
-                android:text="Nome do evento" />
+                android:fontFamily="monospace"
+                android:hint="Nome do evento" />
         </LinearLayout>
 
         <!-- Segundo LinearLayout -->
@@ -42,12 +47,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            >
 
             <ImageView
-                android:layout_width="match_parent"
+
+                android:layout_width="380dp"
+                android:layout_marginLeft="17dp"
                 android:layout_height="200dp"
-                android:src="@drawable/car" />
+                android:src="@drawable/default_foto"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
         </LinearLayout>
 
 
@@ -55,103 +65,211 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="65dp"
             android:background="@drawable/caixa2"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <EditText
-                    android:id="@+id/nome_da_empresa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Nome da Empresa"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/descricao"
-                    android:layout_width="290dp"
-                    android:layout_height="200dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Descrição"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/data_evento"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Data do Evento"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-                <EditText
-                    android:id="@+id/horario_do_evento"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="65dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Horario do Evento"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/Email"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Email"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-                <EditText
-                    android:id="@+id/telefone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="145dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Telefone"
-                    android:textColor="@color/white"
-                    android:textSize="8pt" />
-            </LinearLayout>
-
-
-
-
-
-
-            <EditText
-                android:id="@+id/endereco"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+                >
+
+
+                <EditText
+                    android:id="@+id/nome_da_empresa_cad"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Nome da Empresa"
+                    android:background="@drawable/conteiner"
+
+
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/descricao_cad"
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Descrição"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/data_ano_cad"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:hint="Ano"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt" />
+                <EditText
+                    android:id="@+id/data_mes_cad"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:hint="Mês"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt" />
+                <EditText
+                    android:id="@+id/data_dia_cad"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:hint="Dia"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/horario_evento_cad_hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/conteiner"
+                    android:padding="10dp"
+                    android:hint="Hora"
+
+
+                    android:textSize="8pt" />
+                <EditText
+                    android:id="@+id/horario_do_evento_cad_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/conteiner"
+                    android:hint="Minuto"
+
+
+                    android:textSize="8pt" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/Email_cad"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+
+                    android:hint="Email"
+                    android:background="@drawable/conteiner"
+                    android:textColor="@color/white"
+                    android:textSize="8pt" />
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/endereco_cidade_cad"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Cidade"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt"
+                    android:layout_marginBottom="15dp"
+                    />
+                <EditText
+                    android:id="@+id/endereco_bairro_cad"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Bairro"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt"
+                    android:layout_marginBottom="15dp"
+                    />
+                <EditText
+                    android:id="@+id/endereco_logradouro_cad"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Rua"
+                    android:background="@drawable/conteiner"
+
+                    android:textSize="8pt"
+
+                    />
+
+            </LinearLayout>
+            <EditText
+                android:paddingHorizontal="20dp"
+                android:id="@+id/telefone_cad"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
-                android:text="Endereço"
-                android:textColor="@color/white"
-                android:textSize="8pt" />
+                android:hint="Telefone"
+                android:background="@drawable/conteiner"
+
+                android:textSize="8pt"
+                android:layout_marginBottom="15dp"/>
+
 
         </LinearLayout>
+        <Button
+            android:id="@+id/BtnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/burnt_orange"
+            android:text="Criar Evento"
+            android:padding="20dp"
+            android:layout_marginLeft="135dp"
+            android:textSize="8pt"
+
+            />
 
     </LinearLayout>
 
