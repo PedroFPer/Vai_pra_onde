@@ -6,12 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/teste1"
-    tools:conhint=".Geral.TelasFront.EventoCadastro">
+    tools:conhint=".Geral.TelasFront.TelaCadastroEvento">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
 
 
         <LinearLayout
@@ -48,12 +52,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
+            android:gravity="center"
             >
 
             <ImageView
 
                 android:layout_width="380dp"
-                android:layout_marginLeft="17dp"
+
                 android:layout_height="200dp"
                 android:src="@drawable/default_foto"
                 android:scaleType="centerCrop"
@@ -64,9 +69,9 @@
         <LinearLayout
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+
             android:layout_marginTop="10dp"
-            android:layout_marginRight="65dp"
+
             android:background="@drawable/caixa2"
             android:orientation="vertical"
             >
@@ -84,6 +89,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:hint="Nome da Empresa"
+                    android:textColor="@color/black"
                     android:background="@drawable/conteiner"
 
 
@@ -98,6 +104,7 @@
                     android:layout_width="290dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="15dp"
                     android:hint="Descrição"
                     android:background="@drawable/conteiner"
@@ -112,10 +119,12 @@
                 <EditText
                     android:id="@+id/data_ano_cad"
                     android:layout_width="60dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
+                    android:inputType="number"
                     android:hint="Ano"
                     android:background="@drawable/conteiner"
 
@@ -123,22 +132,26 @@
                 <EditText
                     android:id="@+id/data_mes_cad"
                     android:layout_width="60dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     android:hint="Mês"
+                    android:inputType="number"
                     android:background="@drawable/conteiner"
 
                     android:textSize="8pt" />
                 <EditText
                     android:id="@+id/data_dia_cad"
                     android:layout_width="60dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     android:hint="Dia"
+                    android:inputType="number"
                     android:background="@drawable/conteiner"
 
                     android:textSize="8pt" />
@@ -151,19 +164,23 @@
                 <EditText
                     android:id="@+id/horario_evento_cad_hora"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     android:background="@drawable/conteiner"
                     android:padding="10dp"
+                    android:inputType="number"
                     android:hint="Hora"
 
 
                     android:textSize="8pt" />
                 <EditText
                     android:id="@+id/horario_do_evento_cad_min"
+                    android:inputType="number"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
@@ -181,13 +198,13 @@
                 <TextView
                     android:id="@+id/Email_cad"
                     android:layout_width="300dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
 
                     android:hint="Email"
                     android:background="@drawable/conteiner"
-                    android:textColor="@color/white"
                     android:textSize="8pt" />
 
             </LinearLayout>
@@ -203,6 +220,7 @@
                 <EditText
                     android:id="@+id/endereco_cidade_cad"
                     android:layout_width="100dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="15dp"
@@ -217,6 +235,7 @@
                 <EditText
                     android:id="@+id/endereco_bairro_cad"
                     android:layout_width="100dp"
+                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="5dp"
@@ -232,6 +251,7 @@
                     android:id="@+id/endereco_logradouro_cad"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
+                    android:textColor="@color/black"
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="15dp"
@@ -244,12 +264,13 @@
                     />
 
             </LinearLayout>
-            <TextView
+            <EditText
                 android:paddingHorizontal="20dp"
                 android:id="@+id/telefone_cad"
                 android:layout_width="300dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="15dp"
                 android:hint="Telefone"
                 android:background="@drawable/conteiner"
@@ -266,7 +287,7 @@
             android:backgroundTint="@color/burnt_orange"
             android:text="Criar Evento"
             android:padding="20dp"
-            android:layout_marginLeft="135dp"
+
             android:textSize="8pt"
 
             />

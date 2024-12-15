@@ -2,13 +2,18 @@ package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.inputmethod.InputMethodManager;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -171,6 +176,7 @@ public class TelaCadastroEvento extends Fragment {
                 return;
             }
 
+
             // Formatando a data corretamente
             String data_completa = String.format("%02d/%02d/%04d", data_dia_edit, data_mes_edit, data_ano_edit);
             Date data_final = null;
@@ -178,11 +184,8 @@ public class TelaCadastroEvento extends Fragment {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
                 data_final = dateFormat.parse(data_completa);
 
-                // Verificação se a data foi processada corretamente
-                if (data_final == null) {
-                    Toast.makeText(getActivity(), "Data inválida!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+
+
             } catch (ParseException e) {
                 Toast.makeText(getActivity(), "Erro ao formatar a data!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
@@ -206,7 +209,10 @@ public class TelaCadastroEvento extends Fragment {
                     data_final
             );
             EventoSERVICE.cadastrarEvento(getActivity(), evento);
+            Toast.makeText(getActivity(), "Evento Cadastrado com Sucesso", Toast.LENGTH_SHORT).show();
         });
-
     }
 }
+
+
+

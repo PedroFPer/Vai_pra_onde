@@ -11,7 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        >
 
 
         <LinearLayout
@@ -53,6 +55,7 @@
 
                 android:layout_width="380dp"
                 android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
                 android:layout_height="200dp"
                 android:src="@drawable/default_foto"
                 android:scaleType="centerCrop"
@@ -63,9 +66,9 @@
         <LinearLayout
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+
             android:layout_marginTop="10dp"
-            android:layout_marginRight="65dp"
+
             android:background="@drawable/caixa2"
             android:orientation="vertical"
             >
