@@ -14,11 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeCadasPessoPjViewModel;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ3 extends Fragment {
-    private FragmeCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjViewModel viewModelPj;
 
     @Nullable
     @Override
@@ -32,7 +32,7 @@ public class TelaCadasPJ3 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Obter a instância do ViewModel
-        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjViewModel.class);
 
 
         // Referências aos elementos do layout

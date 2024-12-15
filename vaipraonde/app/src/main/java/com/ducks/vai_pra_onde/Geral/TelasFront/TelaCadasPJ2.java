@@ -15,13 +15,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 
-import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeCadasPessoPjViewModel;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
 import com.ducks.vai_pra_onde.R;
 
 public class TelaCadasPJ2 extends Fragment {
 
-    private FragmeCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjViewModel viewModelPj;
 
     @Nullable
     @Override
@@ -33,7 +33,7 @@ public class TelaCadasPJ2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjViewModel.class);
         UtilVericCreden utilVericCreden = new UtilVericCreden();
 
         EditText edtNomeResPj = view.findViewById(R.id.CadasNomeResPj);

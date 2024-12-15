@@ -17,25 +17,13 @@
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
         <activity
+            android:name=".Geral.TelasFront.TelaGeralSessaoPJ"
+            android:exported="false" />
+        <activity
             android:name=".Geral.TelasFront.EventoCadastro"
             android:exported="false" />
         <activity
-            android:name=".Geral.DAO.TestesDAOActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Geral.DAO.TestesDAOActivity"
-            android:exported="true" />
-        <activity
             android:name=".Geral.TelasFront.PerfilEvento"
-            android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.TelaLoginPJ"
-            android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.TelaLoginPF"
-            android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.PerfilEmpresa"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaInicial"
@@ -66,12 +54,6 @@
             android:name=".Geral.TelasFront.TelaCadasPJ1"
             android:exported="false"
             tools:ignore="Instantiatable" />
-        <activity
-            android:name=".Geral.TelasFront.TelaCadasTipCli"
-            android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.TelaCadasPf"
-            android:exported="false" />
     </application>
 
 </manifest>

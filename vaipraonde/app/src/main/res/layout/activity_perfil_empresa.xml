@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/LayoutSessaoPJ1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Geral.TelasFront.PerfilEmpresa">
@@ -143,9 +143,10 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
+        android:id="@+id/listaEventos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar empresa"
+        android:text="Lista de eventos"
         android:textColor="@color/white"
         android:backgroundTint="#3D3D3D"
         android:layout_marginTop="197dp"

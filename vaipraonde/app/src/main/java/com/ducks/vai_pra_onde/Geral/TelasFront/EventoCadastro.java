@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
-import com.ducks.vai_pra_onde.Geral.novaSERVICE.EventoSERVICE;
+import com.ducks.vai_pra_onde.Geral.SERVICE.EventoSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.text.ParseException;

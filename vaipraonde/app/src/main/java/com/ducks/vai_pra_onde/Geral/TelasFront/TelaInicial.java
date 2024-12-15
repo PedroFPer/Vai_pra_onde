@@ -16,10 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.ducks.vai_pra_onde.Geral.Service.ServiceCadastro;
-import com.ducks.vai_pra_onde.Geral.Service.ServiceLoginEntrad;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilVericCreden;
-import com.ducks.vai_pra_onde.Geral.novaSERVICE.LoginSERVICE;
+import com.ducks.vai_pra_onde.Geral.SERVICE.LoginSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.text.BreakIterator;

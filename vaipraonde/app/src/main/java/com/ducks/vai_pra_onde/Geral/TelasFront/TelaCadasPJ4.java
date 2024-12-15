@@ -19,11 +19,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.DTO.CadasPessoaPJDTO;
-import com.ducks.vai_pra_onde.Geral.DTO.FragmeCadasPessoPjDTO;
+import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeCadasPessoPjViewModel;
 import com.ducks.vai_pra_onde.Geral.Utilidades.UtilArmazenImage;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
-import com.ducks.vai_pra_onde.Geral.novaSERVICE.CadastroSERVICE;
+import com.ducks.vai_pra_onde.Geral.SERVICE.CadastroSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.io.IOException;
@@ -34,7 +33,7 @@ public class TelaCadasPJ4 extends Fragment {
     private String saveImagePath;
     private byte[] imagemData;
 
-    private FragmeCadasPessoPjDTO viewModelPj;
+    private FragmeCadasPessoPjViewModel viewModelPj;
 
     @Nullable
     @Override
@@ -47,7 +46,7 @@ public class TelaCadasPJ4 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjDTO.class);
+        viewModelPj = new ViewModelProvider(requireActivity()).get(FragmeCadasPessoPjViewModel.class);
 
 
         // Referências aos botões e ImageView

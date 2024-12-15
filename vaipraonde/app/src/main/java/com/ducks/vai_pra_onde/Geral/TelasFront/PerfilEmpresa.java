@@ -2,54 +2,62 @@ package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
-import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
+import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.R;
 
-import java.util.ArrayList;
+public class PerfilEmpresa extends Fragment {
 
-public class PerfilEmpresa extends AppCompatActivity {
+    private FragmeSessaoPessoaPJViewModel viewModelSessaoPJ;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_perfil_empresa);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_perfil_empresa, container, false);
+    }
 
-        ArrayList<Eventos> listaUsuarios = getIntent().getParcelableArrayListExtra("listaUsuarios");
-        PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        TextView editNom = findViewById(R.id.nome);
-        TextView editEmai = findViewById(R.id.email);
+        viewModelSessaoPJ = new ViewModelProvider(requireActivity()).get(FragmeSessaoPessoaPJViewModel.class);
 
+        TextView editNom = view.findViewById(R.id.nome);
+        TextView editEmai = view.findViewById(R.id.email);
 
+        Button buttonListEven = view.findViewById(R.id.listaEventos);
 
-        editNom.setText(pessoaPJ.getNomeEmpresa());
-        editEmai.setText(pessoaPJ.getEmail());
+        PessoaPJ pessoaPJ = viewModelSessaoPJ.getPessoaPJ();
 
-        if(listaUsuarios != null) {
-            for (Eventos ev : listaUsuarios) {
-                Log.d("PerfilEmpresa", "Informações da PessoaPJ: " + listaUsuarios.toString());
-            };
+        if (pessoaPJ != null) {
+            editNom.setText(pessoaPJ.getNomeEmpresa());
+            editEmai.setText(pessoaPJ.getEmail());
+        } else {
+            Log.e("PerfilEmpresa", "PessoaPJ não encontrada");
 
-        }else{
-            Log.d("PerfilEmpresa", "Array Vazia");
         }
 
+        buttonListEven.setOnClickListener(v->{
+            if (getActivity() != null) {
+                AppCompatActivity activity = (AppCompatActivity) getActivity();
+                // Realiza a transação para substituir o fragmento
+                activity.getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragSessaoPJ, new TelaListadeEventos()) // Aqui você substitui o fragmento pelo novo
+                        .addToBackStack(null) // Adiciona ao back stack para permitir navegação para trás
+                        .commit();
+            }
+                });
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }
