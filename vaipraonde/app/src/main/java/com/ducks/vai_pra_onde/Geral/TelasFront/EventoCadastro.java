@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
+import com.ducks.vai_pra_onde.Geral.novaSERVICE.EventoSERVICE;
 import com.ducks.vai_pra_onde.R;
 
 import java.text.ParseException;
@@ -160,6 +161,7 @@ public class EventoCadastro extends AppCompatActivity {
                     horario_minuto_edit,
                     data_final
                     );
+            EventoSERVICE.cadastrarEvento(this,evento);
 
         });
     }
