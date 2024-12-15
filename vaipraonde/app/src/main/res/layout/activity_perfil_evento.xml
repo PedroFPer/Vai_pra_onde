@@ -36,7 +36,6 @@
                 android:textSize="14pt"
                 android:background="@drawable/caixaperfil1"
                 android:textColor="@color/white"
-                android:textColortext="@color/white"
                 android:padding="10dp"
                 android:fontFamily="monospace"
                 android:text="Nome do evento" />

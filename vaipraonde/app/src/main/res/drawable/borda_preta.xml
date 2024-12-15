@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/cinza"/> <!-- Cor de fundo cinza -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black"/> <!-- Borda preta -->
+    <corners android:radius="8dp"/> <!-- Bordas arredondadas (opcional) -->
+</shape>

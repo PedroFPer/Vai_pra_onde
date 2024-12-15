@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutCadasPJ1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teste1"
+    tools:context=".Geral.TelasFront.TelaCadasPJ1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- View 1: Fundo Principal -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="860dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- View 2: Container Central -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="188dp"
+            android:background="@drawable/conteiner"
+            android:backgroundTint="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- View 3: Logo Central -->
+        <View
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/logofundotrans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título: Lista de Eventos -->
+        <TextView
+            android:id="@+id/TextInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:fontFamily="sans-serif-black"
+            android:text="LISTA DE EVENTOS"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Container para os eventos -->
+        <LinearLayout
+            android:id="@+id/eventContainer"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="360dp"
+            android:orientation="vertical"
+            android:background="@drawable/borda_preta"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Mensagem padrão quando não há eventos -->
+            <TextView
+                android:id="@+id/noEventMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nenhum evento disponível"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <!-- Caixa de entrada para o evento -->
+            <EditText
+                android:id="@+id/item_evento"
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="0dp"
+                android:background="@drawable/caixa"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="10dp"
+                android:text="ENCONTRO DOS ANTIGOS"
+                android:textColor="@color/dark_gray" />
+        </LinearLayout>
+
+        <!-- Botão Criar Novo Evento -->
+        <Button
+            android:id="@+id/btn_criar_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF5722"
+            android:text="+ | CRIAR NOVO EVENTO"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/eventContainer"
+            tools:layout_editor_absoluteX="101dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
