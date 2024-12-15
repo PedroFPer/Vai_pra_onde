@@ -1,6 +1,5 @@
     package com.ducks.vai_pra_onde.Geral.TelasFront;
 
-    import android.content.Intent; // Import necessário
     import android.os.Bundle;
     import android.view.LayoutInflater;
     import android.view.View;
@@ -12,9 +11,6 @@
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
     import androidx.appcompat.app.AppCompatActivity;
-    import androidx.core.graphics.Insets;
-    import androidx.core.view.ViewCompat;
-    import androidx.core.view.WindowInsetsCompat;
     import androidx.fragment.app.Fragment;
     import androidx.lifecycle.ViewModelProvider;
 
@@ -55,7 +51,7 @@
 
             eventContainer.removeAllViews();
 
-            if (listaEventos != null && !listaEventos.isEmpty()) {
+            if (listaEventos != null) {
                 noEventMessage.setVisibility(View.GONE);
 
                 for (Eventos evento : listaEventos) {
@@ -77,7 +73,7 @@
                     AppCompatActivity activity = (AppCompatActivity) getActivity();
 
                     activity.getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragSessaoPJ, new PerfilEvento())
+                            .replace(R.id.fragSessaoPJ, new TelaCadastroEvento())
                             .addToBackStack(null)
                             .commit();
                 }

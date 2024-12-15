@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/teste1"
-    tools:context=".Geral.TelasFront.EventoCadastro">
+    tools:context=".Geral.TelasFront.TelaCadastroEvento">
 
     <LinearLayout
         android:layout_width="match_parent"

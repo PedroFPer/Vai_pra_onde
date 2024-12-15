@@ -17,8 +17,7 @@ public class EventoSERVICE {
                Log.d("TestesDAOActivity", "EVENTO CRIADO COM SUCESSO!");
            }
            else {
-               // metodo() do front end que exibe mensagem de erro:
-               // "Erro ao cadastrar evento, tente novamente"
+               Toast.makeText( context, "Cadastro evento não concluido", Toast.LENGTH_SHORT).show();
                Log.d("TestesDAOActivity", "Erro, evento não cadastrado");
            }
         });

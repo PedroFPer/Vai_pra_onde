@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class CadastroEventoDAO {
     public static CompletableFuture<Boolean> cadastrar(Eventos evento) {
-            FirebaseFirestore connection = ConnectionDB.connect();
+        FirebaseFirestore connection = ConnectionDB.connect();
         CompletableFuture<Boolean> valorBooleano = new CompletableFuture<>();
         Map<String, Object> eventoCadastro = new HashMap<>();
 

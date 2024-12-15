@@ -20,7 +20,7 @@
             android:name=".Geral.TelasFront.TelaGeralSessaoPJ"
             android:exported="false" />
         <activity
-            android:name=".Geral.TelasFront.EventoCadastro"
+            android:name=".Geral.TelasFront.TelaCadastroEvento"
             android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.PerfilEvento"
