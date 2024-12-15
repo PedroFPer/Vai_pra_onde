@@ -10,7 +10,7 @@ import com.ducks.vai_pra_onde.Geral.DAO.EventosDAO.EditarEventoDAO;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 
 public class EventoSERVICE {
-    public static void cadastrarEvento(Context context, Eventos evento) {
+    public static void cadastrarEvento( Context context,Eventos evento) {
         CadastroEventoDAO.cadastrar(evento).thenAccept(sucessoCadastro -> {
            if(sucessoCadastro) {
                Toast.makeText(context, "Evento Cadastro", Toast.LENGTH_SHORT).show();

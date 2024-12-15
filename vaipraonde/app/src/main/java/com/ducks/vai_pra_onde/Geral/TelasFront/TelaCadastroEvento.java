@@ -68,7 +68,7 @@ public class TelaCadastroEvento extends Fragment {
         //Informações do evento
         EditText nome_evento = view.findViewById(R.id.nome_evento_cad);
         EditText descricao = view.findViewById(R.id.descricao_cad);
-        EditText data_ano = view.findViewById(R.id.data_ano_vw);
+        EditText data_ano = view.findViewById(R.id.data_ano_cad);
         EditText data_mes = view.findViewById(R.id.data_mes_cad);
         EditText data_dia=view.findViewById(R.id.data_dia_cad);
         EditText horario_hora = view.findViewById(R.id.horario_evento_cad_hora);
@@ -85,6 +85,7 @@ public class TelaCadastroEvento extends Fragment {
 
 
         buttonSubmit.setOnClickListener(v -> {
+
             String nome_evento_edit = nome_evento.getText().toString().trim();
             String nome_da_empresa_edit = nome_da_empresa.getText().toString().trim();
             String descricao_edit = descricao.getText().toString().trim();
