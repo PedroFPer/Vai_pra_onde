@@ -59,6 +59,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <!-- Mensagem padrão quando não há eventos -->
+        <TextView
+            android:id="@+id/noEventMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nenhum evento disponível"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/TextInicio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="2dp"/>
+
+
+
         <!-- Container para os eventos -->
         <LinearLayout
             android:id="@+id/eventContainer"
@@ -73,19 +90,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <!-- Mensagem padrão quando não há eventos -->
-            <TextView
-                android:id="@+id/noEventMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nenhum evento disponível"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_gravity="center" />
 
             <!-- Caixa de entrada para o evento -->
-            <EditText
+            <!--<EditText
                 android:id="@+id/item_evento"
                 android:layout_width="330dp"
                 android:layout_height="70dp"
@@ -95,8 +102,11 @@
                 android:inputType="text"
                 android:padding="10dp"
                 android:text="ENCONTRO DOS ANTIGOS"
-                android:textColor="@color/dark_gray" />
+                android:textColor="@color/dark_gray" /> -->
+
         </LinearLayout>
+
+
 
         <!-- Botão Criar Novo Evento -->
         <Button
