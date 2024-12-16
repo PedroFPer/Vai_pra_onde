@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,8 +16,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
+import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.R;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class PerfilEmpresa extends Fragment {
 
@@ -35,10 +41,13 @@ public class PerfilEmpresa extends Fragment {
 
         TextView editNom = view.findViewById(R.id.nome);
         TextView editEmai = view.findViewById(R.id.email);
+        EditText editDesc = view.findViewById(R.id.desc);
 
         Button buttonListEven = view.findViewById(R.id.listaEventos);
 
         PessoaPJ pessoaPJ = viewModelSessaoPJ.getPessoaPJ();
+        ArrayList<Eventos> listaEventos = viewModelSessaoPJ.getListaEventos();
+
 
         if (pessoaPJ != null) {
             editNom.setText(pessoaPJ.getNomeEmpresa());
@@ -47,6 +56,8 @@ public class PerfilEmpresa extends Fragment {
             Log.e("PerfilEmpresa", "PessoaPJ não encontrada");
 
         }
+
+
 
         buttonListEven.setOnClickListener(v->{
             if (getActivity() != null) {

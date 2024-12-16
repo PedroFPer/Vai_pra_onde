@@ -16,15 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vai_pra_onde"
         tools:targetApi="31">
+
         <activity
             android:name=".Geral.TelasFront.TelaGeralSessaoPJ"
             android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.TelaCadastroEvento"
-            android:exported="false" />
-        <activity
-            android:name=".Geral.TelasFront.PerfilEvento"
-            android:exported="false" />
+
         <activity
             android:name=".Geral.TelasFront.TelaInicial"
             android:exported="true"
@@ -35,6 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Geral.TelasFront.TelaCadastroModifEvento"
+            android:exported="false" />
         <activity
             android:name=".Geral.TelasFront.TelaCadasGeralPJ"
             android:exported="false" />

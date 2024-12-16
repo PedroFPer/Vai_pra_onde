@@ -1,4 +1,4 @@
-package com.ducks.vai_pra_onde.Geral.TelasFront;
+/*package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,7 +23,7 @@ public class RascunhoEvento extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_evento_cadastro, container, false);
+        return inflater.inflate(R.layout.activity_cadastro_evento, container, false);
     }
 
     @Override
@@ -65,6 +65,6 @@ public class RascunhoEvento extends Fragment {
 
     }
 
-}
+}*/
 
 

@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.ducks.vai_pra_onde.Geral.DAO.Carregamentos.DownloadEventos;
 import com.ducks.vai_pra_onde.Geral.DAO.Verificacoes.VerificarLogin;
 import com.ducks.vai_pra_onde.Geral.TelasFront.TelaGeralSessaoPJ;
+import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 
 public class LoginSERVICE {
     public static void login(Context context, String email, String senha) {
@@ -17,7 +18,7 @@ public class LoginSERVICE {
             if (pessoaJuridica != null) {
                 Log.d("LoginService", "Conta encontrada?");
                     DownloadEventos.carregarEventos(pessoaJuridica).thenAccept(listaEventos -> {
-                        Log.d("LoginService", "Conta encontrada");
+                        Log.d("LoginService",pessoaJuridica.getTelefone() );
                         Intent intent = new Intent(context, TelaGeralSessaoPJ.class);
                         intent.putExtra("pessoaJuridica", pessoaJuridica);
                         intent.putParcelableArrayListExtra("listaEventos", listaEventos);
