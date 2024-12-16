@@ -47,16 +47,6 @@ public class TelaListadeEventos extends Fragment {
         ArrayList<Eventos> listaEventos = viewModelSessaoPJ.getListaEventos();
         float density = getResources().getDisplayMetrics().density;
 
-        // Código de teste - pode ser removido depois
-        ArrayList<String> teste = new ArrayList<>();
-        teste.add("Teste 1");
-        teste.add("Teste 2");
-
-        // Processar eventos de teste
-        if (teste != null && !teste.isEmpty()) {
-            adicionarEventosDeTeste(teste, density);
-        }
-
         // Processar listaEventos se existir
         if (listaEventos != null && !listaEventos.isEmpty()) {
             adicionarEventos(listaEventos, density);
