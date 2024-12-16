@@ -16,6 +16,7 @@
     import androidx.core.view.WindowInsetsCompat;
 
     import com.ducks.vai_pra_onde.Geral.SERVICE.EventoSERVICE;
+    import com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE.AtualizarListaSERVICE;
     import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
     import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
     import com.ducks.vai_pra_onde.R;
@@ -237,8 +238,9 @@
                         horario_minuto_edit,
                         data_final
                 );*/
-                eventoAtual.setInformacoesEvento(nome_evento_edit,descricao_edit, data_final,horario_hora_edit, horario_minuto_edit);
+                eventoAtual.setInformacoesEvento(nome_evento_edit,descricao_edit, data_final,horario_hora_edit, horario_minuto_edit,rua_edit,bairro_edit,cidade_edit);
                 EventoSERVICE.editarEvento(this, eventoAtual);
+                AtualizarListaSERVICE.atualizarLista(pessoaPJ);
 
             });
 

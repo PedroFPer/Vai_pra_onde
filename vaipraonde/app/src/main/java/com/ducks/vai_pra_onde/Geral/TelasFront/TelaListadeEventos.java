@@ -81,7 +81,12 @@ public class TelaListadeEventos extends Fragment {
             }
         });
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Atualize a lista de notas aqui
 
+    }
 
 
     private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
