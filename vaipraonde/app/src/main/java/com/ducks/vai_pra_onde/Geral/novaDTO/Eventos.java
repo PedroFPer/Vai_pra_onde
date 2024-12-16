@@ -67,6 +67,9 @@ public class Eventos implements Parcelable {
         bairro = in.readString();
         cidade = in.readString();
         estado = in.readString();
+        dataEvento = new Date(in.readLong()); // Use readLong() para ler a data como um long
+        horaEvento = in.readInt();
+        minutoEvento = in.readInt();
     }
 
     public static final Creator<Eventos> CREATOR = new Creator<Eventos>() {
@@ -99,7 +102,11 @@ public class Eventos implements Parcelable {
         dest.writeString(bairro);
         dest.writeString(cidade);
         dest.writeString(estado);
+        dest.writeLong(dataEvento.getTime()); // Aqui você grava a data como um long (timestamp)
+        dest.writeInt(horaEvento);
+        dest.writeInt(minutoEvento);
     }
+
 
     public String getNomeEvento() {
         return nomeEvento;

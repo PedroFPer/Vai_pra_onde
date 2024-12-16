@@ -1,5 +1,6 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import java.util.Locale;
 
 public class TelaCadastroModifEvento extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,19 +65,22 @@ public class TelaCadastroModifEvento extends AppCompatActivity {
         Button buttonDele=findViewById(R.id.buttoDel);
 
 
-       /* Date data_completa = evento.getDataEvento(); // Obtem a data no formato Date
+        Date dataEvento = evento.getDataEvento();
 
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        String dataFormatada = formato.format(data_completa);
-
-        String[] partes = dataFormatada.split("/");
-
-        String dataDia = partes[0]; // Dia: "15"
-        String dataMes = partes[1]; // Mês: "12"
-        String dataAno = partes[2]; // Ano: "2024"
+        SimpleDateFormat diaFormatador = new SimpleDateFormat("dd", Locale.getDefault());
+        SimpleDateFormat mesFormatador = new SimpleDateFormat("MM", Locale.getDefault());
+        SimpleDateFormat anoFormatador = new SimpleDateFormat("yyyy", Locale.getDefault());
 
 
-        nome_da_empresa.setText(pessoaPJ.getNomeEmpresa());
+        String dia = diaFormatador.format(dataEvento);
+        String mes = mesFormatador.format(dataEvento);
+        String ano = anoFormatador.format(dataEvento);
+
+
+
+
+
+        nome_da_empresa.setText(evento.getNomeEmpresa());
         Email.setText(pessoaPJ.getEmail());
         Telefone.setText(pessoaPJ.getTelefone());
 
@@ -83,14 +88,18 @@ public class TelaCadastroModifEvento extends AppCompatActivity {
         bairro.setText(pessoaPJ.getBairro());
         rua.setText(pessoaPJ.getLogradouro());
 
+
+
         //Informações do evento
          nome_evento.setText(evento.getNomeEvento());
          descricao.setText(evento.getDescricao());
-         data_ano.setText(dataAno);
-         data_mes.setText(dataMes);
-         data_dia.setText(dataDia);
-         horario_hora.setText(evento.getHoraEvento());
-         horario_minuto.setText(evento.getMinutoEvento());
+         data_ano.setText(ano);
+         data_mes.setText(mes);
+         data_dia.setText(dia);
+
+
+         horario_hora.setText(Integer.toString(evento.getHoraEvento()));
+         horario_minuto.setText(Integer.toString(evento.getMinutoEvento()));
 
 
         buttonEdit.setOnClickListener(v -> {
@@ -220,7 +229,7 @@ public class TelaCadastroModifEvento extends AppCompatActivity {
             );
             EventoSERVICE.editarEvento(this, evento);
 
-        });*/
+        });
 
         buttonDele.setOnClickListener(v -> {
             EventoSERVICE.deletarEvento(this,evento);

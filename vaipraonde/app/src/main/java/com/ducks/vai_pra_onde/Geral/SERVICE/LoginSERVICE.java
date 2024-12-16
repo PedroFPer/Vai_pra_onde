@@ -12,21 +12,17 @@ import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 
 public class LoginSERVICE {
     public static void login(Context context, String email, String senha) {
-        Log.d("LoginService", "Entrada no metodo login");
         VerificarLogin.validarLogin(email, senha).thenAccept(pessoaJuridica -> {
-            Log.d("LoginService", "Está verificando?");
             if (pessoaJuridica != null) {
-                Log.d("LoginService", "Conta encontrada?");
                     DownloadEventos.carregarEventos(pessoaJuridica).thenAccept(listaEventos -> {
                         Log.d("LoginService",pessoaJuridica.getTelefone() );
                         Intent intent = new Intent(context, TelaGeralSessaoPJ.class);
                         intent.putExtra("pessoaJuridica", pessoaJuridica);
                         intent.putParcelableArrayListExtra("listaEventos", listaEventos);
-                        Log.d("LoginService", "Objetos deportados");
+
                         context.startActivity(intent);
                 });
             } else {
-                Log.d("LoginService", "Deu errado");
                 Toast.makeText(context, "Erro no login", Toast.LENGTH_SHORT).show();
             }
         });

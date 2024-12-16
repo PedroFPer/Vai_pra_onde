@@ -30,6 +30,14 @@ public class TelaGeralSessaoPJ extends AppCompatActivity {
         ArrayList<Eventos> listaEventosRecebida = getIntent().getParcelableArrayListExtra("listaEventos");
         PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
 
+        for(Eventos e : listaEventosRecebida){
+            if(e.getDataEvento() == null) {
+                Log.d("DataErro", "Data nula0");
+            }else{
+                Log.d("DataErro", "Não é aqui0");
+            }
+        }
+
 
         viewModelSessaoPJ = new ViewModelProvider(this).get(FragmeSessaoPessoaPJViewModel.class);
 
