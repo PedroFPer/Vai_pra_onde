@@ -23,28 +23,24 @@ public class EventoSERVICE {
         });
     }
 
-    public static void editarEvento(Eventos evento) {
+    public static void editarEvento(Context context,Eventos evento) {
         EditarEventoDAO.editar(evento).thenAccept(sucessoUpdate -> {
             if(sucessoUpdate) {
-                // dialog-box para exibir que o evento foi atualizado com sucesso
-                Log.d("TestesDAOActivity", "EVENTO ATUALIZADO COM SUCESSO!");
+                Toast.makeText(context, "Evento Editado com Sucesso", Toast.LENGTH_SHORT).show();
             }
             else {
-                // dialog-box para indicar falha na atualizacao do evento
-                Log.d("TestesDAOActivity", "FALHA AO ATUALIZAR");
+                Toast.makeText(context, "Ocorreu algum problema na edição", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public static void deletarEvento(Eventos evento) {
+    public static void deletarEvento(Context context,Eventos evento) {
         DeletarEventoDAO.deletar(evento).thenAccept(sucessoDelete -> {
             if(sucessoDelete) {
-                // dialog-box para exibir que o evento foi DELETADO com sucesso
-                Log.d("TestesDAOActivity", "EVENTO DELETADO COM SUCESSO!");
+                Toast.makeText(context, "Evento Deletado com Sucesso", Toast.LENGTH_SHORT).show();
             }
             else {
-                // dialog-box para indicar falha ao deletar o evento
-                Log.d("TestesDAOActivity", "FALHA AO DELETAR");
+                Toast.makeText(context, "Ocorreu algum problema", Toast.LENGTH_SHORT).show();
             }
         });
     }

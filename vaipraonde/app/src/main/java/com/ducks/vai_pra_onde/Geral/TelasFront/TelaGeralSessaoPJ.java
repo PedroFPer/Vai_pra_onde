@@ -1,6 +1,7 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,12 +27,13 @@ public class TelaGeralSessaoPJ extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_geral_sessao_pj);
 
-        ArrayList<Eventos> listaUsuarios = getIntent().getParcelableArrayListExtra("listaUsuarios");
+        ArrayList<Eventos> listaEventosRecebida = getIntent().getParcelableArrayListExtra("listaEventos");
         PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
+
 
         viewModelSessaoPJ = new ViewModelProvider(this).get(FragmeSessaoPessoaPJViewModel.class);
 
-        viewModelSessaoPJ.setListaEventos(listaUsuarios);
+        viewModelSessaoPJ.setListaEventos(listaEventosRecebida);
         viewModelSessaoPJ.setPessoaPJ(pessoaPJ);
 
         if (savedInstanceState == null) {

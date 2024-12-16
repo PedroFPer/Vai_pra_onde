@@ -1,6 +1,9 @@
 package com.ducks.vai_pra_onde.Geral.TelasFront;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +14,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
+import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.R;
 
 import java.util.ArrayList;
@@ -45,17 +50,15 @@ public class TelaListadeEventos extends Fragment {
         viewModelSessaoPJ = new ViewModelProvider(requireActivity()).get(FragmeSessaoPessoaPJViewModel.class);
 
         ArrayList<Eventos> listaEventos = viewModelSessaoPJ.getListaEventos();
+        PessoaPJ pessoaPJ = viewModelSessaoPJ.getPessoaPJ();
+
         float density = getResources().getDisplayMetrics().density;
 
-        // Processar listaEventos se existir
-        if (listaEventos != null && !listaEventos.isEmpty()) {
-            adicionarEventos(listaEventos, density);
-        }
 
-        // Exibir ou esconder a mensagem de "Nenhum evento"
-        if (eventContainer.getChildCount() > 0) {
+        if (listaEventos != null ) {
             noEventMessage.setVisibility(View.GONE);
-        } else {
+            adicionarEventos(listaEventos, pessoaPJ,density);
+        }else {
             noEventMessage.setVisibility(View.VISIBLE);
         }
 
@@ -71,32 +74,9 @@ public class TelaListadeEventos extends Fragment {
         });
     }
 
-    private void adicionarEventosDeTeste(ArrayList<String> teste, float density) {
-        int largura = (int) (330 * density);
-        int altura = (int) (70 * density);
 
-        for (String s : teste) {
-            Button itemEvento = new Button(getActivity());
 
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(largura, altura);
-            params.setMargins(0, 10, 0, 10);
-
-            itemEvento.setLayoutParams(params);
-            itemEvento.setBackgroundResource(R.drawable.borda_preta);
-            itemEvento.setText("Nome: " + s);
-            itemEvento.setTextColor(getResources().getColor(R.color.black));
-            itemEvento.setTextSize(18);
-
-            // Adicionar funcionalidade ao botão
-            itemEvento.setOnClickListener(v -> {
-                System.out.println("Botão clicado: " + s);
-            });
-
-            eventContainer.addView(itemEvento);
-        }
-    }
-
-    private void adicionarEventos(ArrayList<Eventos> listaEventos, float density) {
+    private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
         int largura = (int) (330 * density);
         int altura = (int) (70 * density);
 
@@ -109,12 +89,23 @@ public class TelaListadeEventos extends Fragment {
             itemEvento.setLayoutParams(params);
             itemEvento.setBackgroundResource(R.drawable.borda_preta);
             itemEvento.setText(evento.getDataEvento() + " | " + evento.getNomeEvento());
-            itemEvento.setTextColor(getResources().getColor(R.color.black));
+            itemEvento.setTextColor(ContextCompat.getColor(getActivity(), R.color.black));
             itemEvento.setTextSize(18);
 
             // Adicionar funcionalidade ao botão
             itemEvento.setOnClickListener(v -> {
-                System.out.println("Botão clicado: " + evento.getNomeEvento());
+
+                if (getActivity() != null) {
+                    Intent intent = new Intent(getActivity(), TelaCadastroModifEvento.class);
+                    Log.d("Promessa25", "????: ");
+                    startActivity(intent);
+                }
+
+
+                /*Intent intent = new Intent(getActivity(), TelaCadastroModifEvento.class);
+                intent.putExtra("pessoaJuridica", pessoaPJ);
+                //intent.putExtra("evento", evento);
+                startActivity(intent);*/
             });
 
             eventContainer.addView(itemEvento);
