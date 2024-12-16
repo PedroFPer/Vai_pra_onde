@@ -1,15 +1,16 @@
     package com.ducks.vai_pra_onde.Geral.TelasFront;
 
+    import static android.app.PendingIntent.getActivity;
+
     import android.annotation.SuppressLint;
-    import android.content.Context;
     import android.os.Bundle;
-    import android.util.Log;
     import android.widget.Button;
     import android.widget.EditText;
     import android.widget.TextView;
     import android.widget.Toast;
 
     import androidx.activity.EdgeToEdge;
+    import androidx.activity.OnBackPressedCallback;
     import androidx.appcompat.app.AppCompatActivity;
     import androidx.core.graphics.Insets;
     import androidx.core.view.ViewCompat;
@@ -23,11 +24,12 @@
 
     import java.text.ParseException;
     import java.text.SimpleDateFormat;
-    import java.util.ArrayList;
     import java.util.Date;
     import java.util.Locale;
 
     public class TelaCadastroModifEvento extends AppCompatActivity {
+
+
 
         @SuppressLint("SetTextI18n")
         @Override
@@ -221,26 +223,10 @@
 
 
 
-                // Criar o objeto Evento e enviar para o serviço
-                /*Eventos eventoEditado = new Eventos(
-                        nome_evento_edit,
-                        nome_da_empresa_edit,
-                        pessoaPJ.getCodigoDocumento(),
-                        eventoAtual.getCodigoDocumento(),
-                        descricao_edit,
-                        email_edit,
-                        telefone_edit,
-                        rua_edit,
-                        bairro_edit,
-                        cidade_edit,
-                        "Bahia",
-                        horario_hora_edit,
-                        horario_minuto_edit,
-                        data_final
-                );*/
                 eventoAtual.setInformacoesEvento(nome_evento_edit,descricao_edit, data_final,horario_hora_edit, horario_minuto_edit,rua_edit,bairro_edit,cidade_edit);
                 EventoSERVICE.editarEvento(this, eventoAtual);
-                AtualizarListaSERVICE.atualizarLista(pessoaPJ);
+                AtualizarListaSERVICE.atualizarLista(this,pessoaPJ);
+
 
             });
 
@@ -256,6 +242,10 @@
                 return insets;
             });
 
+
         }
 
     }
+
+
+

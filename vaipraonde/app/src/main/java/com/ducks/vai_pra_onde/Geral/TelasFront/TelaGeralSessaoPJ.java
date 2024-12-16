@@ -29,14 +29,8 @@ public class TelaGeralSessaoPJ extends AppCompatActivity {
 
         ArrayList<Eventos> listaEventosRecebida = getIntent().getParcelableArrayListExtra("listaEventos");
         PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
+        String fragmentShow = getIntent().getStringExtra("FragmentoShow");
 
-        for(Eventos e : listaEventosRecebida){
-            if(e.getDataEvento() == null) {
-                Log.d("DataErro", "Data nula0");
-            }else{
-                Log.d("DataErro", "Não é aqui0");
-            }
-        }
 
 
         viewModelSessaoPJ = new ViewModelProvider(this).get(FragmeSessaoPessoaPJViewModel.class);
@@ -45,9 +39,16 @@ public class TelaGeralSessaoPJ extends AppCompatActivity {
         viewModelSessaoPJ.setPessoaPJ(pessoaPJ);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragSessaoPJ, new PerfilEmpresa())
-                    .commit();
+            if(fragmentShow.equals("PerfilEmpresa")) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragSessaoPJ, new PerfilEmpresa())
+                        .commit();
+
+            } else if (fragmentShow.equals("ListaPessoa")) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragSessaoPJ, new TelaListadeEventos())
+                        .commit();
+            }
         }
 
     }

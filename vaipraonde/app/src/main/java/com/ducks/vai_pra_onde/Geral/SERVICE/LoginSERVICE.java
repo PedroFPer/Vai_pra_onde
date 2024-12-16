@@ -18,8 +18,8 @@ public class LoginSERVICE {
                         Log.d("LoginService",pessoaJuridica.getTelefone() );
                         Intent intent = new Intent(context, TelaGeralSessaoPJ.class);
                         intent.putExtra("pessoaJuridica", pessoaJuridica);
+                        intent.putExtra("FragmentoShow", "PerfilEmpresa");
                         intent.putParcelableArrayListExtra("listaEventos", listaEventos);
-
                         context.startActivity(intent);
                 });
             } else {

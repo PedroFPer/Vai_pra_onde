@@ -52,13 +52,6 @@ public class TelaListadeEventos extends Fragment {
         ArrayList<Eventos> listaEventos = viewModelSessaoPJ.getListaEventos();
         PessoaPJ pessoaPJ = viewModelSessaoPJ.getPessoaPJ();
 
-        for(Eventos e : listaEventos){
-            if(e.getDataEvento() == null) {
-                Log.d("DataErro", "Data nula2");
-            }else{
-                Log.d("DataErro", "Não é aqui2");
-            }
-        }
 
         float density = getResources().getDisplayMetrics().density;
 
@@ -107,14 +100,7 @@ public class TelaListadeEventos extends Fragment {
 
             // Adicionar funcionalidade ao botão
             itemEvento.setOnClickListener(v -> {
-
-                if (getActivity() != null) {
-                    Intent intent = new Intent(getActivity(), TelaCadastroModifEvento.class);
-                    Log.d("Promessa25", "????: ");
-                    startActivity(intent);
-                }
-
-
+                
                 Intent intent = new Intent(getActivity(), TelaCadastroModifEvento.class);
                 intent.putExtra("pessoaJuridica", pessoaPJ);
                 intent.putExtra("evento", evento);
