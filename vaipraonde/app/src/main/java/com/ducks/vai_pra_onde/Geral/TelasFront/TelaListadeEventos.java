@@ -96,7 +96,7 @@ public class TelaListadeEventos extends Fragment {
 
             itemEvento.setLayoutParams(params);
             itemEvento.setBackgroundResource(R.drawable.borda_preta);
-            itemEvento.setText(evento.getDataEvento() + " | " + evento.getNomeEvento());
+            itemEvento.setText(evento.getDataEvento().getDay()+"/"+ evento.getDataEvento().getMonth() + " | " + evento.getNomeEvento());
             itemEvento.setTextColor(ContextCompat.getColor(getActivity(), R.color.black));
             itemEvento.setTextSize(18);
 
