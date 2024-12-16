@@ -38,12 +38,14 @@ android:background="@drawable/teste1">
         android:text="Vamos descobrir novos eventos?"
         android:textSize="20sp"
         android:gravity="center"
-        android:textColor="@color/dark_gray"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:elevation="3dp"/>
+        android:elevation="3dp"
+
+        />
 
 
 
@@ -72,6 +74,7 @@ android:background="@drawable/teste1">
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
         android:imeOptions="actionNext"
         android:inputType="text"
         />
@@ -79,6 +82,7 @@ android:background="@drawable/teste1">
 
     <EditText
         android:id="@+id/textSenha"
+        android:textColor="@color/black"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_marginHorizontal="70dp"
