@@ -72,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/ende"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/caixa"
@@ -80,7 +80,7 @@
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
-        android:hint="Endereço"
+        android:hint="E-Mail"
         android:textColor="@color/dark_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,14 +88,14 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/ende"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginBottom="110dp"
         android:background="@drawable/caixa"
-
-        android:hint="E-mail"
+        android:textSize="12dp"
+        android:hint="Endereço"
         android:padding="12dp"
         android:textColor="@color/dark_gray"
 
@@ -130,7 +130,7 @@
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
-        android:textColor="@color/white"
+        android:textColor="@color/dark_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

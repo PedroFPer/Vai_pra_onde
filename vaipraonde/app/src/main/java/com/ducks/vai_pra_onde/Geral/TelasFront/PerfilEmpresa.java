@@ -41,7 +41,8 @@ public class PerfilEmpresa extends Fragment {
 
         TextView editNom = view.findViewById(R.id.nome);
         TextView editEmai = view.findViewById(R.id.email);
-        EditText editDesc = view.findViewById(R.id.desc);
+        TextView editDesc = view.findViewById(R.id.desc);
+        TextView ende = view.findViewById(R.id.ende);
 
         Button buttonListEven = view.findViewById(R.id.listaEventos);
 
@@ -52,6 +53,8 @@ public class PerfilEmpresa extends Fragment {
         if (pessoaPJ != null) {
             editNom.setText(pessoaPJ.getNomeEmpresa());
             editEmai.setText(pessoaPJ.getEmail());
+            ende.setText(pessoaPJ.getCidade() +" "+pessoaPJ.getBairro()+" "+pessoaPJ.getLogradouro());
+            editDesc.setText(pessoaPJ.getNomeEmpresa()+" é uma organização comprometida com a excelência e a inovação");
         } else {
             Log.e("PerfilEmpresa", "PessoaPJ não encontrada");
 
