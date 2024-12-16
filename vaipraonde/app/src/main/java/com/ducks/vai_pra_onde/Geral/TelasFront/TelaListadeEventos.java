@@ -85,7 +85,7 @@ public class TelaListadeEventos extends Fragment {
 
 
     private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
-        int largura = (int) (330 * density);
+        int largura = (int) (280 * density);
         int altura = (int) (70 * density);
 
         for (Eventos evento : listaEventos) {
