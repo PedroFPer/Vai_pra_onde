@@ -170,12 +170,16 @@ public class Eventos implements Parcelable {
         this.nomeEvento = nomeEvento;
     }
 
-    public void setInformacoesEvento(String nomeEvento, String descricao, Date dataEvento, int horaEvento, int minutoEvento) {
+    public void setInformacoesEvento(String nomeEvento, String descricao, Date dataEvento, int horaEvento, int minutoEvento,
+    String logradouro, String bairro, String cidade) {
         this.nomeEvento = nomeEvento;
         this.descricao = descricao;
         this.dataEvento = dataEvento;
         this.horaEvento = horaEvento;
         this.minutoEvento = minutoEvento;
+        this.logradouro = logradouro;
+        this.cidade = cidade;
+        this.bairro = bairro;
     }
 
     @Override
