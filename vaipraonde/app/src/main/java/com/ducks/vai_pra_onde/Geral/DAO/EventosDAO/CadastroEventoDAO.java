@@ -22,7 +22,7 @@ public class CadastroEventoDAO {
         eventoCadastro.put("descricao", evento.getDescricao());
         eventoCadastro.put("email", evento.getEmail());
         eventoCadastro.put("telefone",evento.getTelefone());
-        eventoCadastro.put("logradoduro", evento.getLogradouro());
+        eventoCadastro.put("logradouro", evento.getLogradouro());
         eventoCadastro.put("bairro", evento.getBairro());
         eventoCadastro.put("cidade", evento.getCidade());
         eventoCadastro.put("estado", evento.getEstado());
