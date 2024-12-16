@@ -19,7 +19,7 @@ public class VerificarLogin {
                             PessoaPJ pessoaPJConta = new PessoaPJ(documento.getString("nomeEmpresa"), documento.getString("nomeEmpresario"),
                             documento.getString("cpfEmpresario"), documento.getString("senha"), documento.getString("logradouro"),
                             documento.getString("bairro"), documento.getString("cidade"), documento.getString("estado"),
-                            documento.getString("cnpj"), documento.getString("email"), documento.getId());
+                            documento.getString("cnpj"), documento.getString("email"), documento.getString("telefone"), documento.getId());
                             pessoa.complete(pessoaPJConta);
                         }
                         else {
