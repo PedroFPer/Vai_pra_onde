@@ -219,11 +219,13 @@
                 }
 
 
+
                 // Criar o objeto Evento e enviar para o serviço
-                Eventos eventoEditado = new Eventos(
+                /*Eventos eventoEditado = new Eventos(
                         nome_evento_edit,
                         nome_da_empresa_edit,
                         pessoaPJ.getCodigoDocumento(),
+                        eventoAtual.getCodigoDocumento(),
                         descricao_edit,
                         email_edit,
                         telefone_edit,
@@ -234,8 +236,9 @@
                         horario_hora_edit,
                         horario_minuto_edit,
                         data_final
-                );
-                EventoSERVICE.editarEvento(this, eventoEditado);
+                );*/
+                eventoAtual.setInformacoesEvento(nome_evento_edit,descricao_edit, data_final,horario_hora_edit, horario_minuto_edit);
+                EventoSERVICE.editarEvento(this, eventoAtual);
 
             });
 

@@ -152,7 +152,7 @@ public class Eventos implements Parcelable {
         return minutoEvento;
     }
 
-    /*
+
     public void setDataEvento(Date dataEvento) {
         this.dataEvento = dataEvento;
     }
@@ -168,7 +168,7 @@ public class Eventos implements Parcelable {
 
     public void setNomeEvento(String nomeEvento) {
         this.nomeEvento = nomeEvento;
-    }*/
+    }
 
     public void setInformacoesEvento(String nomeEvento, String descricao, Date dataEvento, int horaEvento, int minutoEvento) {
         this.nomeEvento = nomeEvento;
