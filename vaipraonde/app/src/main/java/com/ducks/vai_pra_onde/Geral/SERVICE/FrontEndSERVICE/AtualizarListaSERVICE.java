@@ -1,4 +1,4 @@
-package com.ducks.vai_pra_onde.Geral.novaSERVICE.FrontEndSERVICE;
+package com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE;
 
 import com.ducks.vai_pra_onde.Geral.DAO.Carregamentos.DownloadEventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
