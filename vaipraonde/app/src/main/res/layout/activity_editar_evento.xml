@@ -33,7 +33,7 @@
             <EditText
                 android:id="@+id/nome_evento_vw"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_marginTop="20dp"
                 android:textSize="14pt"
                 android:background="@drawable/caixaperfil1"
@@ -155,8 +155,8 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/horario_do_evento_vw_hora"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
@@ -168,8 +168,8 @@
                     android:textSize="8pt" />
                 <EditText
                     android:id="@+id/horario_do_evento_vw_min"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
