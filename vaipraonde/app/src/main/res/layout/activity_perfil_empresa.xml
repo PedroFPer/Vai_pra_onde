@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LayoutSessaoPJ1"
     android:layout_width="match_parent"
+    android:background="@drawable/teste1"
     android:layout_height="match_parent"
     tools:context=".Geral.TelasFront.PerfilEmpresa">
 
@@ -13,36 +15,39 @@
         android:layout_width="411dp"
         android:layout_height="200dp"
         android:layout_marginBottom="694dp"
-        android:background="@drawable/banner"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_foto"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
 
     <Button
         android:id="@+id/bannerbtn"
 
         android:layout_width="411dp"
         android:layout_height="200dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="694dp"
         android:background="@color/transparente"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
 
     <View
+        android:id="@+id/vw"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="220dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/conteiner"
-        android:backgroundTint="@color/fundoview"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -52,32 +57,31 @@
 
     <TextView
         android:id="@+id/nome"
-        android:layout_width="230dp"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/caixa2"
+        android:background="@drawable/caixa"
         android:layout_marginBottom="350dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="5dp"
         android:padding="12dp"
         android:text="nome"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColor="@color/dark_gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/imgp"
+
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/ende"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/caixa2"
+        android:background="@drawable/caixa"
         android:layout_marginBottom="230dp"
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
         android:hint="Endereço"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColor="@color/dark_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,18 +91,19 @@
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/caixa2"
-        android:layout_marginBottom="110dp"
         android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/caixa"
 
-        android:padding="12dp"
         android:hint="E-mail"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textColor="@color/dark_gray"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
 
     <TextView
         android:layout_width="match_parent"
@@ -110,7 +115,7 @@
         android:padding="12dp"
         android:text="Descrição"
         android:textSize="20sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +125,7 @@
         android:id="@+id/desc"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/caixa2"
+        android:background="@drawable/caixa"
         android:layout_marginTop="320dp"
         android:layout_marginHorizontal="60dp"
 
@@ -131,16 +136,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+
+
     <ImageView
+        android:id="@+id/imgp"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="450dp"
         android:layout_marginEnd="270dp"
-        android:background="@drawable/foto"
+        android:layout_marginBottom="450dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/ftperfil"
+        android:src="@drawable/default_foto"
+        app:circularflow_defaultAngle="@dimen/cardview_default_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/caixa2"
+       app:layout_constraintStart_toStartOf="@+id/imgp"
+        app:layout_constraintTop_toTopOf="@id/imgp"
+
+        />
 
     <Button
         android:id="@+id/listaEventos"
@@ -148,7 +168,7 @@
         android:layout_height="wrap_content"
         android:text="Lista de eventos"
         android:textColor="@color/white"
-        android:backgroundTint="#3D3D3D"
+        android:backgroundTint="@color/burnt_orange"
         android:layout_marginTop="197dp"
         android:textSize="16dp"
         android:padding="12dp"
