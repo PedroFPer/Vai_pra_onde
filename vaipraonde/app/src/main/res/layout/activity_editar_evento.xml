@@ -81,6 +81,7 @@
 
                 <TextView
                     android:id="@+id/nome_da_empresa_vw"
+                    android:padding="10dp"
                     android:layout_width="300dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
@@ -99,6 +100,8 @@
                     android:id="@+id/descricao_vw"
                     android:layout_width="290dp"
                     android:layout_height="100dp"
+                    android:gravity="top|start"
+                    android:padding="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Descrição"
@@ -186,7 +189,7 @@
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-
+                    android:padding="10dp"
                     android:text="Email"
                     android:background="@drawable/conteiner"
 
@@ -261,29 +264,37 @@
 
 
         </LinearLayout>
-        <Button
-            android:id="@+id/buttoDel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/burnt_orange"
-            android:text="Deleta evento"
-            android:padding="20dp"
-            android:layout_marginLeft="100dp"
-            android:textSize="8pt"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/buttoDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/burnt_orange"
+                android:text="Deleta evento"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="8pt"
 
-            />
+                />
 
-        <Button
-            android:id="@+id/buttoEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/burnt_orange"
-            android:text="Editar Cadastro"
-            android:padding="20dp"
-            android:layout_marginRight="100dp"
-            android:textSize="8pt"
+            <Button
+                android:id="@+id/buttoEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/burnt_orange"
+                android:text="Editar Cadastro"
+                android:padding="20dp"
 
-            />
+                android:textSize="8pt"
+
+                />
+        </LinearLayout>
+
 
     </LinearLayout>
 
