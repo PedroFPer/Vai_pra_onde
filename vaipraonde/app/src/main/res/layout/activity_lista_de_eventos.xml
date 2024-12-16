@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -59,7 +56,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <!-- Mensagem padrão quando não há eventos -->
         <TextView
             android:id="@+id/noEventMessage"
@@ -74,12 +70,10 @@
             app:layout_constraintStart_toStartOf="parent"
             android:elevation="2dp"/>
 
-
-
         <!-- Container para os eventos -->
         <LinearLayout
             android:id="@+id/eventContainer"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="380dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="270dp"
@@ -90,37 +84,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
             <!-- Caixa de entrada para o evento -->
-            <!--<EditText
+            <Button
                 android:id="@+id/item_evento"
                 android:layout_width="330dp"
                 android:layout_height="70dp"
                 android:layout_marginHorizontal="0dp"
-                android:background="@drawable/caixa"
+                android:backgroundTint="#FF5722"
+                android:background="@drawable/borda_preta"
                 android:imeOptions="actionNext"
                 android:inputType="text"
-                android:padding="10dp"
+                android:padding="20dp"
                 android:text="ENCONTRO DOS ANTIGOS"
-                android:textColor="@color/dark_gray" /> -->
-
+                android:textColor="#000000"
+                android:visibility="gone"/> <!-- Inicialmente invisível -->
         </LinearLayout>
-
-
 
         <!-- Botão Criar Novo Evento -->
         <Button
             android:id="@+id/btn_criar_evento"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:backgroundTint="#FF5722"
             android:text="+ | CRIAR NOVO EVENTO"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/eventContainer"
-            tools:layout_editor_absoluteX="101dp" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
