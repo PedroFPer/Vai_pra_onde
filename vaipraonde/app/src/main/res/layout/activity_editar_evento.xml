@@ -289,6 +289,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/burnt_orange"
                 android:text="Deleta evento"
+                android:textColor="@color/white"
                 android:padding="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="8pt"
@@ -301,6 +302,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/burnt_orange"
                 android:text="Editar Cadastro"
+                android:textColor="@color/white"
                 android:padding="20dp"
 
                 android:textSize="8pt"
