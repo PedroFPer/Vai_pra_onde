@@ -8,6 +8,7 @@
     android:background="@drawable/teste1"
     tools:conhint=".Geral.TelasFront.TelaCadastroEvento">
 
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,7 +92,7 @@
                     android:padding="10dp"
                     android:hint="Nome da Empresa"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:background="@drawable/caixa"
 
 
@@ -110,7 +111,7 @@
                     android:padding="10dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:hint="Descrição"
                     android:background="@drawable/caixa"
 
@@ -129,7 +130,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:inputType="number"
                     android:hint="Ano"
                     android:background="@drawable/caixa"
@@ -142,7 +143,7 @@
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:textAlignment="center"
                     android:hint="Mês"
                     android:inputType="number"
@@ -155,7 +156,7 @@
                     android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     android:hint="Dia"
@@ -176,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:textAlignment="center"
                     android:background="@drawable/caixa"
                     android:padding="10dp"
@@ -191,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
@@ -211,7 +212,7 @@
                     android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:padding="10dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
 
@@ -235,7 +236,7 @@
                     android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:paddingHorizontal="18dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
@@ -249,7 +250,7 @@
                     android:id="@+id/endereco_bairro_cad"
                     android:layout_width="100dp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_height="48dp"
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="5dp"
