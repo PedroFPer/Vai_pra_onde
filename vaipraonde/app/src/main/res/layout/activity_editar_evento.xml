@@ -56,8 +56,8 @@
 
             <ImageView
 
-                android:layout_width="380dp"
-                android:layout_marginLeft="17dp"
+                android:layout_width="320dp"
+                android:layout_marginLeft="28dp"
                 android:layout_marginRight="17dp"
                 android:layout_height="200dp"
                 android:src="@drawable/default_foto"
@@ -67,8 +67,8 @@
 
 
         <LinearLayout
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_height="670dp"
 
             android:layout_marginTop="10dp"
 
@@ -105,6 +105,7 @@
                     android:layout_height="100dp"
                     android:gravity="top|start"
                     android:padding="10dp"
+                    android:paddingStart="20dp" 
                     android:paddingHorizontal="20dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
@@ -187,6 +188,7 @@
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
                     android:background="@drawable/caixa"
+                    android:textAlignment="center"
                     android:text="Minuto"
                     android:textColor="@color/black"
                     android:imeOptions="actionNext"
@@ -194,28 +196,17 @@
 
                     android:textSize="8pt" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:id="@+id/Email_vw"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:padding="10dp"
-                    android:text="Email"
-                    android:textColor="@color/black"
-                    android:background="@drawable/caixa"
 
-
-                    android:textSize="8pt" />
-
-            </LinearLayout>
-
-
-
+            <TextView
+                android:paddingHorizontal="10dp"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Endereço do evento"
+                android:textColor="@color/black"
+                android:paddingVertical="4dp"
+                android:textSize="8pt"/>
 
 
             <LinearLayout
@@ -224,11 +215,11 @@
                 android:orientation="horizontal">
                 <EditText
                     android:id="@+id/endereco_cidade_vw"
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
+
                     android:layout_marginRight="15dp"
                     android:text="Cidade"
                     android:textColor="@color/black"
@@ -239,53 +230,88 @@
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
                     />
-                <EditText
-                    android:id="@+id/endereco_bairro_vw"
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:paddingHorizontal="18dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:text="Bairro"
-                    android:textColor="@color/black"
-                    android:background="@drawable/caixa"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textSize="8pt"
-                    android:layout_marginBottom="15dp"
-                    />
-                <EditText
-                    android:id="@+id/endereco_logradouro_vw"
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:paddingHorizontal="18dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:text="Rua"
-                    android:textColor="@color/black"
-                    android:background="@drawable/caixa"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textSize="8pt"
 
-                    />
 
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/endereco_bairro_vw"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:paddingHorizontal="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:text="Bairro"
+                android:textColor="@color/black"
+                android:background="@drawable/caixa"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="8pt"
+                android:layout_marginBottom="15dp"
+                />
+            <EditText
+                android:id="@+id/endereco_logradouro_vw"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:paddingHorizontal="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:text="Rua"
+                android:textColor="@color/black"
+                android:background="@drawable/caixa"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="8pt"
+
+                />
             <TextView
-                android:paddingHorizontal="20dp"
+                android:paddingHorizontal="10dp"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Informações para contato"
+                android:textColor="@color/black"
+                android:paddingVertical="4dp"
+                android:textSize="8pt"/>
+
+
+            <TextView
+                android:paddingHorizontal="10dp"
                 android:id="@+id/telefone_vw"
                 android:layout_width="300dp"
-                android:layout_height="48dp"
+                android:layout_height="38dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="0dp"
                 android:text="Telefone"
                 android:textColor="@color/black"
                 android:background="@drawable/caixa"
-
+                android:paddingVertical="4dp"
                 android:textSize="8pt"
                 android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/Email_vw"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="10dp"
+                    android:padding="10dp"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:background="@drawable/caixa"
+                    android:textSize="8pt" />
+
+            </LinearLayout>
+
 
 
         </LinearLayout>

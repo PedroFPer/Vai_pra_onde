@@ -19,6 +19,7 @@
 
     import com.ducks.vai_pra_onde.Geral.SERVICE.EventoSERVICE;
     import com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE.AtualizarListaSERVICE;
+    import com.ducks.vai_pra_onde.Geral.Utilidades.UtilapagarFoco;
     import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
     import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
     import com.ducks.vai_pra_onde.R;
@@ -42,6 +43,8 @@
 
             Eventos eventoAtual = getIntent().getParcelableExtra("evento");
             PessoaPJ pessoaPJ = getIntent().getParcelableExtra("pessoaJuridica");
+
+            UtilapagarFoco utilapagarFoco = new UtilapagarFoco();
 
 
             TextView nome_da_empresa =findViewById(R.id.nome_da_empresa_vw);
@@ -69,6 +72,7 @@
             Button buttonDele=findViewById(R.id.buttoDel);
 
 
+
             Date dataEvento = eventoAtual.getDataEvento();
 
             SimpleDateFormat diaFormatador = new SimpleDateFormat("dd", Locale.getDefault());
@@ -80,7 +84,16 @@
             String mes = mesFormatador.format(dataEvento);
             String ano = anoFormatador.format(dataEvento);
 
-
+            utilapagarFoco.apagarTextoAoFocar(nome_evento);
+            utilapagarFoco.apagarTextoAoFocar(descricao);
+            utilapagarFoco.apagarTextoAoFocar(cidade);
+            utilapagarFoco.apagarTextoAoFocar(bairro);
+            utilapagarFoco.apagarTextoAoFocar(rua);
+            utilapagarFoco.apagarTextoAoFocar(data_ano);
+            utilapagarFoco.apagarTextoAoFocar(data_mes);
+            utilapagarFoco.apagarTextoAoFocar(data_dia);
+            utilapagarFoco.apagarTextoAoFocar(horario_hora);
+            utilapagarFoco.apagarTextoAoFocar(horario_minuto);
 
 
 

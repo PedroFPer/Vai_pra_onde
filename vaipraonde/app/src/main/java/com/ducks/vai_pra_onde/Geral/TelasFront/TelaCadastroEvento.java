@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
 import com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE.AtualizarListaSERVICE;
+import com.ducks.vai_pra_onde.Geral.Utilidades.UtilapagarFoco;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.Geral.SERVICE.EventoSERVICE;
@@ -44,6 +45,8 @@ public class TelaCadastroEvento extends Fragment {
 
         PessoaPJ pessoaPJ = viewModelSessaoPJ.getPessoaPJ();
 
+        UtilapagarFoco utilapagarFoco = new UtilapagarFoco();
+
         //Atribuição dos componentes para variaveis
 
         //Informações da empresa que não podem ser modificadas
@@ -62,7 +65,7 @@ public class TelaCadastroEvento extends Fragment {
         EditText data_ano = view.findViewById(R.id.data_ano_cad);
         EditText data_mes = view.findViewById(R.id.data_mes_cad);
         EditText data_dia=view.findViewById(R.id.data_dia_cad);
-        EditText horario_hora = view.findViewById(R.id.horario_evento_cad_hora);
+        EditText horario_hora = view.findViewById(R.id.horario_do_evento_cad_hora);
         EditText horario_minuto = view.findViewById(R.id.horario_do_evento_cad_min);
 
         //Botão cadastro
@@ -73,6 +76,17 @@ public class TelaCadastroEvento extends Fragment {
         nome_da_empresa.setText(pessoaPJ.getNomeEmpresa());
         Email.setText(pessoaPJ.getEmail());
         Telefone.setText(pessoaPJ.getTelefone());
+
+        utilapagarFoco.apagarTextoAoFocar(nome_evento);
+        utilapagarFoco.apagarTextoAoFocar(descricao);
+        utilapagarFoco.apagarTextoAoFocar(cidade);
+        utilapagarFoco.apagarTextoAoFocar(bairro);
+        utilapagarFoco.apagarTextoAoFocar(rua);
+        utilapagarFoco.apagarTextoAoFocar(data_ano);
+        utilapagarFoco.apagarTextoAoFocar(data_mes);
+        utilapagarFoco.apagarTextoAoFocar(data_dia);
+        utilapagarFoco.apagarTextoAoFocar(horario_hora);
+        utilapagarFoco.apagarTextoAoFocar(horario_minuto);
 
 
         buttonSubmit.setOnClickListener(v -> {

@@ -6,17 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/teste1"
-    android:descendantFocusability="afterDescendants"
-    tools:conhint=".Geral.TelasFront.TelaCadastroEvento">
-
+    tools:context=".Geral.TelasFront.TelaCadastroEvento"
+    android:descendantFocusability="afterDescendants">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         >
 
 
@@ -42,10 +39,9 @@
                 android:textSize="10pt"
                 android:background="@drawable/caixaperfil1"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 android:padding="10dp"
                 android:fontFamily="monospace"
-                android:hint="Nome do evento"
+                android:text="Nome do evento"
                 android:imeOptions="actionNext"
                 android:inputType="text"/>
         </LinearLayout>
@@ -56,15 +52,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
-            android:gravity="center"
             >
 
             <ImageView
 
-                android:layout_width="380dp"
-
+                android:layout_width="320dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="17dp"
                 android:layout_height="200dp"
-
                 android:src="@drawable/default_foto"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true" />
@@ -72,114 +67,98 @@
 
 
         <LinearLayout
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_height="670dp"
 
             android:layout_marginTop="10dp"
 
             android:background="@drawable/conteiner"
             android:orientation="vertical"
             >
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"> <!-- Orientação vertical para melhor empilhamento -->
 
-                    <TextView
-                        android:id="@+id/nome_da_empresa_cad"
-                        android:layout_width="300dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:padding="10dp"
-                        android:hint="Nome da Empresa"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/dark_gray"
-                        android:background="@drawable/caixa"
-                        android:textSize="8pt" />
+                <TextView
+                    android:id="@+id/nome_da_empresa_cad"
+                    android:padding="10dp"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Nome da Empresa"
+                    android:textColor="@color/black"
+                    android:background="@drawable/caixa"
 
-                    <!-- Adicione mais elementos aqui, se necessário -->
 
-                </LinearLayout>
-            </ScrollView>
+                    android:textSize="8pt" />
+            </LinearLayout>
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/descricao_cad"
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:gravity="top|start"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingHorizontal="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Descrição"
+                    android:textColor="@color/black"
+                    android:background="@drawable/caixa"
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:textSize="8pt" />
 
-                    <EditText
-                        android:id="@+id/descricao_cad"
-                        android:layout_width="290dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:gravity="top|start"
-                        android:padding="20dp"
-                        android:paddingVertical="100dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/dark_gray"
-                        android:hint="Descrição"
-                        android:background="@drawable/caixa" />
 
-                </LinearLayout>
-            </ScrollView>
-
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
                     android:id="@+id/data_ano_cad"
                     android:layout_width="60dp"
-                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
-                    android:textColorHint="@color/dark_gray"
-                    android:inputType="number"
-                    android:hint="Ano"
+                    android:text="Ano"
+                    android:textColor="@color/black"
                     android:background="@drawable/caixa"
-                    android:textSize="8pt"
-                    android:imeOptions="actionNext"/>
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textSize="8pt" />
                 <EditText
                     android:id="@+id/data_mes_cad"
                     android:layout_width="60dp"
-                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/dark_gray"
                     android:textAlignment="center"
-                    android:hint="Mês"
-                    android:inputType="number"
+                    android:text="Mês"
+                    android:textColor="@color/black"
                     android:background="@drawable/caixa"
-
-                    android:textSize="8pt"
-                    android:imeOptions="actionNext"/>
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textSize="8pt" />
                 <EditText
                     android:id="@+id/data_dia_cad"
                     android:layout_width="60dp"
-                    android:textColor="@color/black"
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
-                    android:textColorHint="@color/dark_gray"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
-                    android:hint="Dia"
-                    android:inputType="number"
+                    android:text="Dia"
+                    android:textColor="@color/black"
                     android:background="@drawable/caixa"
-
-                    android:textSize="8pt"
-                    android:imeOptions="actionNext"/>
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textSize="8pt" />
 
 
             </LinearLayout>
@@ -187,59 +166,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <EditText
-                    android:id="@+id/horario_evento_cad_hora"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/horario_do_evento_cad_hora"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/dark_gray"
                     android:textAlignment="center"
                     android:background="@drawable/caixa"
                     android:padding="10dp"
-                    android:inputType="number"
-                    android:hint="Hora"
-
+                    android:text="Hora"
+                    android:textColor="@color/black"
                     android:imeOptions="actionNext"
+                    android:inputType="number"
+
                     android:textSize="8pt" />
                 <EditText
                     android:id="@+id/horario_do_evento_cad_min"
-                    android:inputType="number"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="@color/dark_gray"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:padding="12dp"
-                    android:background="@drawable/caixa"
-                    android:hint="Minuto"
-                    android:textSize="8pt"
-                    android:imeOptions="actionNext"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:id="@+id/Email_cad"
-                    android:layout_width="300dp"
-                    android:textColor="@color/black"
+                    android:layout_width="80dp"
                     android:layout_height="48dp"
-                    android:padding="10dp"
-                    android:textColorHint="@color/dark_gray"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
-
-                    android:hint="Email"
+                    android:padding="10dp"
                     android:background="@drawable/caixa"
-                    android:textSize="8pt"
-                    android:imeOptions="actionNext"/>
+                    android:textAlignment="center"
+                    android:text="Minuto"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
 
+                    android:textSize="8pt" />
             </LinearLayout>
 
-
-
+            <TextView
+                android:paddingHorizontal="10dp"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Endereço do evento"
+                android:textColor="@color/black"
+                android:paddingVertical="4dp"
+                android:textSize="8pt"/>
 
 
             <LinearLayout
@@ -248,87 +215,127 @@
                 android:orientation="horizontal">
                 <EditText
                     android:id="@+id/endereco_cidade_cad"
-                    android:layout_width="100dp"
-                    android:textColor="@color/black"
-                    android:layout_height="48dp"
+                    android:layout_width="300dp"
+                    android:layout_height="38dp"
                     android:paddingHorizontal="18dp"
-                    android:textColorHint="@color/dark_gray"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:hint="Cidade"
-                    android:background="@drawable/caixa"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textSize="8pt"
-                    android:layout_marginBottom="15dp"
-                    />
-                <EditText
-                    android:id="@+id/endereco_bairro_cad"
-                    android:layout_width="100dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/dark_gray"
-                    android:layout_height="48dp"
-                    android:paddingHorizontal="18dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:hint="Bairro"
-                    android:background="@drawable/caixa"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textSize="8pt"
-                    android:layout_marginBottom="15dp"
-                    />
-                <EditText
-                    android:id="@+id/endereco_logradouro_cad"
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:textColor="@color/black"
-                    android:paddingHorizontal="18dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="15dp"
-                    android:textColorHint="@color/dark_gray"
-                    android:layout_marginRight="15dp"
-                    android:hint="Rua"
-                    android:background="@drawable/caixa"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textSize="8pt"
 
+                    android:layout_marginRight="15dp"
+                    android:text="Cidade"
+                    android:textColor="@color/black"
+                    android:background="@drawable/caixa"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+
+                    android:textSize="8pt"
+                    android:layout_marginBottom="15dp"
                     />
+
 
             </LinearLayout>
+
+            <EditText
+                android:id="@+id/endereco_bairro_cad"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:paddingHorizontal="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:text="Bairro"
+                android:textColor="@color/black"
+                android:background="@drawable/caixa"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="8pt"
+                android:layout_marginBottom="15dp"
+                />
+            <EditText
+                android:id="@+id/endereco_logradouro_cad"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:paddingHorizontal="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:text="Rua"
+                android:textColor="@color/black"
+                android:background="@drawable/caixa"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="8pt"
+
+                />
             <TextView
                 android:paddingHorizontal="10dp"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Informações para contato"
+                android:textColor="@color/black"
                 android:paddingVertical="4dp"
+                android:textSize="8pt"/>
+
+
+            <TextView
+                android:paddingHorizontal="10dp"
                 android:id="@+id/telefone_cad"
                 android:layout_width="300dp"
                 android:layout_height="38dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:text="Telefone"
                 android:textColor="@color/black"
-                android:layout_marginTop="15dp"
-                android:textColorHint="@color/dark_gray"
-                android:hint="Telefone"
                 android:background="@drawable/caixa"
-                android:imeOptions="actionDone"
+                android:paddingVertical="4dp"
                 android:textSize="8pt"
                 android:layout_marginBottom="15dp"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/Email_cad"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="10dp"
+                    android:padding="10dp"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:background="@drawable/caixa"
+                    android:textSize="8pt" />
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
-        <Button
-            android:id="@+id/BtnSubmit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/burnt_orange"
-            android:text="Criar Evento"
-            android:textColor="@color/white"
-            android:padding="20dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/BtnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/burnt_orange"
+                android:text="Criar evento"
+                android:textColor="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="8pt"
 
-            android:textSize="8pt"
+                />
 
-            />
+        </LinearLayout>
+
 
     </LinearLayout>
 
