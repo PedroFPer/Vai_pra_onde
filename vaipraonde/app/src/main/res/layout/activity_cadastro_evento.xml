@@ -72,7 +72,7 @@
 
             android:layout_marginTop="10dp"
 
-            android:background="@drawable/caixa2"
+            android:background="@drawable/conteiner"
             android:orientation="vertical"
             >
             <LinearLayout
@@ -92,7 +92,7 @@
                     android:hint="Nome da Empresa"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
 
                     android:textSize="8pt" />
@@ -112,7 +112,7 @@
                     android:layout_marginTop="15dp"
                     android:textColorHint="@color/gray"
                     android:hint="Descrição"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
 
@@ -132,7 +132,7 @@
                     android:textColorHint="@color/gray"
                     android:inputType="number"
                     android:hint="Ano"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
                 <EditText
@@ -146,7 +146,7 @@
                     android:textAlignment="center"
                     android:hint="Mês"
                     android:inputType="number"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
                 <EditText
@@ -160,7 +160,7 @@
                     android:textAlignment="center"
                     android:hint="Dia"
                     android:inputType="number"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
 
@@ -178,7 +178,7 @@
                     android:layout_marginTop="15dp"
                     android:textColorHint="@color/gray"
                     android:textAlignment="center"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
                     android:padding="10dp"
                     android:inputType="number"
                     android:hint="Hora"
@@ -195,7 +195,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
                     android:hint="Minuto"
 
 
@@ -216,7 +216,7 @@
                     android:layout_marginTop="15dp"
 
                     android:hint="Email"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
                     android:textSize="8pt" />
 
             </LinearLayout>
@@ -240,7 +240,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
                     android:hint="Cidade"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
@@ -256,7 +256,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="15dp"
                     android:hint="Bairro"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
@@ -269,10 +269,10 @@
                     android:paddingHorizontal="18dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="15dp"
-                    android:textColorHint="@color/gray"
+                    android:textColorHint="@color/dark_gray"
                     android:layout_marginRight="15dp"
                     android:hint="Rua"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
 
@@ -287,9 +287,9 @@
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"
-                android:textColorHint="@color/gray"
+                android:textColorHint="@color/dark_gray"
                 android:hint="Telefone"
-                android:background="@drawable/conteiner"
+                android:background="@drawable/caixa"
 
                 android:textSize="8pt"
                 android:layout_marginBottom="15dp"/>
@@ -302,6 +302,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/burnt_orange"
             android:text="Criar Evento"
+            android:textColor="@color/white"
             android:padding="20dp"
 
             android:textSize="8pt"
