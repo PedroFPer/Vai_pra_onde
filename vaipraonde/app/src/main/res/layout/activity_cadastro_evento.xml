@@ -61,6 +61,7 @@
                 android:layout_width="380dp"
 
                 android:layout_height="200dp"
+
                 android:src="@drawable/default_foto"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true" />
