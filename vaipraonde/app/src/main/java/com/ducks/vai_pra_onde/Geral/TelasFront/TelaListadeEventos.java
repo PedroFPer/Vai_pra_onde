@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
+import com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE.AtualizarListaSERVICE;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.R;
@@ -56,10 +58,10 @@ public class TelaListadeEventos extends Fragment {
         float density = getResources().getDisplayMetrics().density;
 
 
-        if (listaEventos != null ) {
+        if (listaEventos != null) {
             noEventMessage.setVisibility(View.GONE);
-            adicionarEventos(listaEventos, pessoaPJ,density);
-        }else {
+            adicionarEventos(listaEventos, pessoaPJ, density);
+        } else {
             noEventMessage.setVisibility(View.VISIBLE);
         }
 
@@ -73,13 +75,25 @@ public class TelaListadeEventos extends Fragment {
                         .commit();
             }
         });
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        // Atualize a lista de notas aqui
 
+        requireActivity().getOnBackPressedDispatcher().addCallback(
+                getViewLifecycleOwner(),
+                new OnBackPressedCallback(true) {
+                    @Override
+                    public void handleOnBackPressed() {
+                        if (getActivity() != null) {
+                            AppCompatActivity activity = (AppCompatActivity) getActivity();
+                          
+                            activity.getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.fragSessaoPJ, new PerfilEmpresa())
+                                    .addToBackStack(null)
+                                    .commit();
+                        }
+                    }
+                }
+        );
     }
+
 
 
     private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
@@ -106,6 +120,7 @@ public class TelaListadeEventos extends Fragment {
                 intent.putExtra("pessoaJuridica", pessoaPJ);
                 intent.putExtra("evento", evento);
                 startActivity(intent);
+                requireActivity().finish();
             });
 
             eventContainer.addView(itemEvento);

@@ -3,6 +3,7 @@
     import static android.app.PendingIntent.getActivity;
 
     import android.annotation.SuppressLint;
+    import android.content.Intent;
     import android.os.Bundle;
     import android.widget.Button;
     import android.widget.EditText;
@@ -232,7 +233,7 @@
 
             buttonDele.setOnClickListener(v -> {
                 EventoSERVICE.deletarEvento(this,eventoAtual);
-
+                AtualizarListaSERVICE.atualizarLista(this,pessoaPJ);
 
             });
 
@@ -242,6 +243,14 @@
                 return insets;
             });
 
+            OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+                @Override
+                public void handleOnBackPressed() {
+                    AtualizarListaSERVICE.atualizarLista(TelaCadastroModifEvento.this,pessoaPJ);
+                }
+            };
+
+            getOnBackPressedDispatcher().addCallback(this, callback);
 
         }
 

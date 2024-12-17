@@ -60,13 +60,6 @@ public class PerfilEmpresa extends Fragment {
 
         }
 
-        for(Eventos e : listaEventos){
-            if(e.getDataEvento() == null) {
-                Log.d("DataErro1", "Data nula1");
-            }else{
-                Log.d("DataErro 2", "Não é aqui1");
-            }
-        }
 
         buttonListEven.setOnClickListener(v->{
             if (getActivity() != null) {

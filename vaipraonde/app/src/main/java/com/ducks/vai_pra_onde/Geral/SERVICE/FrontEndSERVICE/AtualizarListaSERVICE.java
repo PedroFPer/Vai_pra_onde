@@ -1,5 +1,6 @@
 package com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -13,8 +14,12 @@ public class AtualizarListaSERVICE {
             Intent intent = new Intent(context, TelaGeralSessaoPJ.class);
             intent.putExtra("pessoaJuridica", pessoaLogada);
             intent.putExtra("FragmentoShow", "ListaPessoa");
+            intent.putExtra("FragmentoShow", "ListaPessoa");
             intent.putParcelableArrayListExtra("listaEventos", listaEventosAtualizada);
             context.startActivity(intent);
+            if (context instanceof Activity) {
+                ((Activity) context).finish();
+            }
         });
     }
 }

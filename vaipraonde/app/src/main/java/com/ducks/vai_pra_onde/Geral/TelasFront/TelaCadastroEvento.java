@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ducks.vai_pra_onde.Geral.FragmeViewModel.FragmeSessaoPessoaPJViewModel;
+import com.ducks.vai_pra_onde.Geral.SERVICE.FrontEndSERVICE.AtualizarListaSERVICE;
 import com.ducks.vai_pra_onde.Geral.novaDTO.Eventos;
 import com.ducks.vai_pra_onde.Geral.novaDTO.PessoaPJ;
 import com.ducks.vai_pra_onde.Geral.SERVICE.EventoSERVICE;
@@ -201,6 +202,7 @@ public class TelaCadastroEvento extends Fragment {
             );
             EventoSERVICE.cadastrarEvento(getActivity(), evento);
             Toast.makeText(getActivity(), "Evento Cadastrado com Sucesso", Toast.LENGTH_SHORT).show();
+            AtualizarListaSERVICE.atualizarLista(getActivity(),pessoaPJ);
         });
     }
 }
