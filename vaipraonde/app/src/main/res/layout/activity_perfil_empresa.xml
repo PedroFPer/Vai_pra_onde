@@ -98,7 +98,7 @@
 
         android:layout_marginTop="50dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="10dp"
         android:padding="12dp"
         android:text="Descrição"
         android:textSize="20sp"

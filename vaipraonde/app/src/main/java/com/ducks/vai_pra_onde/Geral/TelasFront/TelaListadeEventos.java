@@ -104,7 +104,7 @@ public class TelaListadeEventos extends Fragment {
 
 
 
-        int largura = (int) (screenWidth * 0.753);
+        int largura = (int) (screenWidth * 0.75);
         int altura = (int) (70 * density);
 
         for (Eventos evento : listaEventos) {
