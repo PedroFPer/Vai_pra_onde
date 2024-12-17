@@ -12,6 +12,7 @@
 
 
     <View
+        android:id="@+id/vw"
         android:layout_width="match_parent"
         android:layout_height="460dp"
         android:layout_marginTop="200dp"
@@ -73,7 +74,8 @@
         android:padding="12dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadNomResPj"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
         android:imeOptions="actionNext"
         android:inputType="text"
         />
@@ -104,7 +106,8 @@
         android:padding="12dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadCpfResPj"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
         android:imeOptions="actionNext"
         android:inputType="text"
         />
@@ -135,7 +138,8 @@
         android:padding="12dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@+id/TextCadSenhaResPj"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
         android:imeOptions="actionDone"
         android:inputType="text"
         />
@@ -148,8 +152,8 @@
         android:textColor="@color/white"
         android:layout_marginTop="70dp"
         android:layout_marginHorizontal="89dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
         app:layout_constraintTop_toTopOf="@+id/CadasSenhaResPj"
         android:backgroundTint="@color/burnt_orange"
         />
