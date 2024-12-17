@@ -60,49 +60,48 @@
         android:layout_width="214dp"
         android:layout_height="wrap_content"
         android:background="@drawable/caixa"
-        android:layout_marginBottom="350dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginBottom="550dp"
+        android:layout_marginEnd="30dp"
         android:padding="12dp"
         android:text="nome"
         android:textColor="@color/dark_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintStart_toEndOf="@id/imgp"
-
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"/>
 
     <TextView
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/caixa"
-        android:layout_marginBottom="230dp"
+        android:layout_marginBottom="420dp"
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
         android:hint="E-Mail"
         android:textColor="@color/dark_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
+        app:layout_constraintStart_toStartOf="@id/vw"/>
 
     <TextView
         android:id="@+id/ende"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="300dp"
         android:background="@drawable/caixa"
         android:textSize="12dp"
         android:hint="Endereço"
         android:padding="12dp"
         android:textColor="@color/dark_gray"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
+        app:layout_constraintStart_toStartOf="@id/vw"
         app:layout_constraintVertical_bias="0.497" />
 
     <TextView
@@ -111,30 +110,30 @@
 
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="60dp"
-
+        android:layout_marginBottom="160"
         android:padding="12dp"
         android:text="Descrição"
         android:textSize="20sp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
+        app:layout_constraintStart_toStartOf="@id/vw"/>
 
     <EditText
         android:id="@+id/desc"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@drawable/caixa"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="140dp"
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
         android:textColor="@color/dark_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
+        app:layout_constraintStart_toStartOf="@id/vw""/>
 
 
 
