@@ -3,6 +3,7 @@ package com.ducks.vai_pra_onde.Geral.TelasFront;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,7 +98,13 @@ public class TelaListadeEventos extends Fragment {
 
 
     private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
-        int largura = (int) (310 * density);
+
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        int screenWidth = metrics.widthPixels;
+
+
+
+        int largura = (int) (screenWidth * 0.753);
         int altura = (int) (70 * density);
 
         for (Eventos evento : listaEventos) {
