@@ -97,7 +97,7 @@
 
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginBottom="160"
+        android:layout_marginBottom="160dp"
         android:padding="12dp"
         android:text="Descrição"
         android:textSize="20sp"
@@ -120,7 +120,7 @@
         app:layout_constraintBottom_toBottomOf="@id/vw"
         app:layout_constraintTop_toTopOf="@id/vw"
         app:layout_constraintEnd_toEndOf="@id/vw"
-        app:layout_constraintStart_toStartOf="@id/vw""/>
+        app:layout_constraintStart_toStartOf="@id/vw"/>
 
 
 
