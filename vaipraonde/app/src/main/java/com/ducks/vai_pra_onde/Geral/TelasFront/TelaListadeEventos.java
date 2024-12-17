@@ -83,7 +83,7 @@ public class TelaListadeEventos extends Fragment {
 
 
     private void adicionarEventos(ArrayList<Eventos> listaEventos, PessoaPJ pessoaPJ, float density) {
-        int largura = (int) (280 * density);
+        int largura = (int) (310 * density);
         int altura = (int) (70 * density);
 
         for (Eventos evento : listaEventos) {
@@ -95,6 +95,7 @@ public class TelaListadeEventos extends Fragment {
             itemEvento.setLayoutParams(params);
             itemEvento.setBackgroundResource(R.drawable.borda_preta);
             itemEvento.setText(evento.getDataEvento().getDay()+"/"+ evento.getDataEvento().getMonth() + " | " + evento.getNomeEvento());
+            itemEvento.setPadding(10,1,10,1);
             itemEvento.setTextColor(ContextCompat.getColor(getActivity(), R.color.black));
             itemEvento.setTextSize(18);
 
