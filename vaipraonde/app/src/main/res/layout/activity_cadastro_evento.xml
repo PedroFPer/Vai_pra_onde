@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/teste1"
+    android:descendantFocusability="afterDescendants"
     tools:conhint=".Geral.TelasFront.TelaCadastroEvento">
 
 
@@ -36,15 +37,17 @@
             <EditText
                 android:id="@+id/nome_evento_cad"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_marginTop="20dp"
-                android:textSize="14pt"
+                android:textSize="10pt"
                 android:background="@drawable/caixaperfil1"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:padding="10dp"
                 android:fontFamily="monospace"
-                android:hint="Nome do evento" />
+                android:hint="Nome do evento"
+                android:imeOptions="actionNext"
+                android:inputType="text"/>
         </LinearLayout>
 
         <!-- Segundo LinearLayout -->
@@ -77,49 +80,59 @@
             android:background="@drawable/conteiner"
             android:orientation="vertical"
             >
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent">
 
-                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"> <!-- Orientação vertical para melhor empilhamento -->
 
+                    <TextView
+                        android:id="@+id/nome_da_empresa_cad"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:padding="10dp"
+                        android:hint="Nome da Empresa"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:background="@drawable/caixa"
+                        android:textSize="8pt" />
 
-                <TextView
-                    android:id="@+id/nome_da_empresa_cad"
-                    android:layout_width="300dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:padding="10dp"
-                    android:hint="Nome da Empresa"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/dark_gray"
-                    android:background="@drawable/caixa"
+                    <!-- Adicione mais elementos aqui, se necessário -->
 
+                </LinearLayout>
+            </ScrollView>
 
-                    android:textSize="8pt" />
-            </LinearLayout>
-
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/descricao_cad"
-                    android:layout_width="290dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="top|start"
-                    android:padding="10dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:textColorHint="@color/dark_gray"
-                    android:hint="Descrição"
-                    android:background="@drawable/caixa"
+                android:layout_height="match_parent">
 
-                    android:textSize="8pt" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <EditText
+                        android:id="@+id/descricao_cad"
+                        android:layout_width="290dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="top|start"
+                        android:padding="20dp"
+                        android:paddingVertical="100dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:hint="Descrição"
+                        android:background="@drawable/caixa" />
 
-            </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -135,8 +148,8 @@
                     android:inputType="number"
                     android:hint="Ano"
                     android:background="@drawable/caixa"
-
-                    android:textSize="8pt" />
+                    android:textSize="8pt"
+                    android:imeOptions="actionNext"/>
                 <EditText
                     android:id="@+id/data_mes_cad"
                     android:layout_width="60dp"
@@ -150,7 +163,8 @@
                     android:inputType="number"
                     android:background="@drawable/caixa"
 
-                    android:textSize="8pt" />
+                    android:textSize="8pt"
+                    android:imeOptions="actionNext"/>
                 <EditText
                     android:id="@+id/data_dia_cad"
                     android:layout_width="60dp"
@@ -164,7 +178,8 @@
                     android:inputType="number"
                     android:background="@drawable/caixa"
 
-                    android:textSize="8pt" />
+                    android:textSize="8pt"
+                    android:imeOptions="actionNext"/>
 
 
             </LinearLayout>
@@ -185,7 +200,7 @@
                     android:inputType="number"
                     android:hint="Hora"
 
-
+                    android:imeOptions="actionNext"
                     android:textSize="8pt" />
                 <EditText
                     android:id="@+id/horario_do_evento_cad_min"
@@ -199,7 +214,8 @@
                     android:padding="12dp"
                     android:background="@drawable/caixa"
                     android:hint="Minuto"
-                    android:textSize="8pt" />
+                    android:textSize="8pt"
+                    android:imeOptions="actionNext"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -217,7 +233,8 @@
 
                     android:hint="Email"
                     android:background="@drawable/caixa"
-                    android:textSize="8pt" />
+                    android:textSize="8pt"
+                    android:imeOptions="actionNext"/>
 
             </LinearLayout>
 
@@ -241,7 +258,8 @@
                     android:layout_marginRight="15dp"
                     android:hint="Cidade"
                     android:background="@drawable/caixa"
-
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
                     />
@@ -257,7 +275,8 @@
                     android:layout_marginRight="15dp"
                     android:hint="Bairro"
                     android:background="@drawable/caixa"
-
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
                     />
@@ -273,24 +292,26 @@
                     android:layout_marginRight="15dp"
                     android:hint="Rua"
                     android:background="@drawable/caixa"
-
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
                     android:textSize="8pt"
 
                     />
 
             </LinearLayout>
-            <EditText
-                android:paddingHorizontal="20dp"
+            <TextView
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
                 android:id="@+id/telefone_cad"
                 android:layout_width="300dp"
-                android:layout_height="48dp"
+                android:layout_height="38dp"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp"
                 android:textColorHint="@color/dark_gray"
                 android:hint="Telefone"
                 android:background="@drawable/caixa"
-
+                android:imeOptions="actionDone"
                 android:textSize="8pt"
                 android:layout_marginBottom="15dp"/>
 
