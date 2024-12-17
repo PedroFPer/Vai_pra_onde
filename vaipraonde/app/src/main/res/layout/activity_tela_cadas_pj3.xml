@@ -211,6 +211,7 @@
         android:id="@+id/CadasPaisPj"
         android:layout_width="290dp"
         android:layout_height="45dp"
+        android:textColor="@color/dark_gray"
         android:layout_marginHorizontal="60dp"
         android:text="Brasil"
         android:background="@drawable/caixa"
