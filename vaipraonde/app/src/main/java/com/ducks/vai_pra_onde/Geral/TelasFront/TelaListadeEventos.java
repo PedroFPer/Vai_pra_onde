@@ -83,7 +83,7 @@ public class TelaListadeEventos extends Fragment {
                     public void handleOnBackPressed() {
                         if (getActivity() != null) {
                             AppCompatActivity activity = (AppCompatActivity) getActivity();
-                          
+
                             activity.getSupportFragmentManager().beginTransaction()
                                     .replace(R.id.fragSessaoPJ, new PerfilEmpresa())
                                     .addToBackStack(null)

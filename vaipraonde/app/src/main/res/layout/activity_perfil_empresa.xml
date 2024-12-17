@@ -12,12 +12,11 @@
     <ImageView
         android:id="@+id/banner"
 
-        android:layout_width="380dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="694dp"
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="550dp"
         android:scaleType="centerCrop"
         android:src="@drawable/default_foto"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,9 +28,9 @@
     <View
         android:id="@+id/vw"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="520dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="205dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/conteiner"
 
@@ -47,29 +46,27 @@
         android:layout_width="214dp"
         android:layout_height="wrap_content"
         android:background="@drawable/caixa"
-        android:layout_marginBottom="550dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="37dp"
         android:padding="12dp"
         android:text="nome"
         android:textColor="@color/dark_gray"
-        app:layout_constraintStart_toEndOf="@id/imgp"
-        app:layout_constraintBottom_toBottomOf="@id/vw"
-        app:layout_constraintTop_toTopOf="@id/vw"
-        app:layout_constraintEnd_toEndOf="@id/vw"/>
+        android:layout_marginEnd="70dp"
+        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintEnd_toEndOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@+id/vw"/>
 
     <TextView
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/caixa"
-        android:layout_marginBottom="420dp"
-        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="50dp"
 
         android:padding="12dp"
         android:hint="E-Mail"
         android:textColor="@color/dark_gray"
-        app:layout_constraintBottom_toBottomOf="@id/vw"
-        app:layout_constraintTop_toTopOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@+id/nome"
         app:layout_constraintEnd_toEndOf="@id/vw"
         app:layout_constraintStart_toStartOf="@id/vw"/>
 
@@ -77,25 +74,23 @@
         android:id="@+id/ende"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="50dp"
         android:background="@drawable/caixa"
         android:textSize="12dp"
         android:hint="Endereço"
         android:padding="12dp"
         android:textColor="@color/dark_gray"
-
-        app:layout_constraintBottom_toBottomOf="@id/vw"
-        app:layout_constraintTop_toTopOf="@id/vw"
-        app:layout_constraintEnd_toEndOf="@id/vw"
-        app:layout_constraintStart_toStartOf="@id/vw"
+        app:layout_constraintTop_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.497" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="60dp"
         android:layout_marginBottom="160dp"
         android:padding="12dp"
@@ -112,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@drawable/caixa"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="150dp"
         android:layout_marginHorizontal="60dp"
 
         android:padding="12dp"
@@ -128,7 +123,7 @@
         android:id="@+id/imgp"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginEnd="270dp"
+        android:layout_marginEnd="230dp"
         android:layout_marginBottom="450dp"
         android:scaleType="centerCrop"
         android:background="@drawable/ftperfil"
@@ -143,7 +138,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:background="@drawable/borda"
-       app:layout_constraintStart_toStartOf="@+id/imgp"
+        app:layout_constraintStart_toStartOf="@+id/imgp"
         app:layout_constraintTop_toTopOf="@id/imgp"
 
         />
@@ -155,7 +150,7 @@
         android:text="Lista de eventos"
         android:textColor="@color/white"
         android:backgroundTint="@color/burnt_orange"
-        android:layout_marginTop="197dp"
+        android:layout_marginTop="190dp"
         android:textSize="16dp"
         android:padding="12dp"
         android:layout_marginHorizontal="90dp"
