@@ -33,7 +33,7 @@ public class UtilVericCreden {
     }
 
     public boolean vericSenha(String senha){
-        if(senha.length()!=8){
+        if(senha.length()<8){
             return false;
         }else{
             return true;
