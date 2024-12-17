@@ -69,7 +69,7 @@
 
             android:layout_marginTop="10dp"
 
-            android:background="@drawable/caixa2"
+            android:background="@drawable/conteiner"
             android:orientation="vertical"
             >
             <LinearLayout
@@ -88,7 +88,7 @@
                     android:layout_marginTop="15dp"
                     android:text="Nome da Empresa"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
 
                     android:textSize="8pt" />
@@ -103,11 +103,12 @@
                     android:layout_height="100dp"
                     android:gravity="top|start"
                     android:padding="10dp"
+                    android:paddingHorizontal="20dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Descrição"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
 
@@ -125,7 +126,7 @@
                     android:textAlignment="center"
                     android:text="Ano"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
                 <EditText
@@ -137,7 +138,7 @@
                     android:textAlignment="center"
                     android:text="Mês"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
                 <EditText
@@ -149,7 +150,7 @@
                     android:textAlignment="center"
                     android:text="Dia"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
 
@@ -165,7 +166,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
                     android:padding="10dp"
                     android:text="Hora"
                     android:textColor="@color/black"
@@ -179,7 +180,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
                     android:text="Minuto"
                     android:textColor="@color/black"
 
@@ -199,7 +200,7 @@
                     android:padding="10dp"
                     android:text="Email"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt" />
 
@@ -223,7 +224,7 @@
                     android:layout_marginRight="15dp"
                     android:text="Cidade"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
@@ -238,7 +239,7 @@
                     android:layout_marginRight="15dp"
                     android:text="Bairro"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
                     android:layout_marginBottom="15dp"
@@ -253,7 +254,7 @@
                     android:layout_marginRight="15dp"
                     android:text="Rua"
                     android:textColor="@color/black"
-                    android:background="@drawable/conteiner"
+                    android:background="@drawable/caixa"
 
                     android:textSize="8pt"
 
@@ -269,7 +270,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Telefone"
                 android:textColor="@color/black"
-                android:background="@drawable/conteiner"
+                android:background="@drawable/caixa"
 
                 android:textSize="8pt"
                 android:layout_marginBottom="15dp"/>
