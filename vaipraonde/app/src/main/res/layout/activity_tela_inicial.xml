@@ -95,7 +95,7 @@ android:background="@drawable/teste1">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:imeOptions="actionDone"
-        android:inputType="text"
+        android:inputType="textPassword"
         />
 
     <Button
