@@ -90,10 +90,10 @@
                     android:layout_marginTop="15dp"
                     android:text="Nome da Empresa"
                     android:textColor="@color/black"
-                    android:background="@drawable/caixa"
 
 
-                    android:textSize="8pt" />
+
+                    android:textSize="12pt" />
             </LinearLayout>
 
             <LinearLayout
@@ -287,9 +287,9 @@
                 android:layout_marginTop="0dp"
                 android:text="Telefone"
                 android:textColor="@color/black"
-                android:background="@drawable/caixa"
+
                 android:paddingVertical="4dp"
-                android:textSize="8pt"
+                android:textSize="10pt"
                 android:layout_marginBottom="15dp"/>
 
             <LinearLayout
@@ -301,14 +301,14 @@
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="1dp"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:padding="10dp"
                     android:text="Email"
                     android:textColor="@color/black"
-                    android:background="@drawable/caixa"
-                    android:textSize="8pt" />
+
+                    android:textSize="9pt" />
 
             </LinearLayout>
 
