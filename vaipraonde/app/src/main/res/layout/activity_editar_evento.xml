@@ -90,10 +90,10 @@
                     android:layout_marginTop="15dp"
                     android:text="Nome da Empresa"
                     android:textColor="@color/black"
-                    android:background="@drawable/caixa"
 
 
-                    android:textSize="8pt" />
+
+                    android:textSize="12pt" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,6 +196,30 @@
 
                     android:textSize="8pt" />
             </LinearLayout>
+<<<<<<< Updated upstream
+=======
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/Email_vw"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:text="Email"
+                    android:textColor="@color/black"
+
+
+
+                    android:textSize="10pt" />
+
+            </LinearLayout>
+
+
+>>>>>>> Stashed changes
 
             <TextView
                 android:paddingHorizontal="10dp"
@@ -287,9 +311,15 @@
                 android:layout_marginTop="0dp"
                 android:text="Telefone"
                 android:textColor="@color/black"
+<<<<<<< Updated upstream
                 android:background="@drawable/caixa"
                 android:paddingVertical="4dp"
                 android:textSize="8pt"
+=======
+
+
+                android:textSize="10pt"
+>>>>>>> Stashed changes
                 android:layout_marginBottom="15dp"/>
 
             <LinearLayout

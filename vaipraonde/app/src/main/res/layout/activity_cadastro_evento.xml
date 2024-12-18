@@ -81,6 +81,7 @@
                 >
 
 
+<<<<<<< Updated upstream
                 <TextView
                     android:id="@+id/nome_da_empresa_cad"
                     android:padding="10dp"
@@ -91,6 +92,20 @@
                     android:text="Nome da Empresa"
                     android:textColor="@color/black"
                     android:background="@drawable/caixa"
+=======
+                    <TextView
+                        android:id="@+id/nome_da_empresa_cad"
+                        android:layout_width="300dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:padding="10dp"
+                        android:hint="Nome da Empresa"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+
+                        android:textSize="12pt" />
+>>>>>>> Stashed changes
 
 
                     android:textSize="8pt" />
@@ -186,6 +201,7 @@
                     android:layout_height="48dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
+<<<<<<< Updated upstream
                     android:padding="10dp"
                     android:background="@drawable/caixa"
                     android:textAlignment="center"
@@ -193,6 +209,13 @@
                     android:textColor="@color/black"
                     android:imeOptions="actionNext"
                     android:inputType="number"
+=======
+
+                    android:hint="Email"
+
+                    android:textSize="10pt"
+                    android:imeOptions="actionNext"/>
+>>>>>>> Stashed changes
 
                     android:textSize="8pt" />
             </LinearLayout>
@@ -287,9 +310,18 @@
                 android:layout_marginTop="0dp"
                 android:text="Telefone"
                 android:textColor="@color/black"
+<<<<<<< Updated upstream
                 android:background="@drawable/caixa"
                 android:paddingVertical="4dp"
                 android:textSize="8pt"
+=======
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/dark_gray"
+                android:hint="Telefone"
+
+                android:imeOptions="actionDone"
+                android:textSize="10pt"
+>>>>>>> Stashed changes
                 android:layout_marginBottom="15dp"/>
 
             <LinearLayout
