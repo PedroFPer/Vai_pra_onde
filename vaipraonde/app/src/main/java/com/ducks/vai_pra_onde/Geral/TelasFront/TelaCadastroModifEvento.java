@@ -98,8 +98,8 @@
 
 
             nome_da_empresa.setText(eventoAtual.getNomeEmpresa());
-            Email.setText("E-Mail: "+pessoaPJ.getEmail());
-            Telefone.setText("Tel: "+ pessoaPJ.getTelefone());
+            Email.setText(pessoaPJ.getEmail());
+            Telefone.setText(pessoaPJ.getTelefone());
 
             cidade.setText(pessoaPJ.getCidade());
             bairro.setText(pessoaPJ.getBairro());

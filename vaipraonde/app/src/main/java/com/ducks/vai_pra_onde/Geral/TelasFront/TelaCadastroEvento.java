@@ -74,8 +74,8 @@ public class TelaCadastroEvento extends Fragment {
 
 
         nome_da_empresa.setText(pessoaPJ.getNomeEmpresa());
-        Email.setText("E-Mail: "+pessoaPJ.getEmail());
-        Telefone.setText("Tel: "+pessoaPJ.getTelefone());
+        Email.setText(pessoaPJ.getEmail());
+        Telefone.setText(pessoaPJ.getTelefone());
 
         utilapagarFoco.apagarTextoAoFocar(nome_evento);
         utilapagarFoco.apagarTextoAoFocar(descricao);
